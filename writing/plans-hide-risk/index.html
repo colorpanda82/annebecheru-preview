@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-Mortem: Research, Data and a Method for Hidden Plan Risk</title>
+<meta name="description" content="A pre-mortem asks a team to imagine its plan already failed. Data on cost overruns, the planning fallacy and 229 expert forecasts show why it works.">
+<link rel="canonical" href="https://annebecheru.com/writing/plans-hide-risk/">
+<meta property="og:title" content="Pre-Mortem: Research, Data and a Method for Hidden Plan Risk">
+<meta property="og:description" content="A pre-mortem asks a team to imagine its plan already failed. Data on cost overruns, the planning fallacy and 229 expert forecasts show why it works.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-11-03">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Pre-mortem: why plans hide risk, and what 229 forecasts reveal",
+      "description": "A pre-mortem asks a team to imagine its plan already failed. Data on cost overruns, the planning fallacy and 229 expert forecasts show why it works.",
+      "url": "https://annebecheru.com/writing/plans-hide-risk/",
+      "mainEntityOfPage": "https://annebecheru.com/writing/plans-hide-risk/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "author": {
+        "@id": "https://brave-new.com/#org"
+      },
+      "publisher": {
+        "@id": "https://brave-new.com/#org"
+      },
+      "keywords": "pre-mortem, planning fallacy, reference class forecasting, project premortem, business risk, optimism bias, cost overrun",
+      "citation": [
+        "https://hbr.org/2007/09/performing-a-project-premortem",
+        "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/buehler-et-al-1994.pdf",
+        "https://arxiv.org/abs/1303.6604",
+        "https://arxiv.org/abs/1409.0003",
+        "https://arxiv.org/abs/1302.3642",
+        "https://arxiv.org/abs/1304.0265",
+        "https://www.oaktreecapital.com/docs/default-source/memos/2015-06-08-risk-revisited-again.pdf",
+        "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/survey-of-professional-forecasters",
+        "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/first-second-third",
+        "https://fred.stlouisfed.org/series/USREC"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://brave-new.com/#org",
+      "name": "Brave New Media",
+      "url": "https://brave-new.com/",
+      "sameAs": [
+        "https://bravenewhive.com/"
+      ],
+      "description": "Marketing agency that builds AI flows to help companies scale their ideas, grow their customer base and expand into new markets, with experience across supply chain and manufacturing.",
+      "knowsAbout": [
+        "AI marketing",
+        "generative engine optimization",
+        "supply chain marketing",
+        "manufacturing marketing",
+        "market expansion",
+        "customer acquisition"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a pre-mortem in business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A pre-mortem is a short team meeting held before a project starts. The leader tells the team the project has already failed, and each person writes down why. The group shares the reasons, picks the most serious, and changes the plan. Gary Klein described the method in Harvard Business Review in September 2007."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a pre-mortem and a post-mortem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A post-mortem happens after a project ends and asks what went wrong. A pre-mortem happens before it starts and asks what will have gone wrong, as if failure already happened. The questions are similar. The timing is the point: a pre-mortem gives you the lessons while you can still act on them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the planning fallacy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The planning fallacy is the tendency to believe your own project will go to plan while knowing that most similar projects ran late or over budget. Kahneman and Tversky named it in 1979. In one study, students predicted their thesis would take 33.9 days. It took 55.5, and even their worst-case estimate was too short."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much should I add to a project budget for risk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start from how similar projects turned out. UK transport appraisal adds 15% to road budgets for even odds of staying within them, and 32% for 80% confidence. Rail adds 40% and 57%. For your own business, use your last five comparable projects as the reference class and add their typical overrun."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate are economic forecasts for business planning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less accurate than most plans assume. In our study of 229 quarterly surveys of US professional forecasters since 1968, the median one-year growth forecast missed by more than one percentage point 48% of the time. At the start of seven of the last eight recessions, the median forecast still showed growth."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--night:#0E1830;--night2:#0B1426;--line:#24365C;--lime:#C9D62A;--paper:#F7F6F2;--ink:#0E1830;--slate:#4B5266;--soft:#AEB6CC;--card:#FFFFFF;--hair:#E2E5EC;--slot:#FFF3CD;--accent-ink:#5E6900;--r:24px;--g:20px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0B1020;--ink:#EEF1F7;--slate:#A9B1C7;--card:#131B30;--hair:#24304D;--slot:#4A3F12;--accent-ink:#C9D62A}}
+:root[data-theme="dark"]{--paper:#0B1020;--ink:#EEF1F7;--slate:#A9B1C7;--card:#131B30;--hair:#24304D;--slot:#4A3F12;--accent-ink:#C9D62A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Figtree,system-ui,Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:"Hanken Grotesk",Figtree,Arial,sans-serif;font-weight:600;letter-spacing:-.02em;margin:0;line-height:1.04}
+em.s{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0;color:var(--accent-ink)}
+.hero em.s,.band em.s,footer em.s{color:var(--lime)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--lime) 28%,transparent);margin:0 0 22px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:14px 24px;border-radius:999px;background:var(--lime);color:#0E1830;white-space:nowrap}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.slot{background:var(--slot);color:#3a3000;padding:0 4px;border-radius:3px}
+section{padding:88px 0}
+.h1{font-size:clamp(46px,5.4vw,88px)}.h2{font-size:clamp(38px,5vw,68px)}.h3{font-size:24px}
+.lead{font-size:clamp(18px,1.7vw,22px);color:var(--slate);max-width:640px;margin:22px 0 0}
+/* hero: cinematic frame */
+.hero{margin:var(--g);border-radius:var(--r);background:radial-gradient(120% 80% at 75% 30%,#1C2C55 0%,#0E1830 55%,#0B1426 100%);color:#F2F4F8;position:relative;overflow:hidden;min-height:calc(100vh - 40px);display:grid;grid-template-columns:1.15fr .85fr;padding:0}
+.hero .frame{position:absolute;inset:22px;pointer-events:none}
+.hero .frame i{position:absolute;width:26px;height:26px;border-color:rgba(242,244,248,.55);border-style:solid}
+.hero .frame i:nth-child(1){top:0;left:0;border-width:1.5px 0 0 1.5px}.hero .frame i:nth-child(2){top:0;right:0;border-width:1.5px 1.5px 0 0}.hero .frame i:nth-child(3){bottom:0;left:0;border-width:0 0 1.5px 1.5px}.hero .frame i:nth-child(4){bottom:0;right:0;border-width:0 1.5px 1.5px 0}
+.hero .ticks{position:absolute;top:90px;bottom:90px;width:14px;background:repeating-linear-gradient(180deg,rgba(242,244,248,.35) 0 1px,transparent 1px 18px)}
+.hero .ticks.l{left:30px}.hero .ticks.r{right:30px}
+.hero nav{position:absolute;top:44px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+.hero nav .brand{font-family:"Hanken Grotesk";font-weight:700;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.hero nav .brand em{font-family:"Instrument Serif";font-weight:400;color:var(--lime)}
+.hero nav div a{text-decoration:none;font-size:15px;margin-left:28px;color:#F2F4F8}
+.hero .copy{padding:200px 64px 80px 72px;position:relative;z-index:2;align-self:end}
+.hero .copy .lead{color:#C9D0E0}
+.hero .ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero .photo{position:relative}
+.hero .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(.1) contrast(1.03)}
+.hero .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0E1830 0%,rgba(14,24,48,0) 38%),linear-gradient(0deg,rgba(14,24,48,.85) 0%,rgba(14,24,48,0) 30%),linear-gradient(180deg,rgba(14,24,48,.7) 0%,rgba(14,24,48,0) 16%),rgba(28,44,85,.42)}
+.hero .roles{position:absolute;right:64px;bottom:56px;z-index:3;text-align:right;font-size:14px;color:#C9D0E0;line-height:1.8}
+.hero .roles b{color:#fff;font-weight:600}
+/* manifesto */
+.manifesto p.big{font-family:"Hanken Grotesk";font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.2;letter-spacing:-.015em;max-width:980px;margin:0}
+.manifesto p.big span{color:var(--slate)}
+/* shift cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.card{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:32px}
+.card .k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.card h3{font-size:24px;margin:14px 0 10px}
+.card p{margin:0;color:var(--slate);font-size:16px}
+.card .from{font-size:15px;color:var(--slate);text-decoration:line-through;text-decoration-color:var(--lime);margin-top:12px}
+/* dark band */
+.band{background:var(--night);color:#F2F4F8;margin:0 var(--g);border-radius:var(--r)}
+.band .lead{color:#C9D0E0}
+.band .card{background:#13204A;border-color:var(--line)}
+.band .card p,.band .card .k{color:#AEB6CC}
+.band .card h3{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.steps .n{font-family:"Instrument Serif";font-style:italic;font-size:56px;line-height:1;color:var(--lime)}
+/* values */
+.vals{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hair);margin-top:48px}
+.vals div{padding:34px 28px 34px 0;border-bottom:1px solid var(--hair)}
+.vals h3{font-size:22px;margin:0 0 10px}
+.vals p{margin:0;color:var(--slate);font-size:16px;max-width:320px}
+/* proof chips */
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.chip{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:16px 18px}
+.chip i{flex:none;width:40px;height:40px;border-radius:50%;background:var(--paper);border:1px solid var(--hair);display:grid;place-items:center;font-style:normal;font-weight:700;color:var(--lime);background:#0E1830}
+.chip b{display:block;font-family:"Hanken Grotesk";font-weight:600;font-size:17px;letter-spacing:-.01em}
+.chip span{color:var(--slate);font-size:14px}
+/* doors */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.door{border-radius:20px;padding:36px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none}
+.door h3{font-size:30px}
+.door p{margin:12px 0 0;font-size:16px}
+.d1{background:var(--night);color:#F2F4F8}.d1 p{color:#C9D0E0}
+.d2{background:var(--lime);color:#0E1830}
+.d3{background:var(--card);border:1px solid var(--hair)}.d3 p{color:var(--slate)}
+.arrow{font-size:15px;font-weight:600;margin-top:28px}
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:40px}
+.faq div{padding:24px 0;border-top:1px solid var(--hair)}
+.faq h3{font-size:19px;margin:0 0 8px}
+.faq p{margin:0;color:var(--slate);font-size:16px}
+footer{background:var(--night2);color:#AEB6CC;margin:var(--g);border-radius:var(--r);padding:72px 0 40px}
+footer .word{font-family:"Hanken Grotesk";font-weight:700;font-size:clamp(56px,10vw,150px);letter-spacing:-.04em;color:#F2F4F8;line-height:.9;margin-top:56px}
+footer .word em{font-family:"Instrument Serif";font-weight:400;color:var(--lime)}
+footer a{color:#C9D0E0;text-decoration:none;margin-right:22px}
+.sub{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.sub input{flex:1;min-width:220px;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:#13204A;color:#fff;font:inherit}
+@media (max-width:900px){
+  .wrap{padding:0 20px}section{padding:72px 0}
+  .hero{grid-template-columns:1fr;min-height:0}.hero nav{left:28px;right:28px;top:34px}.hero nav div{display:none}
+  .hero .copy{padding:120px 28px 40px}.hero .photo{min-height:420px}.hero .roles{position:static;text-align:left;padding:0 28px 40px}
+  .hero .ticks{display:none}
+  .hero .photo:after{background:linear-gradient(180deg,#0E1830 0%,rgba(14,24,48,0) 30%),linear-gradient(0deg,#0E1830 0%,rgba(14,24,48,0) 30%),rgba(28,44,85,.42)}
+  .grid3,.steps,.vals,.doors,.faq,.workgrid,.chips,#journal .card{grid-template-columns:1fr !important}
+  #journal .card{padding:40px 24px !important}
+}
+
+/* left content bar (after atlas.attio.com) */
+@media (min-width:901px) and (max-width:1100px){.chips{grid-template-columns:repeat(2,1fr)}}
+.band.ess .ecard .k{color:#C9D62A}.band.ess .ecard .ft{border-color:#24365C}.band.ess .ecard .ft b{color:#C9D62A}
+.ess .top h2{max-width:760px}.ess .top{display:flex;justify-content:space-between;align-items:end;gap:32px}
+.ess .ecard{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit}
+.ess .ecard .k{color:var(--accent-ink)}
+.ess .ecard h3{margin:0;font-size:24px;line-height:1.15}
+.ess .ecard p{font-size:16px}
+.ess .ecard .ft{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;font-size:14px;color:var(--slate)}
+.ess .ecard .ft b{color:var(--accent-ink);font-weight:600}
+.btn.line{background:var(--card);color:var(--ink);border:1.5px solid var(--hair)}
+
+/* typesetting pass */
+h1,h2,h3,.manifesto p.big{text-wrap:balance}
+p,.lead,.card p,.roles{text-wrap:pretty}
+.h2 em.s,.h1 em.s{white-space:normal}
+.nb{white-space:nowrap}
+.band.ess .ecard .ft{color:#AEB6CC}
+@media (min-width:901px){h2.h2 em.s::before{content:"\A";white-space:pre}}
+@media (max-width:1100px){.card h3,.ess .ecard h3{font-size:21px}.card{padding:26px}}
+@media (max-width:900px){.ess .top{flex-direction:column;align-items:flex-start;gap:20px}.h1{font-size:44px;line-height:1.05}.h2{font-size:34px;line-height:1.08}.manifesto p.big{font-size:26px}}
+
+.vz{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.vz .st{grid-column:1/-1;font-family:"Hanken Grotesk";font-weight:600;font-size:clamp(34px,4.6vw,64px);line-height:1.06;letter-spacing:-.025em;max-width:1050px;text-wrap:balance}
+.vz .mid{font-family:"Hanken Grotesk";font-weight:500;font-size:26px;line-height:1.3;letter-spacing:-.01em;color:var(--slate);text-wrap:pretty;padding-top:28px;border-top:1px solid var(--hair)}
+.vz .mid em.s{font-size:1.15em}
+.vz .rt{font-size:19px;line-height:1.65;color:var(--slate);text-wrap:pretty;padding-top:28px;border-top:1px solid var(--hair)}
+.vz .rt b{color:var(--ink);font-weight:600}
+@media (max-width:900px){.vz{grid-template-columns:1fr;gap:28px}.vz .st{font-size:34px}.vz .mid{font-size:22px}}
+
+/* essay page */
+/* Type system. Two families, per Anne's spec: Hanken Grotesk for titles (h1-h3, figure titles, FAQ
+   questions, prev/next), Figtree for everything else. Sizes: 12 caps labels, 13 chart text, 14 UI and
+   notes, 15 tables and lists in the chrome, 18 running text, 21 lede, 22 h3, 26-30 h2, 34-48 h1.
+   Weights: 400 text, 500 UI, 600 emphasis and titles. font-synthesis:none stops the browser faking a
+   bold we do not load. */
+html{font-synthesis:none;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+strong,b{font-weight:600}
+article h1{text-wrap:balance}
+article h2,article h3,.fig .ft,.faq summary,.pn span{text-wrap:pretty}
+article p,article li{text-wrap:pretty}
+.ch,table,.rail .m,.clab,.meta{font-variant-numeric:tabular-nums}
+.crumb{display:inline-block;margin:44px 0 0;font-size:14px;font-weight:500;text-decoration:none;color:var(--slate)}
+.crumb:hover{color:var(--ink)}
+article{max-width:680px;padding:40px 0 64px;counter-reset:sec}
+article h1{font-size:clamp(34px,3.6vw,48px);line-height:1.1;letter-spacing:-.025em;margin:0 0 22px}
+article .meta{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;font-size:14px;color:var(--slate);margin:0 0 26px;padding:0 0 22px;border-bottom:3px solid var(--lime)}
+article .meta b{font-weight:600;color:var(--ink)}
+article .meta .dot{width:4px;height:4px;border-radius:50%;background:var(--slate);opacity:.6}
+article h2{font-size:clamp(26px,2.4vw,30px);line-height:1.2;letter-spacing:-.02em;margin:0 0 18px;scroll-margin-top:24px}
+article h3{font-size:22px;line-height:1.3;letter-spacing:-.01em;margin:36px 0 10px;scroll-margin-top:24px}
+article p,article li{font-size:18px;line-height:1.65}
+article p{margin:0 0 20px}
+article ul{margin:0 0 24px;padding-left:22px}
+article li{margin:0 0 10px}
+article li::marker{color:var(--accent-ink)}
+article a{color:var(--ink);text-decoration-color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1.5px}
+article a.fn{text-decoration:none;font-size:.7em;vertical-align:super;line-height:0;color:var(--accent-ink);font-weight:600}
+article .tip{background:color-mix(in srgb,var(--lime) 12%,var(--card));border:1px solid var(--hair);padding:16px 20px;border-radius:12px}
+.faqs .faq{display:block;margin:0;border-top:1px solid var(--hair)}
+.faqs .faq>p,.faqs .faq>ul{color:var(--ink);margin:0 0 18px}
+.faqs .faq:last-child{border-bottom:1px solid var(--hair)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;font:600 18px/1.35 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.005em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font:400 26px/1 Figtree;color:var(--accent-ink)}
+.faq[open] summary::after{content:"\2212"}
+.faq p{font-size:17px}
+.refs .ref{font-size:15px;line-height:1.55;margin:0 0 10px;padding-left:30px;position:relative;color:var(--slate);scroll-margin-top:24px}
+.refs .ref{top:auto;bottom:auto;border-left:0;opacity:1}
+.refs .ref span{position:absolute;left:0;font-weight:600;color:var(--ink)}
+.refs .ref:target{background:rgba(201,214,42,.25)}
+.seealso li{font-size:17px;margin-bottom:8px}
+.next{background:var(--night);color:#F2F4F8;border-radius:20px;padding:36px 36px 16px;margin:48px 0 0}
+.next h2{color:#F2F4F8}
+.next p{color:#D5DAE7}
+.next a{color:var(--lime);text-decoration-color:var(--lime)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:680px;margin:0 0 88px}
+.pn a{display:block;text-decoration:none;border:1px solid var(--hair);background:var(--card);border-radius:14px;padding:16px 20px}
+.pn a:hover{border-color:var(--lime)}
+.pn small{display:block;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:0 0 4px}
+.pn span{font:600 18px/1.25 "Hanken Grotesk",Figtree,sans-serif}
+.pn .nx{text-align:right;grid-column:2}
+.tbl{overflow-x:auto;margin:8px 0 28px;border:1px solid var(--hair);border-radius:14px;background:var(--card)}
+.fig .tbl{margin:0}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--hair)}
+th{font-weight:600;font-size:14px;background:var(--paper)}
+tr:last-child td{border-bottom:0}
+@media (max-width:620px){
+  article p,article li{font-size:17px}
+  .toc ol{columns:1}
+  .kf{padding:20px 18px 6px}.next{padding:26px 22px 8px}
+  .pn{grid-template-columns:1fr}.pn .nx{grid-column:1}
+  th,td{padding:10px 12px;font-size:14px}
+}
+
+/* O1 paper grain: a faint tiled noise baked into the page background (cards stay clean white) */
+body.essay,.rail{background-color:var(--paper);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .09 0 0 0 0 .19 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body.essay,:root:not([data-theme="light"]) .rail{background-blend-mode:screen}}
+:root[data-theme="dark"] body.essay,:root[data-theme="dark"] .rail{background-blend-mode:screen}
+body.essay{overflow-x:clip}
+/* chapters layout: left rail, one screen per chapter */
+body.essay{padding-left:320px}
+.rail{position:fixed;top:0;left:0;bottom:0;width:320px;box-sizing:border-box;border-right:1px solid var(--hair);display:flex;flex-direction:column;padding:22px 0 0;z-index:40;overflow:hidden}
+.rh{display:flex;justify-content:space-between;align-items:center;padding:0 22px 18px}
+.rh .back{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none}.rh .back:hover{color:var(--ink)}
+.rx{display:none;border:0;background:var(--card);color:var(--ink);width:34px;height:34px;border-radius:50%;font:400 22px/1 Figtree,sans-serif;cursor:pointer}
+.rcap{margin:0 22px 6px;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.rtitle{margin:0 22px 10px;font:600 17px/1.3 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.01em;text-wrap:balance}
+.rs{margin:0 22px 10px;font-size:13px;color:var(--slate);font-variant-numeric:tabular-nums}
+.rbar{margin:0 22px 14px;height:4px;border-radius:4px;background:var(--hair);overflow:hidden}.rbar i{display:block;height:100%;width:0;background:var(--lime);border-radius:4px;transition:width .5s cubic-bezier(.16,1,.3,1)}
+.rail ol{list-style:none;margin:0;padding:4px 10px 16px;overflow-y:auto;flex:1;scrollbar-width:thin;border-top:1px solid var(--hair)}
+.rail ol a{display:grid;grid-template-columns:18px 1fr auto;gap:10px;align-items:start;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--slate);font-size:14px;line-height:1.35}
+.rail ol a:hover{background:var(--card);color:var(--ink)}
+.rail ol .d{width:12px;height:12px;margin-top:3px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--slate) 45%,transparent);box-sizing:border-box}
+.rail ol a.done .d{background:var(--ink);border-color:var(--ink)}
+.rail ol a[aria-current]{color:var(--ink);font-weight:600;background:var(--card)}
+.rail ol a[aria-current] .d{background:var(--lime);border-color:var(--lime);box-shadow:0 0 0 4px color-mix(in srgb,var(--lime) 30%,transparent)}
+.rail ol .m{font-size:12px;color:var(--slate);font-weight:500;font-variant-numeric:tabular-nums}
+.rail ol .rf{margin-top:6px;padding-top:6px;border-top:1px solid var(--hair)}
+.rhome{display:block;padding:16px 22px;border-top:1px solid var(--hair);font:700 16px "Hanken Grotesk",Figtree,sans-serif;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.rhome em{font-family:"Instrument Serif";font-weight:400;color:var(--accent-ink)}
+.rail-scrim,.rail-fab{display:none}
+.cmain{max-width:760px;margin:0 auto;padding:32px 40px 72px}
+.chap{counter-reset:none}
+html{scroll-behavior:smooth}
+.chap{scroll-margin-top:24px}
+.chap+.chap{margin-top:64px;padding-top:56px;border-top:1px solid var(--hair)}
+.chap.ov+.chap{margin-top:40px}
+.chap.refs .ref{font-size:15px}
+.cover{color:#F2F4F8;position:relative;isolation:isolate;padding:72px 0 52px;margin:-32px 0 28px}
+.cover .eyebrow{background:var(--lime);color:#0E1830}
+.cover h1{font-size:clamp(32px,3.4vw,46px);line-height:1.08;letter-spacing:-.025em;margin:0 0 18px;color:#fff;text-wrap:balance}
+.cover .meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:14px;color:#C9D0E0;margin:0 0 24px}
+.cover .meta b{color:#fff;font-weight:600}.cover .meta .dot{width:4px;height:4px;border-radius:50%;background:#AEB6CC;opacity:.7}
+.cover .acts{display:flex;gap:10px;flex-wrap:wrap}.cover .btn.ghost{color:#F2F4F8}
+.chap .intro{margin:0 0 36px}
+.chap .intro>p:first-child{font-size:clamp(19px,1.6vw,21px);line-height:1.6;color:var(--ink)}
+.kf2{margin:0 0 32px;scroll-margin-top:24px}
+.kf2 .kh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--hair);padding-bottom:12px;margin-bottom:6px}
+.kf2 h2{font-size:clamp(26px,2.4vw,30px);margin:0}
+.kf2 .kh span{font-size:13px;color:var(--slate)}
+/* key findings as cards, each with its headline number */
+.kf2 ol.kgrid{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.kf2 ol.kgrid li{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:22px 22px 20px}
+.kf2 .big{font:600 46px/1 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.kf2 .big small{font-size:.38em;letter-spacing:0;color:var(--slate);font-weight:500;margin-left:6px}
+.kf2 .kn{font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);margin-top:10px}
+.kf2 ol.kgrid h3{margin:0;font-size:18px}
+.kf2 ol.kgrid p{margin:0;font-size:15px;line-height:1.55;color:var(--slate)}
+.kf2 mark{background:none;color:var(--ink);font-weight:600;box-shadow:inset 0 -.42em 0 color-mix(in srgb,var(--lime) 45%,transparent)}
+.kf2 ol.kgrid li:first-child{grid-column:1/-1;background:var(--night);border-color:var(--night);display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:center}
+.kf2 ol.kgrid li:first-child .big{color:var(--lime);font-size:84px;grid-row:1/4}
+.kf2 ol.kgrid li:first-child h3{color:#fff;font-size:22px}.kf2 ol.kgrid li:first-child p{color:#C9D0E0}.kf2 ol.kgrid li:first-child mark{color:#fff}
+.kf2 ol.kgrid li:first-child .kn{color:#C9D62A;margin:0}
+@media (max-width:620px){.kf2 ol.kgrid{grid-template-columns:1fr}.kf2 ol.kgrid li:first-child{display:flex;align-items:flex-start;text-align:left}.kf2 ol.kgrid li:first-child .big{font-size:64px}}
+/* footnotes: sidenotes in the right margin on wide screens, a tap-to-open note below the paragraph otherwise */
+@media (min-width:1300px){
+  .cmain{max-width:1040px;margin:0 auto;padding-left:56px;padding-right:32px}
+  .cmain>.chap{max-width:680px}
+  .cmain{position:relative}
+  .sn{position:absolute;left:calc(56px + 680px + 40px);width:250px;font-size:13px;line-height:1.5;color:var(--slate);padding-left:12px;transition:background .2s}
+  .sn b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:color-mix(in srgb,var(--lime) 45%,transparent);color:var(--ink);font:600 11px Figtree,sans-serif;margin-right:6px}
+  .sn a{color:var(--slate)}
+  .sn.hi{color:var(--ink)}
+  .fnpop{display:none !important}
+}
+.fnpop{display:block;margin:-6px 0 20px;background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:12px 14px 12px 14px;font-size:14px;line-height:1.5;color:var(--slate);box-shadow:0 8px 24px rgba(14,24,48,.1);position:relative}
+.fnpop b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:color-mix(in srgb,var(--lime) 45%,transparent);color:var(--ink);font:600 11px Figtree,sans-serif;margin-right:6px}
+.fnpop button{position:absolute;top:6px;right:8px;border:0;background:none;font:400 18px Figtree;color:var(--slate);cursor:pointer}
+.fnpop a{color:var(--slate)}
+.clab{margin:0 0 10px;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.chap>h2{font-size:clamp(28px,2.8vw,38px);line-height:1.12;letter-spacing:-.025em;margin:0 0 22px;text-wrap:balance}
+.chap p,.chap li{font-size:18px;line-height:1.65}
+.chap>p,.chap .faq p{margin:0 0 20px}
+.chap ul{margin:0 0 24px;padding-left:22px}.chap li{margin:0 0 10px}.chap li::marker{color:var(--accent-ink)}
+.chap h3{font-size:22px;line-height:1.3;letter-spacing:-.01em;margin:36px 0 10px;scroll-margin-top:24px}
+.chap a{color:var(--ink);text-decoration-color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1.5px}
+.chap a.fn{text-decoration:none;font-size:.7em;vertical-align:super;line-height:0;color:var(--accent-ink);font-weight:600}
+.chap a.btn,.pn a{text-decoration:none}
+.chap .tip{background:color-mix(in srgb,var(--lime) 12%,var(--card));border:1px solid var(--hair);padding:16px 20px;border-radius:12px}
+.chap p,.chap li,.kf2 h3,.faq summary{text-wrap:pretty}
+.seealso{margin:36px 0 0}.seealso h2{font-size:22px;margin:0 0 12px}.seealso li{font-size:17px;margin-bottom:8px}
+.next h2{font-size:26px;margin:0 0 14px}
+.pn{margin:28px 0 0}
+@media (max-width:1099px){
+  body.essay{padding-left:0}
+  .rail{width:min(340px,88vw);transform:translateX(calc(-100% - 60px));transition:transform .3s cubic-bezier(.4,0,1,1);box-shadow:18px 0 50px rgba(14,24,48,.22);border-radius:0 20px 20px 0;z-index:62}
+  body.rail-open .rail{transform:none;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+  .rx{display:block}
+  .rail-scrim{display:block;position:fixed;inset:0;z-index:61;background:rgba(14,24,48,.38);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+  body.rail-open .rail-scrim{opacity:1;visibility:visible;transition:opacity .35s}
+  .rail-fab{display:inline-flex;align-items:center;gap:10px;position:fixed;right:16px;bottom:16px;z-index:60;border:0;cursor:pointer;background:var(--night);color:#fff;font:600 14px Figtree,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(14,24,48,.3)}
+  .rail-fab .ic{display:grid;gap:3px;width:16px}.rail-fab .ic i{display:block;height:2px;border-radius:2px;background:var(--lime)}.rail-fab .ic i:nth-child(2){width:70%}
+  body.rail-open .rail-fab{opacity:0;pointer-events:none}
+}
+@media (max-width:620px){
+  .cmain{padding:20px 18px 96px}
+  .cover{padding:28px 22px 26px;border-radius:20px}
+  .chap p,.chap li{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rail,.rail-scrim,.rbar i{transition-duration:.01s !important}}
+@media print{.rail,.rail-fab,.rail-scrim{display:none !important}body.essay{padding-left:0}}
+/* essays page */
+.ehead{min-height:0 !important;display:block !important;padding:0 !important}
+.ehead .copy{padding:180px 72px 64px !important;align-self:auto !important;display:flex;justify-content:space-between;align-items:end;gap:48px}
+.ehead .copy .lead{max-width:560px;margin-top:20px}
+.by{display:flex;align-items:center;gap:16px;font-size:14px;color:#C9D0E0;line-height:1.7;text-align:right;flex:none}
+.by img{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 18%;filter:grayscale(.1) contrast(1.03);order:2;box-shadow:0 0 0 1.5px rgba(242,244,248,.35)}
+.by b{color:#fff;font-weight:600}
+.flt{display:flex;gap:10px;flex-wrap:wrap;margin:0}
+.flt button{border:1px solid var(--hair);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 18px;font:500 14px Figtree,sans-serif;cursor:pointer}
+.flt button[aria-pressed="true"]{background:var(--night);color:#fff;border-color:var(--night)}
+.egrid{margin-top:28px}.egrid .ecard[hidden]{display:none}
+@media (max-width:900px){.ehead .copy{padding:120px 28px 40px !important;flex-direction:column;align-items:flex-start}.by{text-align:left}.by img{order:0}}
+
+/* the homepage gives every <section> 88px padding; essay sections set their own spacing */
+.chap,.kf2,.seealso{padding-top:0;padding-bottom:0}
+html:has(body.essay){overflow-x:clip}
+/* lead finding without a headline number: stack it like the other cards */
+.kf2 ol.kgrid li.nonum:first-child{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:8px}
+.kf2 ol.kgrid li.nonum:first-child h3{font-size:26px;line-height:1.2}
+.kf2 ol.kgrid li.nonum:first-child .kn{margin-top:4px}
+.kf2 ol.kgrid li:first-child a.fn{color:var(--lime)}
+/* cover: the navy spans the full width of the reading area (rail edge to window edge), text stays on the column */
+.cover::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:-100vw;right:-100vw;
+  background:radial-gradient(70% 120% at 70% 20%,#1C2C55 0%,#0E1830 55%,#0B1426 100%);border-bottom:1px solid var(--line)}
+.cover h1,.cover .meta{max-width:680px}
+/* links inside navy blocks keep light colours in both themes */
+.chap a.btn{color:#0E1830}.chap a.btn.ghost{color:#F2F4F8}
+.chap .next a{color:var(--lime);text-decoration-color:var(--lime)}
+.chap .next{border:1px solid var(--line)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cover::before{border-bottom-color:#2B3E6B}:root:not([data-theme="light"]) .chap .next,:root:not([data-theme="light"]) .kf2 ol.kgrid li:first-child{background:#13204A;border-color:#2B3E6B}}
+:root[data-theme="dark"] .cover::before{border-bottom-color:#2B3E6B}
+:root[data-theme="dark"] .chap .next,:root[data-theme="dark"] .kf2 ol.kgrid li:first-child{background:#13204A;border-color:#2B3E6B}
+@media (max-width:620px){.cover{padding:52px 0 36px;margin-top:-20px}}
+
+/* figures */
+.fig{margin:44px 0 40px}
+.fig .ft{font:600 18px/1.35 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.005em;margin:0 0 16px;color:var(--ink)}
+.fig .cap{font-size:14px;line-height:1.55;color:var(--slate);margin:14px 0 0}
+.fig .cap em{font-style:normal}
+.ch{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:22px 22px 16px;font-family:Figtree,sans-serif}
+.navy{background:var(--ink)}.navy2{background:#3A5185}.navy3{background:#6B83B8}.navy4{background:#9DB0D9}.lime{background:#C9D62A}.gray{background:#7A8094}
+.lg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--slate);margin:0 0 16px}
+.lg .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.hb .r{display:grid;grid-template-columns:minmax(130px,34%) 1fr;gap:0 16px;align-items:center;margin:0 0 10px}
+.hb .r.blk{grid-template-columns:1fr;gap:5px 0;margin:0 0 18px}
+.hb .lb{font-size:14px;line-height:1.3;color:var(--ink)}
+.hb .r.blk .lb{font-weight:600}
+.hb .tks{display:grid;gap:4px}
+.trk{position:relative;height:26px}
+.hb .r.blk .trk{height:20px}
+.bar{position:absolute;top:0;bottom:0;border-radius:3px}
+.vl{position:absolute;top:50%;transform:translateY(-50%);font:600 13px/1 Figtree,sans-serif;color:var(--ink);white-space:nowrap}
+.sl{position:absolute;top:50%;transform:translateY(-50%);text-align:center;font:600 12px/1 Figtree,sans-serif;white-space:nowrap;overflow:hidden}
+.vl.in{font-size:12px}
+.ref{position:absolute;top:-4px;bottom:-4px;border-left:2px dashed #7A8094;opacity:.9}
+.zero{position:absolute;top:-4px;bottom:-4px;border-left:1.5px solid var(--slate)}
+.gt{font:600 12px/1 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:20px 0 12px}
+.gt:first-child{margin-top:0}
+.axis{font-size:12px;color:var(--slate);margin:14px 0 0;padding-top:10px;border-top:1px solid var(--hair)}
+.note{font-size:12px;line-height:1.45;color:var(--slate);margin:8px 0 0}
+.rk{display:inline-block;width:0;height:11px;border-left:2px dashed #7A8094;margin-right:6px;vertical-align:-1px}
+/* vertical bars */
+.vchart{position:relative}
+.vplot{position:absolute;left:0;right:0;top:0;height:var(--h)}
+.vcols{position:relative;display:grid;grid-template-columns:repeat(var(--n),1fr);gap:6px}
+.vcol .vbars{height:var(--h);display:flex;gap:3px;justify-content:center;padding:0 6%}
+.vbw{position:relative;flex:1;max-width:64px}
+.vb{position:absolute;left:0;right:0;border-radius:3px 3px 0 0}
+.vv{position:absolute;left:50%;transform:translateX(-50%);font:600 12px/1 Figtree,sans-serif;color:var(--ink);white-space:nowrap;margin:3px 0}
+.vlab{font-size:13px;line-height:1.25;text-align:center;color:var(--ink);margin-top:10px;padding:0 2px}
+.vref{position:absolute;left:0;right:0;border-top:2px dashed #7A8094}
+.vzero{position:absolute;left:0;right:0;border-top:1.5px solid var(--slate)}
+/* line charts */
+.svgc{width:100%;height:auto;display:block}
+.svgc .gl{stroke:var(--hair);stroke-width:1}.svgc .zl{stroke:var(--slate);stroke-width:1.5}
+.svgc .tx{fill:var(--slate);font:13px Figtree,sans-serif}.svgc .vv2{fill:var(--ink);font:600 13px Figtree,sans-serif}
+.svgc .an{stroke:#7A8094;stroke-dasharray:3 4}.svgc .an-t{fill:var(--slate)}
+.alt{display:none}
+@media (max-width:620px){
+  .ch{padding:16px 14px 12px}
+  .hb .r{grid-template-columns:1fr;gap:4px 0;margin:0 0 14px}
+  .svgwrap{display:none}.alt{display:block}
+  .vlab{font-size:11px}.vv{font-size:11px}
+  .vcol .vbars{padding:0}.vcols{gap:2px}
+}
+</style>
+</head>
+<body class="essay" id="top">
+<aside class="rail" id="rail" aria-label="Chapters">
+  <div class="rh"><a class="back" href="/annebecheru-preview/writing/">← All essays</a><button type="button" class="rx" aria-label="Close chapters">×</button></div>
+  <p class="rcap">Essay</p><p class="rtitle">Pre-mortem: why plans hide risk, and what 229 forecasts reveal</p>
+  <p class="rs" id="rs">Overview · 2 min</p><div class="rbar"><i id="rbar"></i></div>
+  <ol><li><a href="#overview" data-i="0"><span class="d"></span><span class="t">Overview</span><span class="m">2m</span></a></li><li><a href="#what-a-pre-mortem-is" data-i="1"><span class="d"></span><span class="t">What a pre-mortem is</span><span class="m">1m</span></a></li><li><a href="#the-evidence-part-1-the-planning-fallacy" data-i="2"><span class="d"></span><span class="t">The evidence, part 1: the planning fallacy</span><span class="m">1m</span></a></li><li><a href="#the-evidence-part-2-what-real-projects-cost" data-i="3"><span class="d"></span><span class="t">The evidence, part 2: what real projects cost</span><span class="m">2m</span></a></li><li><a href="#the-evidence-part-3-how-much-to-add" data-i="4"><span class="d"></span><span class="t">The evidence, part 3: how much to add</span><span class="m">1m</span></a></li><li><a href="#original-research-how-often-do-expert-forecasts-miss" data-i="5"><span class="d"></span><span class="t">Original research: how often do expert forecasts miss?</span><span class="m">3m</span></a></li><li><a href="#a-framework-the-four-views-of-a-plan" data-i="6"><span class="d"></span><span class="t">A framework: the Four Views of a Plan</span><span class="m">1m</span></a></li><li><a href="#how-to-run-a-30-minute-pre-mortem" data-i="7"><span class="d"></span><span class="t">How to run a 30-minute pre-mortem</span><span class="m">2m</span></a></li><li><a href="#what-this-means-for-leaders" data-i="8"><span class="d"></span><span class="t">What this means for leaders</span><span class="m">1m</span></a></li><li><a href="#common-mistakes" data-i="9"><span class="d"></span><span class="t">Common mistakes</span><span class="m">1m</span></a></li><li><a href="#methodology" data-i="10"><span class="d"></span><span class="t">Methodology</span><span class="m">1m</span></a></li><li><a href="#frequently-asked-questions" data-i="11"><span class="d"></span><span class="t">Frequently asked questions</span><span class="m">1m</span></a></li><li class="rf"><a href="#references" data-i="12"><span class="d"></span><span class="t">References</span></a></li></ol>
+  <a class="rhome" href="/annebecheru-preview/">Anne <em>Becheru</em></a>
+</aside>
+<div class="rail-scrim" aria-hidden="true"></div>
+<button type="button" class="rail-fab" aria-expanded="false" aria-controls="rail"><span class="ic" aria-hidden="true"><i></i><i></i><i></i></span> <span id="fabl">Chapters</span></button>
+<main class="cmain">
+<section class="chap ov" id="overview" data-i="0" data-label="Overview · 2 min">
+  <header class="cover"><span class="eyebrow">Essay</span><h1>Pre-mortem: why plans hide risk, and what 229 forecasts reveal</h1><p class="meta"><span>Brave New Media</span><i class="dot"></i><span>Published <time datetime="2026-11-03"><b>3 November 2026</b></time></span><i class="dot"></i><span>19 min read</span></p>
+  <div class="acts"><a class="btn" href="#what-a-pre-mortem-is">Start chapter 1 →</a><a class="btn ghost" href="#key-findings">Key findings ↓</a></div></header>
+  <div class="intro"><p><strong>A pre-mortem is a planning exercise in which a team imagines that its project has already failed and works backwards to explain why, before any money is committed.</strong> The psychologist Gary Klein described it in the <em>Harvard Business Review</em> in September 2007. In his version, team members assume that the project they are planning has just failed.<a class="fn" href="#ref-1">[1]</a> A post-mortem asks what killed the patient. A pre-mortem asks the same question while the patient can still be saved.</p>
+<p>This essay brings together three bodies of evidence on why plans need one. The first is psychology research on the planning fallacy, the habit of underestimating time and cost. The second is Oxford research on hundreds of real projects, from rail lines to IT systems, that ran over budget. The third is our own study of 229 quarterly forecasts made by US professional forecasters since 1968, compared with what the economy did. We close with a framework, the Four Views of a Plan, and a 30-minute pre-mortem any team can run this week.</p>
+<p><strong>Idea in brief</strong></p>
+<p><strong>The problem.</strong> A plan describes one future, the one its authors expect. In a study of 258 transport projects, actual costs were higher than estimated in 86% of cases.<a class="fn" href="#ref-3">[3]</a> Plans are not neutral forecasts. They lean towards hope.</p>
+<p><strong>Why it happens.</strong> People plan from the inside: the tasks, the team, the timeline in front of them. Even when students were asked to predict their finish date "if everything went as poorly as it possibly could," the average guess was still too early.<a class="fn" href="#ref-2">[2]</a></p>
+<p><strong>The gap.</strong> In our study of the Survey of Professional Forecasters, the median one-year forecast for US growth missed by more than one percentage point in 48% of 229 surveys. At the start of seven of the last eight recessions, the median forecast still showed growth. Yet in the same surveys the forecasters put the chance of a falling quarter at between 15% and 51%. The risk was written down. It just was not in the headline number.</p>
+<p><strong>The answer.</strong> Look at a plan from four sides: the inside view, the outside view (what happened to similar projects), the range of outcomes, and the failure view (the pre-mortem). Then give every top risk an owner and an early warning sign.</p></div>
+  <section class="kf2" id="key-findings"><div class="kh"><h2>Key findings</h2><span>The essay in 2 minutes</span></div><ol class="kgrid"><li><span class="kn">Finding 1</span><span class="big">55.5 days</span><h3>Even worst-case plans are too hopeful.</h3><p>Students predicted their thesis would take 33.9 days. <mark>It took 55.5</mark>. Their "everything goes wrong" estimate, 48.6 days, was still short, and only 48.7% finished by it.<a class="fn" href="#ref-2">[2]</a></p></li><li><span class="kn">Finding 2</span><span class="big">27.6%</span><h3>Cost overruns are the norm.</h3><p>Across 258 transport projects in 20 nations, costs averaged <mark>27.6% over estimate</mark>. In 1,471 IT projects, one in six overran by 200% on average.<a class="fn" href="#ref-3">[3]</a><a class="fn" href="#ref-6">[6]</a></p></li><li><span class="kn">Finding 3</span><span class="big">1.35 pts</span><h3>Expert forecasts miss by a lot, often.</h3><p>Across 229 quarterly surveys from 1968 to 2025, the median forecast of US growth over the next four quarters missed the outcome by <mark>1.35 percentage points</mark> on average. A quarter of forecasts missed by more than 2 points.<a class="fn" href="#ref-8">[8]</a><a class="fn" href="#ref-9">[9]</a></p></li><li><span class="kn">Finding 4</span><span class="big">7 of 8</span><h3>Point forecasts hide the risk that probabilities show.</h3><p>At the start of each recession since 1970, forecasters gave a falling quarter odds of 15% to 51%, yet the median growth forecast was positive in <mark>7 of 8</mark> cases.<a class="fn" href="#ref-8">[8]</a></p></li><li><span class="kn">Finding 5</span><span class="big">17.4%</span><h3>A year ahead, recessions look like any other year.</h3><p>Four quarters before each recession began, forecasters put the chance of a decline in that quarter at 10% to 30%. Their typical reading across all surveys was <mark>17.4%</mark>.<a class="fn" href="#ref-8">[8]</a></p></li></ol></section>
+</section>
+<section class="chap" id="what-a-pre-mortem-is" data-i="1" data-label="Chapter 1 of 11 · 15 min left">
+  <p class="clab">Chapter 1 · 1 min</p><h2>What a pre-mortem is</h2>
+  <p>A pre-mortem is a structured meeting, held before a decision is final, that treats failure as a fact and asks the team to explain it. A risk register lists the risks a team already knows. Reference class forecasting fixes a plan's numbers by starting from how similar projects turned out. A post-mortem comes too late to help the project it studies. The pre-mortem finds the risks nobody has written down yet, because nobody felt free to.</p>
+<h3 id="terms-used-in-this-essay">Terms used in this essay</h3>
+<div class="tbl"><table><thead><tr><th><strong>Term</strong></th><th><strong>Meaning</strong></th></tr></thead><tbody><tr><td>Pre-mortem</td><td>A meeting in which a team assumes its project has failed and lists the reasons, before the project starts.[1]</td></tr><tr><td>Planning fallacy</td><td>The tendency to believe your own project will go as planned while knowing that most similar projects ran late. The term comes from Kahneman and Tversky (1979).[2]</td></tr><tr><td>Inside view</td><td>Forecasting from the details of the project at hand: its tasks, team and obstacles.[5]</td></tr><tr><td>Outside view</td><td>Forecasting from the actual results of a group of similar past projects.[5]</td></tr><tr><td>Reference class forecasting</td><td>A method for taking the outside view: pick similar past projects, look at how they turned out, and start your estimate there.[5]</td></tr><tr><td>Optimism bias uplift</td><td>A percentage added to a budget, based on past overruns, to reach a chosen chance of staying within budget.[5]</td></tr><tr><td>Point forecast</td><td>A single number, such as "2% growth" or "launch in March". Most plans are point forecasts.</td></tr></tbody></table></div>
+  
+</section>
+<section class="chap" id="the-evidence-part-1-the-planning-fallacy" data-i="2" data-label="Chapter 2 of 11 · 14 min left">
+  <p class="clab">Chapter 2 · 1 min</p><h2>The evidence, part 1: the planning fallacy</h2>
+  <p>The best known test of the planning fallacy comes from Roger Buehler, Dale Griffin and Michael Ross, published in the <em>Journal of Personality and Social Psychology</em> in 1994.<a class="fn" href="#ref-2">[2]</a> They telephoned 37 psychology students in the final semester of an honours thesis course at the University of Waterloo. Each student gave three predictions: a best guess, a guess "if everything went as well as it possibly could," and a guess "if everything went as poorly as it possibly could." The course coordinator then recorded when each thesis was handed in.</p>
+<figure class="fig" id="fig-1"><h4 class="ft">Figure 1. Even the worst case was too hopeful</h4><div class="ch hb"><div class="r"><div class="lb">Optimistic prediction (everything goes as well as possible)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:45.67%"></i><b class="vl" style="left:calc(45.67% + 6px)">27.4</b></div></div><div class="r"><div class="lb">Best-guess prediction</div><div class="trk"><i class="bar navy" style="left:0.00%;width:56.50%"></i><b class="vl" style="left:calc(56.50% + 6px)">33.9</b></div></div><div class="r"><div class="lb">Pessimistic prediction (everything goes as poorly as possible)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:81.00%"></i><b class="vl in" style="right:20.00%;color:var(--paper)">48.6</b></div></div><div class="r"><div class="lb">Actual completion time</div><div class="trk"><i class="bar lime" style="left:0.00%;width:92.50%"></i><b class="vl in" style="right:8.50%;color:#0E1830">55.5</b></div></div><p class="axis">Days to finish</p><p class="note">Share who finished by the predicted date: optimistic 10.8%, best guess 29.7%, pessimistic 48.7%.</p></div><p class="cap"><em>Average predicted and actual days to finish an honours thesis, and the share of students who finished within each prediction. Source: Buehler, Griffin and Ross, Journal of Personality and Social Psychology, 1994, Study 1, Table 1.</em></p></figure>
+<p>The best guess averaged 33.9 days. The real average was 55.5, and fewer than a third of students (29.7%) finished by the date they named. The striking row is the pessimistic one. Asked to imagine everything going as badly as possible, students still came in a week short on average, and fewer than half (48.7%) beat even that date.<a class="fn" href="#ref-2">[2]</a></p>
+<p>This is the core of why plans hide risk. Planners are not lying or careless. They build the future from the parts they can see, and the rest never reaches the page. Kahneman's <a href="https://bravenewhive.com/readings/thinking-fast-and-slow-kahneman/"><em>Thinking, Fast and Slow</em></a> explains the mechanism at book length, and the Hive's entry on <a href="https://bravenewhive.com/branding/system-1-and-system-2/">System 1 and System 2</a> covers the fast, confident thinking behind it.</p>
+<h3 id="limits-of-this-evidence">Limits of this evidence</h3>
+<ul>
+<li>It is one study of 33 students (four had not finished when records stopped), not managers.</li>
+<li>A thesis is a solo task. Business plans involve teams, suppliers and buyers, which adds more ways to be late, not fewer.</li>
+</ul>
+  
+</section>
+<section class="chap" id="the-evidence-part-2-what-real-projects-cost" data-i="3" data-label="Chapter 3 of 11 · 13 min left">
+  <p class="clab">Chapter 3 · 2 min</p><h2>The evidence, part 2: what real projects cost</h2>
+  <p>The Oxford professor Bent Flyvbjerg and colleagues have collected data on how real projects compare with their approved estimates. Their 2002 paper in the <em>Journal of the American Planning Association</em> covered 258 transport projects worth $90 billion, in 20 nations on five continents.<a class="fn" href="#ref-3">[3]</a></p>
+<figure class="fig" id="fig-2"><h4 class="ft">Figure 2. Cost overruns by type of project</h4><div class="ch hb"><div class="r"><div class="lb">Rail (N = 58)</div><div class="trk"><i class="bar lime" style="left:0.00%;width:89.40%"></i><b class="vl in" style="right:11.60%;color:#0E1830">44.7%</b></div></div><div class="r"><div class="lb">Fixed links (bridges and tunnels) (N = 33)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:67.60%"></i><b class="vl" style="left:calc(67.60% + 6px)">33.8%</b></div></div><div class="r"><div class="lb">Roads (N = 167)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:40.80%"></i><b class="vl" style="left:calc(40.80% + 6px)">20.4%</b></div></div><div class="r"><div class="lb">All projects (N = 258)</div><div class="trk"><i class="bar gray" style="left:0.00%;width:55.20%"></i><b class="vl" style="left:calc(55.20% + 6px)">27.6%</b></div></div><p class="axis">Average cost overrun (%), 258 transport projects</p></div><p class="cap"><em>Average difference between actual and estimated construction cost, in percent of the estimate, constant prices. Source: Flyvbjerg, Holm and Buhl, Journal of the American Planning Association, 2002, Table 1.</em></p></figure>
+<p>For a randomly chosen project in the sample, the chance that actual costs exceeded the estimate was 86%. The authors found that cost underestimation appeared in all 20 nations studied.<a class="fn" href="#ref-3">[3]</a> In a 2014 overview, Flyvbjerg summed up the record for very large projects: nine out of ten have cost overruns, and overruns have stayed high and constant for the 70 years for which comparable data exist.<a class="fn" href="#ref-4">[4]</a></p>
+<p>The averages are only the start. The same overview lists some of the most famous overruns.</p>
+<figure class="fig" id="fig-3"><h4 class="ft">Figure 3. The most famous overruns</h4><div class="ch hb"><div class="r"><div class="lb">Suez Canal, Egypt</div><div class="trk"><i class="bar navy" style="left:0.00%;width:95.00%"></i><b class="vl in" style="right:6.00%;color:var(--paper)">1,900%</b></div></div><div class="r"><div class="lb">Scottish Parliament Building, Scotland</div><div class="trk"><i class="bar navy" style="left:0.00%;width:80.00%"></i><b class="vl" style="left:calc(80.00% + 6px)">1,600%</b></div></div><div class="r"><div class="lb">Sydney Opera House, Australia</div><div class="trk"><i class="bar lime" style="left:0.00%;width:70.00%"></i><b class="vl" style="left:calc(70.00% + 6px)">1,400%</b></div></div><div class="r"><div class="lb">Montreal Summer Olympics, Canada</div><div class="trk"><i class="bar navy" style="left:0.00%;width:65.00%"></i><b class="vl" style="left:calc(65.00% + 6px)">1,300%</b></div></div><div class="r"><div class="lb">Concorde supersonic aeroplane, UK and France</div><div class="trk"><i class="bar navy" style="left:0.00%;width:55.00%"></i><b class="vl" style="left:calc(55.00% + 6px)">1,100%</b></div></div><div class="r"><div class="lb">National Health Service IT system, UK</div><div class="trk"><i class="bar navy" style="left:0.00%;width:27.50%"></i><b class="vl" style="left:calc(27.50% + 6px)">550%</b></div></div><div class="r"><div class="lb">Boston&#x27;s Big Dig artery/tunnel project, USA</div><div class="trk"><i class="bar navy" style="left:0.00%;width:11.00%"></i><b class="vl" style="left:calc(11.00% + 6px)">220%</b></div></div><div class="r"><div class="lb">Denver international airport, USA</div><div class="trk"><i class="bar navy" style="left:0.00%;width:10.00%"></i><b class="vl" style="left:calc(10.00% + 6px)">200%</b></div></div><div class="r"><div class="lb">Channel tunnel, UK and France</div><div class="trk"><i class="bar gray" style="left:0.00%;width:4.00%"></i><b class="vl" style="left:calc(4.00% + 6px)">80%</b></div></div><p class="axis">Cost overrun (% of original estimate)</p><p class="note">Channel tunnel: the prospectus allowed 10%.</p></div><p class="cap"><em>Cost overrun in percent of the original estimate, for selected projects. Source: Flyvbjerg, Project Management Journal, 2014, Table 2.</em></p></figure>
+<p>The Channel Tunnel row carries a lesson about how plans talk about risk. At its public offering, Eurotunnel told investors that 10% "would be a reasonable allowance for the possible impact of unforeseen circumstances on construction costs." Construction costs went 80% over budget, and financing costs 140%.<a class="fn" href="#ref-4">[4]</a> The plan did mention risk. It priced it at an eighth of what arrived.</p>
+<h3 id="the-fat-tail-in-it-projects">The fat tail in IT projects</h3>
+<p>For most companies, the closest thing to a megaproject is a new IT system. Flyvbjerg and Alexander Budzier studied 1,471 IT projects for a 2011 <em>Harvard Business Review</em> article. The average cost overrun was 27%. But one project in six was what they called a black swan, with a cost overrun of 200% on average and a schedule overrun of almost 70%.<a class="fn" href="#ref-6">[6]</a></p>
+<p>Two of their examples come from supply chains. At Levi Strauss, an ERP migration with a proposed budget under $5 million left the company unable to fill orders, forced it to close its three US distribution centres for a week, and ended in a $192.5 million charge against earnings in the second quarter of 2008. At Hershey, a new order-taking and fulfilment system stopped the company shipping $100 million worth of candy in time for Halloween, and quarterly earnings fell 18.6%.<a class="fn" href="#ref-6">[6]</a> Neither failure was in the plan. Both were the kind of thing a warehouse supervisor might have named in a pre-mortem.</p>
+<h3 id="limits-of-this-evidence">Limits of this evidence</h3>
+<ul>
+<li>The transport and IT samples are mostly large public projects (92% of the IT sample was public agencies, 83% US-based).<a class="fn" href="#ref-6">[6]</a> A 40-person company's projects are smaller.</li>
+<li>Figure 3 shows the extreme tail, not the typical project.</li>
+</ul>
+<p>If you are planning a move into a new market or a new channel, the <a href="https://brave-new.com/audit/">Brave New audit</a> looks at the assumptions about buyers that sit inside that plan, before you spend against them.</p>
+  
+</section>
+<section class="chap" id="the-evidence-part-3-how-much-to-add" data-i="4" data-label="Chapter 4 of 11 · 11 min left">
+  <p class="clab">Chapter 4 · 1 min</p><h2>The evidence, part 3: how much to add</h2>
+  <p>Flyvbjerg's answer to the planning fallacy is reference class forecasting, built on the "outside view" described by Kahneman and Tversky. Lovallo and Kahneman (2003) traced the planning fallacy to the inside view: focusing on the parts of one project rather than the outcomes of similar projects already finished.<a class="fn" href="#ref-5">[5]</a> In the summer of 2004, the UK Department for Transport and HM Treasury decided to use reference class forecasting in the appraisal of large transport projects.<a class="fn" href="#ref-5">[5]</a></p>
+<p>The method turns past overruns into an uplift: the percentage to add to a budget for a chosen chance of staying within it.</p>
+<figure class="fig" id="fig-4"><h4 class="ft">Figure 4. What to add to a budget, by how sure you want to be</h4><div class="ch vb-wrap"><div class="lg"><span><i class="sw gray"></i>50% chance of staying in budget</span><span><i class="sw lime"></i>80% chance of staying in budget</span></div><div class="vchart" style="--h:240px"><div class="vplot"><u class="vzero" style="bottom:0.00%"></u></div><div class="vcols" style="--n:3"><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb gray" style="bottom:0.00%;height:23.08%"></i><b class="vv" style="bottom:23.08%">15%</b></div><div class="vbw"><i class="vb lime" style="bottom:0.00%;height:49.23%"></i><b class="vv" style="bottom:49.23%">32%</b></div></div><div class="vlab">Roads</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb gray" style="bottom:0.00%;height:35.38%"></i><b class="vv" style="bottom:35.38%">23%</b></div><div class="vbw"><i class="vb lime" style="bottom:0.00%;height:84.62%"></i><b class="vv" style="bottom:84.62%">55%</b></div></div><div class="vlab">Fixed links (bridges and tunnels)</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb gray" style="bottom:0.00%;height:61.54%"></i><b class="vv" style="bottom:61.54%">40%</b></div><div class="vbw"><i class="vb lime" style="bottom:0.00%;height:87.69%"></i><b class="vv" style="bottom:87.69%">57%</b></div></div><div class="vlab">Rail</div></div></div></div><p class="axis">Uplift added to budget (%)</p></div><p class="cap"><em>Optimism bias uplifts on capital costs, constant prices, as set out for the UK Department for Transport. Source: Flyvbjerg, Project Management Journal, 2006, Table 4.</em></p></figure>
+<p>Read across a row and you see the price of certainty. A road scheme that wants even odds of staying in budget adds 15%. One that wants to be 80% sure adds 32%. In Flyvbjerg's worked example, a motorway budget of £100 million, planned for an 80% chance of staying within it, becomes £132 million.<a class="fn" href="#ref-5">[5]</a> The plan did not change. Only the honesty about its range did.</p>
+  
+</section>
+<section class="chap" id="original-research-how-often-do-expert-forecasts-miss" data-i="5" data-label="Chapter 5 of 11 · 10 min left">
+  <p class="clab">Chapter 5 · 3 min</p><h2>Original research: how often do expert forecasts miss?</h2>
+  <p>The studies above describe projects. We wanted to test the same idea on some of the most closely watched forecasts there are: professional forecasts of the economy, which demand, pricing and hiring plans quietly depend on. So on 3 November 2026 we compared every quarterly Survey of Professional Forecasters since 1968 with what the US economy then did.</p>
+<p>The Survey of Professional Forecasters is run by the Federal Reserve Bank of Philadelphia. Each quarter, it asks a panel of professional forecasters for their view of real GDP growth for the current quarter and the next four, and for the probability that real GDP will fall in each of those quarters.<a class="fn" href="#ref-8">[8]</a> We took the median growth forecast for the four quarters starting with the survey quarter and compared it with actual growth over the same four quarters, using the latest figures published by the Philadelphia Fed's Real-Time Data Research Center.<a class="fn" href="#ref-9">[9]</a> The full method is at the end of this essay.</p>
+<h3 id="finding-1-half-of-forecasts-miss-by-more-than-a-point">Finding 1: half of forecasts miss by more than a point</h3>
+<figure class="fig" id="fig-5"><h4 class="ft">Figure 5. How far the forecast missed</h4><div class="ch vb-wrap"><div class="vchart" style="--h:240px"><div class="vplot"><u class="vzero" style="bottom:0.00%"></u></div><div class="vcols" style="--n:5"><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:75.00%"></i><b class="vv" style="bottom:75.00%">24%</b></div></div><div class="vlab">Under 0.5</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:87.19%"></i><b class="vv" style="bottom:87.19%">27.9%</b></div></div><div class="vlab">0.5 to 1</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb lime" style="bottom:0.00%;height:72.19%"></i><b class="vv" style="bottom:72.19%">23.1%</b></div></div><div class="vlab">1 to 2</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb lime" style="bottom:0.00%;height:53.12%"></i><b class="vv" style="bottom:53.12%">17%</b></div></div><div class="vlab">2 to 3</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb lime" style="bottom:0.00%;height:24.69%"></i><b class="vv" style="bottom:24.69%">7.9%</b></div></div><div class="vlab">Over 3</div></div></div></div><p class="axis">Share of surveys (%) by size of miss (percentage points)</p><p class="note">48% of the 229 surveys missed by more than a point. Surveys per group: 55, 64, 53, 39, 18.</p></div><p class="cap"><em>Absolute difference between the median forecast of US real GDP growth over four quarters and actual growth, 229 surveys from 1968 Q4 to 2025 Q4. Source: Brave New Media analysis of Federal Reserve Bank of Philadelphia data, 3 November 2026.</em></p></figure>
+<p>On average, forecasts were close: a mean forecast of 2.67% growth against a mean outcome of 2.74%. The average hides the spread. The typical miss was 1.35 percentage points, 48% of surveys missed by more than a point, and a quarter (24.9%) missed by more than two. In an economy that grows around 2.7% a year, a two-point miss is the difference between a good year and a flat one.</p>
+<p>The misses were not evenly spread. In the 57 surveys whose four-quarter window included a recession, outcomes fell short of the forecast 63.2% of the time, by 1.18 points on average, and the typical miss doubled to 2.15 points. In the 172 surveys that covered only expansion, the typical miss was 1.08 points and outcomes beat the forecast more often than not.</p>
+<h3 id="finding-2-the-risk-was-in-the-probability-not-the-plan">Finding 2: the risk was in the probability, not the plan</h3>
+<figure class="fig" id="fig-6"><h4 class="ft">Figure 6. What forecasters said as each recession began</h4><div class="svgwrap"><div class="ch vb-wrap"><div class="lg"><span><i class="sw navy"></i>Median forecast</span><span><i class="sw gray"></i>Actual growth</span></div><div class="vchart" style="--h:260px"><div class="vplot"><u class="vzero" style="bottom:51.52%"></u></div><div class="vcols" style="--n:8"><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:51.52%;height:34.05%"></i><b class="vv" style="bottom:85.57%">1.88</b></div><div class="vbw"><i class="vb gray" style="bottom:48.44%;height:3.08%"></i><b class="vv" style="top:51.56%">-0.17</b></div></div><div class="vlab">1970Q1</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:51.52%;height:11.95%"></i><b class="vv" style="bottom:63.47%">0.66</b></div><div class="vbw"><i class="vb gray" style="bottom:40.11%;height:11.41%"></i><b class="vv" style="top:59.89%">-0.63</b></div></div><div class="vlab">1973Q4</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:40.11%;height:11.41%"></i><b class="vv" style="top:59.89%">-0.63</b></div><div class="vbw"><i class="vb gray" style="bottom:50.80%;height:0.72%"></i><b class="vv" style="top:49.20%">-0.04</b></div></div><div class="vlab">1980Q1</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:51.52%;height:43.28%"></i><b class="vv" style="bottom:94.81%">2.39</b></div><div class="vbw"><i class="vb gray" style="bottom:33.23%;height:18.29%"></i><b class="vv" style="top:66.77%">-1.01</b></div></div><div class="vlab">1981Q3</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:51.52%;height:17.21%"></i><b class="vv" style="bottom:68.73%">0.95</b></div><div class="vbw"><i class="vb gray" style="bottom:41.74%;height:9.78%"></i><b class="vv" style="top:58.26%">-0.54</b></div></div><div class="vlab">1990Q3</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:51.52%;height:40.39%"></i><b class="vv" style="bottom:91.91%">2.23</b></div><div class="vbw"><i class="vb gray" style="bottom:51.52%;height:24.27%"></i><b class="vv" style="bottom:75.79%">1.34</b></div></div><div class="vlab">2001Q2</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:51.52%;height:34.23%"></i><b class="vv" style="bottom:85.75%">1.89</b></div><div class="vbw"><i class="vb gray" style="bottom:5.52%;height:46.00%"></i><b class="vv" style="top:94.48%">-2.54</b></div></div><div class="vlab">2008Q1</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:51.52%;height:35.86%"></i><b class="vv" style="bottom:87.38%">1.98</b></div><div class="vbw"><i class="vb gray" style="bottom:34.86%;height:16.66%"></i><b class="vv" style="top:65.14%">-0.92</b></div></div><div class="vlab">2020Q1</div></div></div></div><p class="axis">Growth over the next four quarters (%)</p><p class="note">Chance forecasters gave to a falling quarter (the anxious index), by recession start: 1970Q1 45.9%, 1973Q4 47.4%, 1980Q1 50.6%, 1981Q3 35.2%, 1990Q3 41.5%, 2001Q2 28.8%, 2008Q1 42.9%, 2020Q1 14.9%.</p></div></div><div class="alt"><div class="tbl"><table><thead><tr><th><strong>Recession began</strong></th><th><strong>Median forecast, next four quarters (%)</strong></th><th><strong>Actual growth, same four quarters (%)</strong></th><th><strong>Chance of a fall in the next quarter (%)</strong></th></tr></thead><tbody><tr><td>1970 Q1</td><td>1.88</td><td>-0.17</td><td>45.9</td></tr><tr><td>1973 Q4</td><td>0.66</td><td>-0.63</td><td>47.4</td></tr><tr><td>1980 Q1</td><td>-0.63</td><td>-0.04</td><td>50.6</td></tr><tr><td>1981 Q3</td><td>2.39</td><td>-1.01</td><td>35.2</td></tr><tr><td>1990 Q3</td><td>0.95</td><td>-0.54</td><td>41.5</td></tr><tr><td>2001 Q2</td><td>2.23</td><td>1.34</td><td>28.8</td></tr><tr><td>2008 Q1</td><td>1.89</td><td>-2.54</td><td>42.9</td></tr><tr><td>2020 Q1</td><td>1.98</td><td>-0.92</td><td>14.9</td></tr></tbody></table></div></div><p class="cap"><em>Survey taken in the first quarter of each NBER recession. Growth forecast is the median response; probability is the mean response for a decline in real GDP in the quarter after the survey (the Anxious Index). Actual growth is the latest published estimate. Source: Brave New Media analysis of Federal Reserve Bank of Philadelphia and FRED data, 3 November 2026.</em></p></figure>
+<p>This is the clearest picture we know of how a plan hides risk. In seven of the eight surveys taken as a recession was starting, the median forecast still showed growth over the next year. Growth over that year then turned out negative in seven of the eight, though only by 0.04 points in 1980.</p>
+<p>But the forecasters were not blind. In the same surveys, the average probability they gave to a falling quarter was between 29% and 51% in seven of eight cases, against an average of 19.3% across all 232 surveys. The risk was on the form. It simply did not survive the trip into the single number that a budget or a sales plan would use. The exception, 2020, makes the point from the other side: responses were due by mid-February 2020, before the pandemic reached the US economy, and no plan could have priced it.</p>
+<h3 id="finding-3-a-year-out-recessions-look-like-ordinary-years">Finding 3: a year out, recessions look like ordinary years</h3>
+<figure class="fig" id="fig-7"><h4 class="ft">Figure 7. A year ahead, the warning was faint</h4><div class="ch vb-wrap"><div class="vchart" style="--h:240px"><div class="vplot"><u class="vref" style="bottom:43.50%"></u><u class="vzero" style="bottom:0.00%"></u></div><div class="vcols" style="--n:7"><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:32.75%"></i><b class="vv" style="bottom:32.75%">13.1%</b></div></div><div class="vlab">1973Q4</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:75.50%"></i><b class="vv" style="bottom:75.50%">30.2%</b></div></div><div class="vlab">1980Q1</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:25.00%"></i><b class="vv" style="bottom:25.00%">10%</b></div></div><div class="vlab">1981Q3</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:72.75%"></i><b class="vv" style="bottom:72.75%">29.1%</b></div></div><div class="vlab">1990Q3</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:45.25%"></i><b class="vv" style="bottom:45.25%">18.1%</b></div></div><div class="vlab">2001Q2</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:37.50%"></i><b class="vv" style="bottom:37.50%">15%</b></div></div><div class="vlab">2008Q1</div></div><div class="vcol"><div class="vbars"><div class="vbw"><i class="vb navy" style="bottom:0.00%;height:54.75%"></i><b class="vv" style="bottom:54.75%">21.9%</b></div></div><div class="vlab">2020Q1</div></div></div></div><p class="note"><u class="rk"></u> Typical reading, all surveys (median): 17.4%</p><p class="axis">Probability of a decline (%), one year before each recession began</p></div><p class="cap"><em>Mean probability that real GDP would fall in the fourth quarter after the survey, which was the quarter each recession began. The 1969 Q1 survey did not report this horizon. Source: Brave New Media analysis of Federal Reserve Bank of Philadelphia data, 3 November 2026.</em></p></figure>
+<p>Most annual plans are written about a year ahead. A year before each recession, the forecasters' odds of a decline in the quarter it would start sat between 10% and 30%, close to their typical reading of 17.4%. From twelve months out, the year a recession arrives looks much like any other year. If the best-resourced forecasters in the US miss by more than a point half the time, a company's sales forecast will miss too. A plan written a year ahead has to carry its own range, and ask what the team would do at the bottom of it. That is the question a pre-mortem forces.</p>
+  
+</section>
+<section class="chap" id="a-framework-the-four-views-of-a-plan" data-i="6" data-label="Chapter 6 of 11 · 7 min left">
+  <p class="clab">Chapter 6 · 1 min</p><h2>A framework: the Four Views of a Plan</h2>
+  <p>The evidence points to four ways of looking at any plan. Each catches something the others miss. Most plans only ever get the first.</p>
+<div class="tbl"><table><thead><tr><th><strong>View</strong></th><th><strong>Question it answers</strong></th><th><strong>Evidence</strong></th><th><strong>What to produce</strong></th></tr></thead><tbody><tr><td>1. Inside view</td><td>What will it take if things go as we expect?</td><td>Useful for organising work, but biased: even worst-case student estimates fell short.[2]</td><td>Tasks, owners, timeline, budget</td></tr><tr><td>2. Outside view</td><td>How did similar projects turn out?</td><td>Costs exceeded estimates in 86% of 258 projects; UK appraisal uses uplifts of 15% to 57%.[3][5]</td><td>A reference class and an uplift on time and cost</td></tr><tr><td>3. Range view</td><td>How wide is the spread of outcomes, and what is in the tail?</td><td>One IT project in six overran by 200%; expert growth forecasts missed by over a point in 48% of surveys.[6]</td><td>A low case, a base case and a high case, with the low case funded</td></tr><tr><td>4. Failure view</td><td>It failed. Why?</td><td>Professional forecasters wrote recession risk on the form but not into the number.</td><td>A pre-mortem list: top risks, owners, early warning signs</td></tr></tbody></table></div>
+<p>Run them in order. The outside view corrects the plan's numbers, the range view sets the cushion, and the failure view finds the specific risks no reference class will show, such as the one supplier everyone knows is fragile.</p>
+  
+</section>
+<section class="chap" id="how-to-run-a-30-minute-pre-mortem" data-i="7" data-label="Chapter 7 of 11 · 6 min left">
+  <p class="clab">Chapter 7 · 2 min</p><h2>How to run a 30-minute pre-mortem</h2>
+  <p>This is the method we recommend for a growing business. It works with two people or twelve.</p>
+<h3 id="step-1-name-the-plan-and-the-date-3-minutes">Step 1: Name the plan and the date (3 minutes)</h3>
+<p>Name one specific plan: a product launch, a new distributor, a price change, an ERP switch, an entry into a new country. Pick the date by which you would know whether it worked, usually 6 to 12 months out. Write both where everyone can see them.</p>
+<h3 id="step-2-announce-the-failure-2-minutes">Step 2: Announce the failure (2 minutes)</h3>
+<p>Say it plainly: "It's next October. This launch failed. It cost us money." Do not soften it to "underperformed". Klein's design depends on the team treating failure as something that has already happened.<a class="fn" href="#ref-1">[1]</a></p>
+<h3 id="step-3-write-alone-in-silence-8-minutes">Step 3: Write alone, in silence (8 minutes)</h3>
+<p>Each person writes their own list of reasons. No talking, because the first voice shapes the rest. Ask for specifics: "the casting supplier missed the March delivery" beats "operations problems".</p>
+<p class="tip"><strong>Tip:</strong> The leader writes too, and shares last. If the founder's reasons come first, the team stops at those.</p>
+<h3 id="step-4-share-one-reason-at-a-time-10-minutes">Step 4: Share one reason at a time (10 minutes)</h3>
+<p>Go round the room, one reason per person per turn, until the lists run out. Record every reason. Group similar ones. No debate yet.</p>
+<h3 id="step-5-pick-three-and-give-each-an-owner-and-a-signal-7-minutes">Step 5: Pick three, and give each an owner and a signal (7 minutes)</h3>
+<p>Vote on the three reasons that are most likely or would hurt most. For each, agree who owns it and what early sign would show it starting. Then change the plan where you can.</p>
+<p>This case is made up, but it is typical. Say a 60-person food-packaging manufacturer plans to start selling through distributors in a second country. Its pre-mortem might end like this:</p>
+<div class="tbl"><table><thead><tr><th><strong>Risk found</strong></th><th><strong>Owner</strong></th><th><strong>Early warning sign</strong></th><th><strong>Plan change</strong></th></tr></thead><tbody><tr><td>Launch slips because the one approved casting supplier is late</td><td>Operations lead</td><td>Fewer than 2 sample batches confirmed by week 6</td><td>Qualify a second supplier before launch</td></tr><tr><td>First distributors order once and stop</td><td>Sales lead</td><td>Fewer than half reorder within 90 days</td><td>Add a technical onboarding call for each distributor</td></tr><tr><td>A quality complaint spreads before we can respond</td><td>Marketing lead</td><td>Any public complaint or returned batch</td><td>Write a response plan before launch</td></tr></tbody></table></div>
+<p>The last row matters more than most teams expect. The Hive explains <a href="https://bravenewhive.com/reputation/reputation-risk/">reputation risk</a>, and the <a href="https://bravenewhive.com/reputation/the-tylenol-case-1982/">Tylenol case of 1982</a> shows how an event outside any plan can land on a company. A pre-mortem cannot predict that kind of event. It can settle in advance who speaks and what happens first.</p>
+<h3 id="then-fix-the-numbers">Then fix the numbers</h3>
+<p>Pull the planned and actual time and cost for your last five similar projects, start from their typical overrun, and only then adjust for what is truly different. Gathering that history by hand is slow, which is why most teams skip it. It is the kind of job we build AI flows for: pulling past quotes, lead times and project records into one view, so a team can check a new plan against its own history before taking an idea to more markets and more buyers.</p>
+<h3 id="which-to-do-first">Which to do first</h3>
+<div class="tbl"><table><thead><tr><th><strong>Action</strong></th><th><strong>View</strong></th><th><strong>Effort</strong></th><th><strong>Likely impact</strong></th><th><strong>When</strong></th></tr></thead><tbody><tr><td>30-minute pre-mortem on the next big decision</td><td>Failure</td><td>Low</td><td>High</td><td>This week</td></tr><tr><td>List your last five projects: planned vs actual time and cost</td><td>Outside</td><td>Low</td><td>High</td><td>This month</td></tr><tr><td>Add a low case to the budget and fund it</td><td>Range</td><td>Low to medium</td><td>High</td><td>Next budget cycle</td></tr><tr><td>Owner and early warning sign for each top risk</td><td>Failure</td><td>Low</td><td>Medium</td><td>Same meeting</td></tr><tr><td>A standing reference-class database for quotes and projects</td><td>Outside</td><td>Medium</td><td>High</td><td>Ongoing</td></tr></tbody></table></div>
+  
+</section>
+<section class="chap" id="what-this-means-for-leaders" data-i="8" data-label="Chapter 8 of 11 · 4 min left">
+  <p class="clab">Chapter 8 · 1 min</p><h2>What this means for leaders</h2>
+  <p>For a manufacturer or a supply-chain business, the riskiest plans are usually growth plans: a new market, a new channel, a new system to support more customers. They are new to the team, so the inside view is weakest. They depend on distributors, suppliers and regulators who are not in the planning meeting. And they are written about a year out, the horizon at which, in our data, a coming downturn looked like any other year.</p>
+<p>The evidence does not say "do not expand". Several projects in Figure 3, such as the Sydney Opera House, are now landmarks. It says that a growth plan should carry its range openly, start its numbers from what similar moves cost, and be put through a pre-mortem by the people closest to the operation. Companies that do this can move into more markets with fewer surprises, because the surprises were named first.</p>
+<p>If you want an AI flow that tests a growth plan against your own history and the buyers in each new market, start with the <a href="https://brave-new.com/audit/">Brave New audit</a>.</p>
+  
+</section>
+<section class="chap" id="common-mistakes" data-i="9" data-label="Chapter 9 of 11 · 3 min left">
+  <p class="clab">Chapter 9 · 1 min</p><h2>Common mistakes</h2>
+  <ul>
+<li><strong>Running the pre-mortem after the contract is signed.</strong> Once money is spent, nobody says what they think. Hold it before the commitment.</li>
+<li><strong>Talking before writing, or softening the failure.</strong> The loudest voice sets the list, and "it underperformed" gets mild answers.</li>
+<li><strong>Blaming only the outside world.</strong> The economy and competitors are easy targets. Push for reasons inside your control: hiring, cash, suppliers, timing.</li>
+<li><strong>Ending with a list.</strong> A risk without an owner and an early warning sign changes nothing.</li>
+<li><strong>Trusting the average.</strong> A 27% average overrun is survivable. The one-in-six 200% overrun is the kind that has brought down whole companies, such as Kmart.<a class="fn" href="#ref-6">[6]</a></li>
+<li><strong>Treating a point forecast as the plan.</strong> In our data, the risk was in the probability column, not the headline number.</li>
+</ul>
+<p>The Hive's entry on <a href="https://bravenewhive.com/branding/loss-aversion-in-marketing/">loss aversion</a> explains part of why this is hard: imagining a loss is uncomfortable, and that discomfort is what makes the exercise useful.</p>
+  
+</section>
+<section class="chap" id="methodology" data-i="10" data-label="Chapter 10 of 11 · 2 min left">
+  <p class="clab">Chapter 10 · 1 min</p><h2>Methodology</h2>
+  <p><strong>Data.</strong> The Federal Reserve Bank of Philadelphia's Survey of Professional Forecasters (SPF): the file of median forecasts for real GDP growth (quarter-on-quarter, annualised, for the survey quarter and the next four) and the file of mean probabilities of a decline in real GDP (RECESS1 to RECESS5).<a class="fn" href="#ref-8">[8]</a> Actual growth came from the Philadelphia Fed Real-Time Data Research Center file for real GNP/GDP (ROUTPUT), "most recent" release, last updated 30 October 2026.<a class="fn" href="#ref-9">[9]</a> Recession dates came from the NBER-based indicator USREC on FRED.<a class="fn" href="#ref-10">[10]</a> All files were downloaded on 3 November 2026 with a script that identified itself as "BraveNewResearch/1.0".</p>
+<p><strong>Measures.</strong> The forecast is the median growth forecast for the survey quarter and the next three quarters, compounded into four-quarter growth. The actual is the same four quarters compounded from the latest data. A survey window counts as containing a recession if any of its quarters includes an NBER recession month. For Figure 6 we used the survey taken in the first quarter of each recession and the mean probability of a decline in the following quarter, which the Philadelphia Fed calls the Anxious Index. For Figure 7 we used the survey four quarters earlier and the probability of a decline in the fourth quarter after the survey.</p>
+<p><strong>Denominators.</strong> 229 surveys from 1968 Q4 to 2025 Q4 had both a forecast and a full four quarters of actual data. 57 windows contained a recession and 172 did not. Probability data were available for 232 surveys at the one-quarter horizon and 228 at the four-quarter horizon. Eight recessions began after the survey started, from 1970 to 2020.</p>
+<p><strong>Robustness.</strong> Using the BEA's third estimate instead of the latest data (224 surveys), the average miss was 1.28 points and 46.0% of surveys missed by more than a point.</p>
+<p><strong>Limits.</strong> Before 1992 the survey asked about real GNP, and later data revisions change the "actual" figures. We measured the median forecaster and the whole US economy, not any company's sales. Scripts and data are published with this essay.</p>
+  
+</section>
+<section class="chap" id="frequently-asked-questions" data-i="11" data-label="Chapter 11 of 11 · 1 min left">
+  <p class="clab">Chapter 11 · 1 min</p><h2>Frequently asked questions</h2>
+  <div class="faqs"><details class="faq"><summary>What is a pre-mortem in business?</summary><p>A pre-mortem is a short team meeting held before a project starts. The leader tells the team the project has already failed, and each person writes down why. The group shares the reasons, picks the most serious, and changes the plan. Gary Klein described the method in Harvard Business Review in September 2007.</p></details><details class="faq"><summary>What is the difference between a pre-mortem and a post-mortem?</summary><p>A post-mortem happens after a project ends and asks what went wrong. A pre-mortem happens before it starts and asks what will have gone wrong, as if failure already happened. The questions are similar. The timing is the point: a pre-mortem gives you the lessons while you can still act on them.</p></details><details class="faq"><summary>What is the planning fallacy?</summary><p>The planning fallacy is the tendency to believe your own project will go to plan while knowing that most similar projects ran late or over budget. Kahneman and Tversky named it in 1979. In one study, students predicted their thesis would take 33.9 days. It took 55.5, and even their worst-case estimate was too short.</p></details><details class="faq"><summary>How much should I add to a project budget for risk?</summary><p>Start from how similar projects turned out. UK transport appraisal adds 15% to road budgets for even odds of staying within them, and 32% for 80% confidence. Rail adds 40% and 57%. For your own business, use your last five comparable projects as the reference class and add their typical overrun.</p></details><details class="faq"><summary>How accurate are economic forecasts for business planning?</summary><p>Less accurate than most plans assume. In our study of 229 quarterly surveys of US professional forecasters since 1968, the median one-year growth forecast missed by more than one percentage point 48% of the time. At the start of seven of the last eight recessions, the median forecast still showed growth.</p></details></div>
+  <section class="next"><h2>Your next step</h2><p>The investor Howard Marks likes to quote the London Business School professor Elroy Dimson: "Risk means more things can happen than will happen." Marks adds that people who rely heavily on forecasts "seem to think there's only one possibility."<a class="fn" href="#ref-7">[7]</a> A plan is that kind of forecast.</p>
+<p>This week, pick the next decision that will cost real money. Book 30 minutes with the three people closest to it, tell them it failed, and give them eight quiet minutes to write why. Then pull the planned and actual numbers for your last five similar projects. Leave with three risks, three owners, three warning signs and one honest uplift.</p>
+<p>If the plan is about growing your customer base or entering a new market, start with the <a href="https://brave-new.com/audit/">Brave New audit</a>.</p>
+<p><em>Brave New Media is a marketing agency that builds AI flows to help companies scale their ideas, grow their customer base and expand into new markets, with experience across supply chain and manufacturing.</em></p></section><section class="seealso"><h2>See also</h2><ul>
+<li><a href="https://bravenewhive.com/readings/thinking-fast-and-slow-kahneman/">Thinking, Fast and Slow</a>, Brave New Hive</li>
+<li><a href="https://bravenewhive.com/reputation/reputation-risk/">Reputation risk</a>, Brave New Hive</li>
+<li><a href="https://brave-new.com/journal/">The Brave New Business Journal</a>, weekly thinking on supply chains, risk and growth</li>
+<li><a href="https://brave-new.com/qa/">Brave New Q&amp;A</a>, answers to the questions owners ask most</li>
+</ul></section><nav class="pn" aria-label="More essays"><a class="pv" href="/annebecheru-preview/writing/orchestration-costed/"><small>Previous essay</small><span>Orchestration, costed</span></a><a class="nx" href="/annebecheru-preview/writing/price-versus-value/"><small>Next essay</small><span>Price versus value</span></a></nav>
+</section>
+<section class="chap refs" id="references" data-i="12" data-label="References">
+  <h2>References</h2><p class="ref" id="ref-1"><span>1.</span> Klein, G. "Performing a Project Premortem." Harvard Business Review, September 2007. <a href="https://hbr.org/2007/09/performing-a-project-premortem">hbr.org</a></p><p class="ref" id="ref-2"><span>2.</span> Buehler, R., Griffin, D. and Ross, M. "Exploring the 'Planning Fallacy': Why People Underestimate Their Task Completion Times." Journal of Personality and Social Psychology, 67(3), 1994, pp. 366 to 381. <a href="https://bear.warrington.ufl.edu/brenner/mar7588/Papers/buehler-et-al-1994.pdf">bear.warrington.ufl.edu</a></p><p class="ref" id="ref-3"><span>3.</span> Flyvbjerg, B., Holm, M. S. and Buhl, S. "Underestimating Costs in Public Works Projects: Error or Lie?" Journal of the American Planning Association, 68(3), 2002, pp. 279 to 295. <a href="https://arxiv.org/abs/1303.6604">arxiv.org/abs/1303.6604</a></p><p class="ref" id="ref-4"><span>4.</span> Flyvbjerg, B. "What You Should Know about Megaprojects and Why: An Overview." Project Management Journal, 45(2), 2014, pp. 6 to 19. <a href="https://arxiv.org/abs/1409.0003">arxiv.org/abs/1409.0003</a></p><p class="ref" id="ref-5"><span>5.</span> Flyvbjerg, B. "From Nobel Prize to Project Management: Getting Risks Right." Project Management Journal, 37(3), 2006, pp. 5 to 15. <a href="https://arxiv.org/abs/1302.3642">arxiv.org/abs/1302.3642</a></p><p class="ref" id="ref-6"><span>6.</span> Flyvbjerg, B. and Budzier, A. "Why Your IT Project May Be Riskier than You Think." Harvard Business Review, 89(9), September 2011, pp. 23 to 25. <a href="https://arxiv.org/abs/1304.0265">arxiv.org/abs/1304.0265</a></p><p class="ref" id="ref-7"><span>7.</span> Marks, H. "Risk Revisited Again." Memo to Oaktree clients, 8 June 2015. <a href="https://www.oaktreecapital.com/docs/default-source/memos/2015-06-08-risk-revisited-again.pdf">oaktreecapital.com</a></p><p class="ref" id="ref-8"><span>8.</span> Federal Reserve Bank of Philadelphia. Survey of Professional Forecasters: median real GDP growth and mean probability of decline in real GDP. <a href="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/survey-of-professional-forecasters">philadelphiafed.org</a></p><p class="ref" id="ref-9"><span>9.</span> Federal Reserve Bank of Philadelphia, Real-Time Data Research Center. Real GNP/GDP (ROUTPUT), first, second, third and most recent releases. <a href="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/first-second-third">philadelphiafed.org</a></p><p class="ref" id="ref-10"><span>10.</span> Federal Reserve Bank of St. Louis. NBER based Recession Indicators for the United States (USREC). <a href="https://fred.stlouisfed.org/series/USREC">fred.stlouisfed.org</a></p><p class="ref" id="ref-11"><span>11.</span> Brave New Media. Forecast-versus-outcome study of 229 Survey of Professional Forecasters surveys, 3 November 2026. Data published with this essay.</p>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap">
+      <div style="max-width:520px"><b style="color:#F2F4F8;font-family:'Hanken Grotesk';font-size:20px">Anne Becheru</b><p style="margin:8px 0 0">AI marketer, founder of Brave New and the Brave New Hive, investor.</p></div>
+      <div><a href="https://www.linkedin.com/in/anne-becheru">LinkedIn</a><a href="https://brave-new.com/">Brave New</a><a href="https://bravenewhive.com/">The Hive</a><a href="https://www.youtube.com/@BraveNewMediaOfficial">YouTube</a><a href="https://www.instagram.com/bravenew.media/">Instagram</a><a href="https://www.linkedin.com/company/brave-new/">Brave New on LinkedIn</a><a href="mailto:anne@brave-new.com">Email</a></div>
+    </div>
+    <div class="word">Anne <em>Becheru</em></div>
+    <p style="margin-top:28px;font-size:14px">© 2026 Anne Becheru · A Brave New production · Last updated 26 October 2026</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var chs=[].slice.call(document.querySelectorAll('.chap'));if(!chs.length)return;
+  var links=[].slice.call(document.querySelectorAll('.rail ol a')),rs=document.getElementById('rs'),
+      bar=document.getElementById('rbar'),fab=document.querySelector('.rail-fab'),fabl=document.getElementById('fabl'),
+      list=document.querySelector('.rail ol'),cur=-1,ticking=false;
+  function close(){document.body.classList.remove('rail-open');fab.setAttribute('aria-expanded','false');}
+  function update(){
+    ticking=false;
+    var y=window.scrollY,line=window.innerHeight*0.3,on=0;
+    for(var k=0;k<chs.length;k++){if(chs[k].getBoundingClientRect().top<=line)on=k;}
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    if(h>0&&y>=h-4)on=chs.length-1;
+    bar.style.width=(h>0?Math.min(100,y/h*100):0)+'%';
+    if(on===cur)return;cur=on;
+    var ch=chs[on],i=+ch.getAttribute('data-i');
+    links.forEach(function(a){var j=+a.getAttribute('data-i');a.classList.toggle('done',j<i);
+      if(j===i){a.setAttribute('aria-current','true');
+        var r=a.getBoundingClientRect(),lr=list.getBoundingClientRect();
+        if(r.top<lr.top+8||r.bottom>lr.bottom-8)list.scrollTop+=r.top-lr.top-lr.height/3;}
+      else a.removeAttribute('aria-current');});
+    rs.textContent=ch.getAttribute('data-label');fabl.textContent=ch.getAttribute('data-label').split(' · ')[0];
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
+  window.addEventListener('resize',update);update();
+  document.querySelector('.rail').addEventListener('click',function(ev){if(ev.target.closest('ol a'))close();});
+  fab.addEventListener('click',function(){var o=document.body.classList.toggle('rail-open');fab.setAttribute('aria-expanded',o?'true':'false');});
+  document.querySelector('.rail-scrim').addEventListener('click',close);
+  document.querySelector('.rx').addEventListener('click',close);
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape')close();});
+})();
+</script>
+<script>
+(function(){
+  // Footnotes: on wide screens each reference sits in the right margin level with its marker;
+  // narrower, a tap opens the reference under the paragraph. The References list stays at the end.
+  var main=document.querySelector('.cmain');if(!main)return;
+  var fns=[].slice.call(document.querySelectorAll('.chap:not(.refs) a.fn'));
+  function refText(n){var r=document.getElementById('ref-'+n);if(!r)return '';var c=r.cloneNode(true);var sp=c.querySelector('span');if(sp)sp.remove();return c.innerHTML.trim();}
+  function place(){
+    [].slice.call(main.querySelectorAll('.sn')).forEach(function(x){x.remove();});
+    if(window.innerWidth<1300)return;
+    var mt=main.getBoundingClientRect().top+window.scrollY,lastBottom=-1;
+    fns.forEach(function(a){
+      var n=a.getAttribute('href').slice(5),y=a.getBoundingClientRect().top+window.scrollY-mt-4;
+      var s=document.createElement('aside');s.className='sn';s.innerHTML='<b>'+n+'</b>'+refText(n);
+      main.appendChild(s);if(y<lastBottom+10)y=lastBottom+10;s.style.top=y+'px';lastBottom=y+s.offsetHeight;
+      a._sn=s;});
+  }
+  fns.forEach(function(a){
+    a.addEventListener('mouseenter',function(){if(a._sn)a._sn.classList.add('hi');});
+    a.addEventListener('mouseleave',function(){if(a._sn)a._sn.classList.remove('hi');});
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();if(window.innerWidth>=1300)return;
+      var blk=a.closest('p,li,figure,td')||a.parentNode,nx=blk.nextElementSibling;
+      if(nx&&nx.classList.contains('fnpop')){nx.remove();return;}
+      var n=a.getAttribute('href').slice(5),d=document.createElement('div');d.className='fnpop';d.setAttribute('role','note');
+      d.innerHTML='<b>'+n+'</b>'+refText(n)+'<button type="button" aria-label="Close">×</button>';
+      d.querySelector('button').addEventListener('click',function(){d.remove();});blk.after(d);});
+  });
+  var t;function later(){clearTimeout(t);t=setTimeout(place,150);}
+  window.addEventListener('resize',later);window.addEventListener('load',place);
+  [].slice.call(document.querySelectorAll('details')).forEach(function(d){d.addEventListener('toggle',later);});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);place();
+})();
+</script>
+</body>
+</html>

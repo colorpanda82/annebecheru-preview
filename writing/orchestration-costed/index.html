@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Orchestration Costed: Token Prices vs Human Time Data</title>
+<meta name="description" content="AI orchestration costed with data: 11 AI models priced per token against BLS wages for 7 marketing tasks, and why review time, not model price, decides the bill.">
+<link rel="canonical" href="https://annebecheru.com/writing/orchestration-costed/">
+<meta property="og:title" content="AI Orchestration Costed: Token Prices vs Human Time Data">
+<meta property="og:description" content="AI orchestration costed with data: 11 AI models priced per token against BLS wages for 7 marketing tasks, and why review time, not model price, decides the bill.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-11-03">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "AI orchestration, costed: what AI marketing work really costs",
+      "description": "AI orchestration costed with data: 11 AI models priced per token against BLS wages for 7 marketing tasks, and why review time, not model price, decides the bill.",
+      "url": "https://annebecheru.com/writing/orchestration-costed/",
+      "mainEntityOfPage": "https://annebecheru.com/writing/orchestration-costed/",
+      "datePublished": "2026-11-03",
+      "dateModified": "2026-11-03",
+      "author": {
+        "@id": "https://brave-new.com/#org"
+      },
+      "publisher": {
+        "@id": "https://brave-new.com/#org"
+      },
+      "keywords": "AI orchestration, AI workflow automation, cost of AI, AI automation ROI, human in the loop, AI API pricing, AI marketing cost",
+      "citation": [
+        "https://en.wikipedia.org/wiki/Orchestration_(computing",
+        "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+        "https://pubmed.ncbi.nlm.nih.gov/37440646/",
+        "https://www.nber.org/papers/w31161",
+        "https://docs.claude.com/en/docs/about-claude/pricing",
+        "https://developers.openai.com/api/docs/pricing",
+        "https://ai.google.dev/gemini-api/docs/pricing",
+        "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+        "https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/",
+        "https://www.bls.gov/oes/",
+        "https://metr.org/blog/2026-02-24-uplift-update/",
+        "https://s205.q4cdn.com/644747736/files/doc_financials/2025/q2/Q2-25-Klarna-Group-plc-Earnings-Release.pdf",
+        "https://s205.q4cdn.com/644747736/files/doc_earnings/2025/q4/earnings-result/Q4-25-Klarna-Group-plc-Earnings-Release.pdf",
+        "https://en.wikipedia.org/wiki/Moffatt_v._Air_Canada"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://brave-new.com/#org",
+      "name": "Brave New Media",
+      "url": "https://brave-new.com/",
+      "sameAs": [
+        "https://bravenewhive.com/"
+      ],
+      "description": "Marketing agency that builds AI flows to help companies scale their ideas, grow their customer base and expand into new markets, with experience across supply chain and manufacturing.",
+      "knowsAbout": [
+        "AI marketing",
+        "generative engine optimization",
+        "supply chain marketing",
+        "manufacturing marketing",
+        "market expansion",
+        "customer acquisition"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AI orchestration in simple terms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI orchestration means planning how AI models and people share a piece of work. You decide which steps the model handles, which steps a person checks or does, and which items go straight to a person. For most businesses it is less about software and more about designing one workflow carefully, then measuring whether it saves money."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to run an AI model on a marketing task?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less than most people expect. In our cost model, using published prices from 3 November 2026, a 1,500-word article draft cost $0.92 in tokens on the most expensive model we priced and under one cent on the cheapest. The larger cost is the person who reviews the draft, about $53 for an hour of a writer's time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does AI workflow automation save money?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can, if review is fast. In our model the AI workflow cost 70% to 78% less than doing seven marketing tasks by hand, assuming review takes about a quarter of the original time. If review takes as long as the original work, the saving disappears. Time a sample of real items before you decide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can you tell if an AI tool is saving your team time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time the task by hand first, then time it with the tool, including checking and fixing the output. Do not rely on how fast it feels. In METR's 2025 trial, experienced developers using AI took 19% longer while believing they had been 20% faster. A short pilot with a stopwatch settles the question."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI model should a small business choose to keep costs down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose on quality and review time first, price second. Output prices across the 11 models we sampled ranged from $0.50 to $50 per million tokens, yet switching from the priciest to the cheapest model changed the total cost of an article draft by under 2%. A model that needs less fixing usually saves more than a cheaper one."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--night:#0E1830;--night2:#0B1426;--line:#24365C;--lime:#C9D62A;--paper:#F7F6F2;--ink:#0E1830;--slate:#4B5266;--soft:#AEB6CC;--card:#FFFFFF;--hair:#E2E5EC;--slot:#FFF3CD;--accent-ink:#5E6900;--r:24px;--g:20px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0B1020;--ink:#EEF1F7;--slate:#A9B1C7;--card:#131B30;--hair:#24304D;--slot:#4A3F12;--accent-ink:#C9D62A}}
+:root[data-theme="dark"]{--paper:#0B1020;--ink:#EEF1F7;--slate:#A9B1C7;--card:#131B30;--hair:#24304D;--slot:#4A3F12;--accent-ink:#C9D62A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Figtree,system-ui,Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:"Hanken Grotesk",Figtree,Arial,sans-serif;font-weight:600;letter-spacing:-.02em;margin:0;line-height:1.04}
+em.s{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0;color:var(--accent-ink)}
+.hero em.s,.band em.s,footer em.s{color:var(--lime)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--lime) 28%,transparent);margin:0 0 22px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:14px 24px;border-radius:999px;background:var(--lime);color:#0E1830;white-space:nowrap}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.slot{background:var(--slot);color:#3a3000;padding:0 4px;border-radius:3px}
+section{padding:88px 0}
+.h1{font-size:clamp(46px,5.4vw,88px)}.h2{font-size:clamp(38px,5vw,68px)}.h3{font-size:24px}
+.lead{font-size:clamp(18px,1.7vw,22px);color:var(--slate);max-width:640px;margin:22px 0 0}
+/* hero: cinematic frame */
+.hero{margin:var(--g);border-radius:var(--r);background:radial-gradient(120% 80% at 75% 30%,#1C2C55 0%,#0E1830 55%,#0B1426 100%);color:#F2F4F8;position:relative;overflow:hidden;min-height:calc(100vh - 40px);display:grid;grid-template-columns:1.15fr .85fr;padding:0}
+.hero .frame{position:absolute;inset:22px;pointer-events:none}
+.hero .frame i{position:absolute;width:26px;height:26px;border-color:rgba(242,244,248,.55);border-style:solid}
+.hero .frame i:nth-child(1){top:0;left:0;border-width:1.5px 0 0 1.5px}.hero .frame i:nth-child(2){top:0;right:0;border-width:1.5px 1.5px 0 0}.hero .frame i:nth-child(3){bottom:0;left:0;border-width:0 0 1.5px 1.5px}.hero .frame i:nth-child(4){bottom:0;right:0;border-width:0 1.5px 1.5px 0}
+.hero .ticks{position:absolute;top:90px;bottom:90px;width:14px;background:repeating-linear-gradient(180deg,rgba(242,244,248,.35) 0 1px,transparent 1px 18px)}
+.hero .ticks.l{left:30px}.hero .ticks.r{right:30px}
+.hero nav{position:absolute;top:44px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+.hero nav .brand{font-family:"Hanken Grotesk";font-weight:700;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.hero nav .brand em{font-family:"Instrument Serif";font-weight:400;color:var(--lime)}
+.hero nav div a{text-decoration:none;font-size:15px;margin-left:28px;color:#F2F4F8}
+.hero .copy{padding:200px 64px 80px 72px;position:relative;z-index:2;align-self:end}
+.hero .copy .lead{color:#C9D0E0}
+.hero .ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero .photo{position:relative}
+.hero .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(.1) contrast(1.03)}
+.hero .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0E1830 0%,rgba(14,24,48,0) 38%),linear-gradient(0deg,rgba(14,24,48,.85) 0%,rgba(14,24,48,0) 30%),linear-gradient(180deg,rgba(14,24,48,.7) 0%,rgba(14,24,48,0) 16%),rgba(28,44,85,.42)}
+.hero .roles{position:absolute;right:64px;bottom:56px;z-index:3;text-align:right;font-size:14px;color:#C9D0E0;line-height:1.8}
+.hero .roles b{color:#fff;font-weight:600}
+/* manifesto */
+.manifesto p.big{font-family:"Hanken Grotesk";font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.2;letter-spacing:-.015em;max-width:980px;margin:0}
+.manifesto p.big span{color:var(--slate)}
+/* shift cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.card{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:32px}
+.card .k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.card h3{font-size:24px;margin:14px 0 10px}
+.card p{margin:0;color:var(--slate);font-size:16px}
+.card .from{font-size:15px;color:var(--slate);text-decoration:line-through;text-decoration-color:var(--lime);margin-top:12px}
+/* dark band */
+.band{background:var(--night);color:#F2F4F8;margin:0 var(--g);border-radius:var(--r)}
+.band .lead{color:#C9D0E0}
+.band .card{background:#13204A;border-color:var(--line)}
+.band .card p,.band .card .k{color:#AEB6CC}
+.band .card h3{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.steps .n{font-family:"Instrument Serif";font-style:italic;font-size:56px;line-height:1;color:var(--lime)}
+/* values */
+.vals{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hair);margin-top:48px}
+.vals div{padding:34px 28px 34px 0;border-bottom:1px solid var(--hair)}
+.vals h3{font-size:22px;margin:0 0 10px}
+.vals p{margin:0;color:var(--slate);font-size:16px;max-width:320px}
+/* proof chips */
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.chip{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:16px 18px}
+.chip i{flex:none;width:40px;height:40px;border-radius:50%;background:var(--paper);border:1px solid var(--hair);display:grid;place-items:center;font-style:normal;font-weight:700;color:var(--lime);background:#0E1830}
+.chip b{display:block;font-family:"Hanken Grotesk";font-weight:600;font-size:17px;letter-spacing:-.01em}
+.chip span{color:var(--slate);font-size:14px}
+/* doors */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.door{border-radius:20px;padding:36px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none}
+.door h3{font-size:30px}
+.door p{margin:12px 0 0;font-size:16px}
+.d1{background:var(--night);color:#F2F4F8}.d1 p{color:#C9D0E0}
+.d2{background:var(--lime);color:#0E1830}
+.d3{background:var(--card);border:1px solid var(--hair)}.d3 p{color:var(--slate)}
+.arrow{font-size:15px;font-weight:600;margin-top:28px}
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:40px}
+.faq div{padding:24px 0;border-top:1px solid var(--hair)}
+.faq h3{font-size:19px;margin:0 0 8px}
+.faq p{margin:0;color:var(--slate);font-size:16px}
+footer{background:var(--night2);color:#AEB6CC;margin:var(--g);border-radius:var(--r);padding:72px 0 40px}
+footer .word{font-family:"Hanken Grotesk";font-weight:700;font-size:clamp(56px,10vw,150px);letter-spacing:-.04em;color:#F2F4F8;line-height:.9;margin-top:56px}
+footer .word em{font-family:"Instrument Serif";font-weight:400;color:var(--lime)}
+footer a{color:#C9D0E0;text-decoration:none;margin-right:22px}
+.sub{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.sub input{flex:1;min-width:220px;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:#13204A;color:#fff;font:inherit}
+@media (max-width:900px){
+  .wrap{padding:0 20px}section{padding:72px 0}
+  .hero{grid-template-columns:1fr;min-height:0}.hero nav{left:28px;right:28px;top:34px}.hero nav div{display:none}
+  .hero .copy{padding:120px 28px 40px}.hero .photo{min-height:420px}.hero .roles{position:static;text-align:left;padding:0 28px 40px}
+  .hero .ticks{display:none}
+  .hero .photo:after{background:linear-gradient(180deg,#0E1830 0%,rgba(14,24,48,0) 30%),linear-gradient(0deg,#0E1830 0%,rgba(14,24,48,0) 30%),rgba(28,44,85,.42)}
+  .grid3,.steps,.vals,.doors,.faq,.workgrid,.chips,#journal .card{grid-template-columns:1fr !important}
+  #journal .card{padding:40px 24px !important}
+}
+
+/* left content bar (after atlas.attio.com) */
+@media (min-width:901px) and (max-width:1100px){.chips{grid-template-columns:repeat(2,1fr)}}
+.band.ess .ecard .k{color:#C9D62A}.band.ess .ecard .ft{border-color:#24365C}.band.ess .ecard .ft b{color:#C9D62A}
+.ess .top h2{max-width:760px}.ess .top{display:flex;justify-content:space-between;align-items:end;gap:32px}
+.ess .ecard{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit}
+.ess .ecard .k{color:var(--accent-ink)}
+.ess .ecard h3{margin:0;font-size:24px;line-height:1.15}
+.ess .ecard p{font-size:16px}
+.ess .ecard .ft{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;font-size:14px;color:var(--slate)}
+.ess .ecard .ft b{color:var(--accent-ink);font-weight:600}
+.btn.line{background:var(--card);color:var(--ink);border:1.5px solid var(--hair)}
+
+/* typesetting pass */
+h1,h2,h3,.manifesto p.big{text-wrap:balance}
+p,.lead,.card p,.roles{text-wrap:pretty}
+.h2 em.s,.h1 em.s{white-space:normal}
+.nb{white-space:nowrap}
+.band.ess .ecard .ft{color:#AEB6CC}
+@media (min-width:901px){h2.h2 em.s::before{content:"\A";white-space:pre}}
+@media (max-width:1100px){.card h3,.ess .ecard h3{font-size:21px}.card{padding:26px}}
+@media (max-width:900px){.ess .top{flex-direction:column;align-items:flex-start;gap:20px}.h1{font-size:44px;line-height:1.05}.h2{font-size:34px;line-height:1.08}.manifesto p.big{font-size:26px}}
+
+.vz{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.vz .st{grid-column:1/-1;font-family:"Hanken Grotesk";font-weight:600;font-size:clamp(34px,4.6vw,64px);line-height:1.06;letter-spacing:-.025em;max-width:1050px;text-wrap:balance}
+.vz .mid{font-family:"Hanken Grotesk";font-weight:500;font-size:26px;line-height:1.3;letter-spacing:-.01em;color:var(--slate);text-wrap:pretty;padding-top:28px;border-top:1px solid var(--hair)}
+.vz .mid em.s{font-size:1.15em}
+.vz .rt{font-size:19px;line-height:1.65;color:var(--slate);text-wrap:pretty;padding-top:28px;border-top:1px solid var(--hair)}
+.vz .rt b{color:var(--ink);font-weight:600}
+@media (max-width:900px){.vz{grid-template-columns:1fr;gap:28px}.vz .st{font-size:34px}.vz .mid{font-size:22px}}
+
+/* essay page */
+/* Type system. Two families, per Anne's spec: Hanken Grotesk for titles (h1-h3, figure titles, FAQ
+   questions, prev/next), Figtree for everything else. Sizes: 12 caps labels, 13 chart text, 14 UI and
+   notes, 15 tables and lists in the chrome, 18 running text, 21 lede, 22 h3, 26-30 h2, 34-48 h1.
+   Weights: 400 text, 500 UI, 600 emphasis and titles. font-synthesis:none stops the browser faking a
+   bold we do not load. */
+html{font-synthesis:none;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+strong,b{font-weight:600}
+article h1{text-wrap:balance}
+article h2,article h3,.fig .ft,.faq summary,.pn span{text-wrap:pretty}
+article p,article li{text-wrap:pretty}
+.ch,table,.rail .m,.clab,.meta{font-variant-numeric:tabular-nums}
+.crumb{display:inline-block;margin:44px 0 0;font-size:14px;font-weight:500;text-decoration:none;color:var(--slate)}
+.crumb:hover{color:var(--ink)}
+article{max-width:680px;padding:40px 0 64px;counter-reset:sec}
+article h1{font-size:clamp(34px,3.6vw,48px);line-height:1.1;letter-spacing:-.025em;margin:0 0 22px}
+article .meta{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;font-size:14px;color:var(--slate);margin:0 0 26px;padding:0 0 22px;border-bottom:3px solid var(--lime)}
+article .meta b{font-weight:600;color:var(--ink)}
+article .meta .dot{width:4px;height:4px;border-radius:50%;background:var(--slate);opacity:.6}
+article h2{font-size:clamp(26px,2.4vw,30px);line-height:1.2;letter-spacing:-.02em;margin:0 0 18px;scroll-margin-top:24px}
+article h3{font-size:22px;line-height:1.3;letter-spacing:-.01em;margin:36px 0 10px;scroll-margin-top:24px}
+article p,article li{font-size:18px;line-height:1.65}
+article p{margin:0 0 20px}
+article ul{margin:0 0 24px;padding-left:22px}
+article li{margin:0 0 10px}
+article li::marker{color:var(--accent-ink)}
+article a{color:var(--ink);text-decoration-color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1.5px}
+article a.fn{text-decoration:none;font-size:.7em;vertical-align:super;line-height:0;color:var(--accent-ink);font-weight:600}
+article .tip{background:color-mix(in srgb,var(--lime) 12%,var(--card));border:1px solid var(--hair);padding:16px 20px;border-radius:12px}
+.faqs .faq{display:block;margin:0;border-top:1px solid var(--hair)}
+.faqs .faq>p,.faqs .faq>ul{color:var(--ink);margin:0 0 18px}
+.faqs .faq:last-child{border-bottom:1px solid var(--hair)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;font:600 18px/1.35 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.005em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font:400 26px/1 Figtree;color:var(--accent-ink)}
+.faq[open] summary::after{content:"\2212"}
+.faq p{font-size:17px}
+.refs .ref{font-size:15px;line-height:1.55;margin:0 0 10px;padding-left:30px;position:relative;color:var(--slate);scroll-margin-top:24px}
+.refs .ref{top:auto;bottom:auto;border-left:0;opacity:1}
+.refs .ref span{position:absolute;left:0;font-weight:600;color:var(--ink)}
+.refs .ref:target{background:rgba(201,214,42,.25)}
+.seealso li{font-size:17px;margin-bottom:8px}
+.next{background:var(--night);color:#F2F4F8;border-radius:20px;padding:36px 36px 16px;margin:48px 0 0}
+.next h2{color:#F2F4F8}
+.next p{color:#D5DAE7}
+.next a{color:var(--lime);text-decoration-color:var(--lime)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:680px;margin:0 0 88px}
+.pn a{display:block;text-decoration:none;border:1px solid var(--hair);background:var(--card);border-radius:14px;padding:16px 20px}
+.pn a:hover{border-color:var(--lime)}
+.pn small{display:block;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:0 0 4px}
+.pn span{font:600 18px/1.25 "Hanken Grotesk",Figtree,sans-serif}
+.pn .nx{text-align:right;grid-column:2}
+.tbl{overflow-x:auto;margin:8px 0 28px;border:1px solid var(--hair);border-radius:14px;background:var(--card)}
+.fig .tbl{margin:0}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--hair)}
+th{font-weight:600;font-size:14px;background:var(--paper)}
+tr:last-child td{border-bottom:0}
+@media (max-width:620px){
+  article p,article li{font-size:17px}
+  .toc ol{columns:1}
+  .kf{padding:20px 18px 6px}.next{padding:26px 22px 8px}
+  .pn{grid-template-columns:1fr}.pn .nx{grid-column:1}
+  th,td{padding:10px 12px;font-size:14px}
+}
+
+/* O1 paper grain: a faint tiled noise baked into the page background (cards stay clean white) */
+body.essay,.rail{background-color:var(--paper);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .09 0 0 0 0 .19 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body.essay,:root:not([data-theme="light"]) .rail{background-blend-mode:screen}}
+:root[data-theme="dark"] body.essay,:root[data-theme="dark"] .rail{background-blend-mode:screen}
+body.essay{overflow-x:clip}
+/* chapters layout: left rail, one screen per chapter */
+body.essay{padding-left:320px}
+.rail{position:fixed;top:0;left:0;bottom:0;width:320px;box-sizing:border-box;border-right:1px solid var(--hair);display:flex;flex-direction:column;padding:22px 0 0;z-index:40;overflow:hidden}
+.rh{display:flex;justify-content:space-between;align-items:center;padding:0 22px 18px}
+.rh .back{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none}.rh .back:hover{color:var(--ink)}
+.rx{display:none;border:0;background:var(--card);color:var(--ink);width:34px;height:34px;border-radius:50%;font:400 22px/1 Figtree,sans-serif;cursor:pointer}
+.rcap{margin:0 22px 6px;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.rtitle{margin:0 22px 10px;font:600 17px/1.3 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.01em;text-wrap:balance}
+.rs{margin:0 22px 10px;font-size:13px;color:var(--slate);font-variant-numeric:tabular-nums}
+.rbar{margin:0 22px 14px;height:4px;border-radius:4px;background:var(--hair);overflow:hidden}.rbar i{display:block;height:100%;width:0;background:var(--lime);border-radius:4px;transition:width .5s cubic-bezier(.16,1,.3,1)}
+.rail ol{list-style:none;margin:0;padding:4px 10px 16px;overflow-y:auto;flex:1;scrollbar-width:thin;border-top:1px solid var(--hair)}
+.rail ol a{display:grid;grid-template-columns:18px 1fr auto;gap:10px;align-items:start;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--slate);font-size:14px;line-height:1.35}
+.rail ol a:hover{background:var(--card);color:var(--ink)}
+.rail ol .d{width:12px;height:12px;margin-top:3px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--slate) 45%,transparent);box-sizing:border-box}
+.rail ol a.done .d{background:var(--ink);border-color:var(--ink)}
+.rail ol a[aria-current]{color:var(--ink);font-weight:600;background:var(--card)}
+.rail ol a[aria-current] .d{background:var(--lime);border-color:var(--lime);box-shadow:0 0 0 4px color-mix(in srgb,var(--lime) 30%,transparent)}
+.rail ol .m{font-size:12px;color:var(--slate);font-weight:500;font-variant-numeric:tabular-nums}
+.rail ol .rf{margin-top:6px;padding-top:6px;border-top:1px solid var(--hair)}
+.rhome{display:block;padding:16px 22px;border-top:1px solid var(--hair);font:700 16px "Hanken Grotesk",Figtree,sans-serif;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.rhome em{font-family:"Instrument Serif";font-weight:400;color:var(--accent-ink)}
+.rail-scrim,.rail-fab{display:none}
+.cmain{max-width:760px;margin:0 auto;padding:32px 40px 72px}
+.chap{counter-reset:none}
+html{scroll-behavior:smooth}
+.chap{scroll-margin-top:24px}
+.chap+.chap{margin-top:64px;padding-top:56px;border-top:1px solid var(--hair)}
+.chap.ov+.chap{margin-top:40px}
+.chap.refs .ref{font-size:15px}
+.cover{color:#F2F4F8;position:relative;isolation:isolate;padding:72px 0 52px;margin:-32px 0 28px}
+.cover .eyebrow{background:var(--lime);color:#0E1830}
+.cover h1{font-size:clamp(32px,3.4vw,46px);line-height:1.08;letter-spacing:-.025em;margin:0 0 18px;color:#fff;text-wrap:balance}
+.cover .meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:14px;color:#C9D0E0;margin:0 0 24px}
+.cover .meta b{color:#fff;font-weight:600}.cover .meta .dot{width:4px;height:4px;border-radius:50%;background:#AEB6CC;opacity:.7}
+.cover .acts{display:flex;gap:10px;flex-wrap:wrap}.cover .btn.ghost{color:#F2F4F8}
+.chap .intro{margin:0 0 36px}
+.chap .intro>p:first-child{font-size:clamp(19px,1.6vw,21px);line-height:1.6;color:var(--ink)}
+.kf2{margin:0 0 32px;scroll-margin-top:24px}
+.kf2 .kh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--hair);padding-bottom:12px;margin-bottom:6px}
+.kf2 h2{font-size:clamp(26px,2.4vw,30px);margin:0}
+.kf2 .kh span{font-size:13px;color:var(--slate)}
+/* key findings as cards, each with its headline number */
+.kf2 ol.kgrid{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.kf2 ol.kgrid li{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:22px 22px 20px}
+.kf2 .big{font:600 46px/1 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.kf2 .big small{font-size:.38em;letter-spacing:0;color:var(--slate);font-weight:500;margin-left:6px}
+.kf2 .kn{font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);margin-top:10px}
+.kf2 ol.kgrid h3{margin:0;font-size:18px}
+.kf2 ol.kgrid p{margin:0;font-size:15px;line-height:1.55;color:var(--slate)}
+.kf2 mark{background:none;color:var(--ink);font-weight:600;box-shadow:inset 0 -.42em 0 color-mix(in srgb,var(--lime) 45%,transparent)}
+.kf2 ol.kgrid li:first-child{grid-column:1/-1;background:var(--night);border-color:var(--night);display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:center}
+.kf2 ol.kgrid li:first-child .big{color:var(--lime);font-size:84px;grid-row:1/4}
+.kf2 ol.kgrid li:first-child h3{color:#fff;font-size:22px}.kf2 ol.kgrid li:first-child p{color:#C9D0E0}.kf2 ol.kgrid li:first-child mark{color:#fff}
+.kf2 ol.kgrid li:first-child .kn{color:#C9D62A;margin:0}
+@media (max-width:620px){.kf2 ol.kgrid{grid-template-columns:1fr}.kf2 ol.kgrid li:first-child{display:flex;align-items:flex-start;text-align:left}.kf2 ol.kgrid li:first-child .big{font-size:64px}}
+/* footnotes: sidenotes in the right margin on wide screens, a tap-to-open note below the paragraph otherwise */
+@media (min-width:1300px){
+  .cmain{max-width:1040px;margin:0 auto;padding-left:56px;padding-right:32px}
+  .cmain>.chap{max-width:680px}
+  .cmain{position:relative}
+  .sn{position:absolute;left:calc(56px + 680px + 40px);width:250px;font-size:13px;line-height:1.5;color:var(--slate);padding-left:12px;transition:background .2s}
+  .sn b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:color-mix(in srgb,var(--lime) 45%,transparent);color:var(--ink);font:600 11px Figtree,sans-serif;margin-right:6px}
+  .sn a{color:var(--slate)}
+  .sn.hi{color:var(--ink)}
+  .fnpop{display:none !important}
+}
+.fnpop{display:block;margin:-6px 0 20px;background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:12px 14px 12px 14px;font-size:14px;line-height:1.5;color:var(--slate);box-shadow:0 8px 24px rgba(14,24,48,.1);position:relative}
+.fnpop b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:color-mix(in srgb,var(--lime) 45%,transparent);color:var(--ink);font:600 11px Figtree,sans-serif;margin-right:6px}
+.fnpop button{position:absolute;top:6px;right:8px;border:0;background:none;font:400 18px Figtree;color:var(--slate);cursor:pointer}
+.fnpop a{color:var(--slate)}
+.clab{margin:0 0 10px;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.chap>h2{font-size:clamp(28px,2.8vw,38px);line-height:1.12;letter-spacing:-.025em;margin:0 0 22px;text-wrap:balance}
+.chap p,.chap li{font-size:18px;line-height:1.65}
+.chap>p,.chap .faq p{margin:0 0 20px}
+.chap ul{margin:0 0 24px;padding-left:22px}.chap li{margin:0 0 10px}.chap li::marker{color:var(--accent-ink)}
+.chap h3{font-size:22px;line-height:1.3;letter-spacing:-.01em;margin:36px 0 10px;scroll-margin-top:24px}
+.chap a{color:var(--ink);text-decoration-color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1.5px}
+.chap a.fn{text-decoration:none;font-size:.7em;vertical-align:super;line-height:0;color:var(--accent-ink);font-weight:600}
+.chap a.btn,.pn a{text-decoration:none}
+.chap .tip{background:color-mix(in srgb,var(--lime) 12%,var(--card));border:1px solid var(--hair);padding:16px 20px;border-radius:12px}
+.chap p,.chap li,.kf2 h3,.faq summary{text-wrap:pretty}
+.seealso{margin:36px 0 0}.seealso h2{font-size:22px;margin:0 0 12px}.seealso li{font-size:17px;margin-bottom:8px}
+.next h2{font-size:26px;margin:0 0 14px}
+.pn{margin:28px 0 0}
+@media (max-width:1099px){
+  body.essay{padding-left:0}
+  .rail{width:min(340px,88vw);transform:translateX(calc(-100% - 60px));transition:transform .3s cubic-bezier(.4,0,1,1);box-shadow:18px 0 50px rgba(14,24,48,.22);border-radius:0 20px 20px 0;z-index:62}
+  body.rail-open .rail{transform:none;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+  .rx{display:block}
+  .rail-scrim{display:block;position:fixed;inset:0;z-index:61;background:rgba(14,24,48,.38);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+  body.rail-open .rail-scrim{opacity:1;visibility:visible;transition:opacity .35s}
+  .rail-fab{display:inline-flex;align-items:center;gap:10px;position:fixed;right:16px;bottom:16px;z-index:60;border:0;cursor:pointer;background:var(--night);color:#fff;font:600 14px Figtree,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(14,24,48,.3)}
+  .rail-fab .ic{display:grid;gap:3px;width:16px}.rail-fab .ic i{display:block;height:2px;border-radius:2px;background:var(--lime)}.rail-fab .ic i:nth-child(2){width:70%}
+  body.rail-open .rail-fab{opacity:0;pointer-events:none}
+}
+@media (max-width:620px){
+  .cmain{padding:20px 18px 96px}
+  .cover{padding:28px 22px 26px;border-radius:20px}
+  .chap p,.chap li{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rail,.rail-scrim,.rbar i{transition-duration:.01s !important}}
+@media print{.rail,.rail-fab,.rail-scrim{display:none !important}body.essay{padding-left:0}}
+/* essays page */
+.ehead{min-height:0 !important;display:block !important;padding:0 !important}
+.ehead .copy{padding:180px 72px 64px !important;align-self:auto !important;display:flex;justify-content:space-between;align-items:end;gap:48px}
+.ehead .copy .lead{max-width:560px;margin-top:20px}
+.by{display:flex;align-items:center;gap:16px;font-size:14px;color:#C9D0E0;line-height:1.7;text-align:right;flex:none}
+.by img{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 18%;filter:grayscale(.1) contrast(1.03);order:2;box-shadow:0 0 0 1.5px rgba(242,244,248,.35)}
+.by b{color:#fff;font-weight:600}
+.flt{display:flex;gap:10px;flex-wrap:wrap;margin:0}
+.flt button{border:1px solid var(--hair);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 18px;font:500 14px Figtree,sans-serif;cursor:pointer}
+.flt button[aria-pressed="true"]{background:var(--night);color:#fff;border-color:var(--night)}
+.egrid{margin-top:28px}.egrid .ecard[hidden]{display:none}
+@media (max-width:900px){.ehead .copy{padding:120px 28px 40px !important;flex-direction:column;align-items:flex-start}.by{text-align:left}.by img{order:0}}
+
+/* the homepage gives every <section> 88px padding; essay sections set their own spacing */
+.chap,.kf2,.seealso{padding-top:0;padding-bottom:0}
+html:has(body.essay){overflow-x:clip}
+/* lead finding without a headline number: stack it like the other cards */
+.kf2 ol.kgrid li.nonum:first-child{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:8px}
+.kf2 ol.kgrid li.nonum:first-child h3{font-size:26px;line-height:1.2}
+.kf2 ol.kgrid li.nonum:first-child .kn{margin-top:4px}
+.kf2 ol.kgrid li:first-child a.fn{color:var(--lime)}
+/* cover: the navy spans the full width of the reading area (rail edge to window edge), text stays on the column */
+.cover::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:-100vw;right:-100vw;
+  background:radial-gradient(70% 120% at 70% 20%,#1C2C55 0%,#0E1830 55%,#0B1426 100%);border-bottom:1px solid var(--line)}
+.cover h1,.cover .meta{max-width:680px}
+/* links inside navy blocks keep light colours in both themes */
+.chap a.btn{color:#0E1830}.chap a.btn.ghost{color:#F2F4F8}
+.chap .next a{color:var(--lime);text-decoration-color:var(--lime)}
+.chap .next{border:1px solid var(--line)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cover::before{border-bottom-color:#2B3E6B}:root:not([data-theme="light"]) .chap .next,:root:not([data-theme="light"]) .kf2 ol.kgrid li:first-child{background:#13204A;border-color:#2B3E6B}}
+:root[data-theme="dark"] .cover::before{border-bottom-color:#2B3E6B}
+:root[data-theme="dark"] .chap .next,:root[data-theme="dark"] .kf2 ol.kgrid li:first-child{background:#13204A;border-color:#2B3E6B}
+@media (max-width:620px){.cover{padding:52px 0 36px;margin-top:-20px}}
+
+/* figures */
+.fig{margin:44px 0 40px}
+.fig .ft{font:600 18px/1.35 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.005em;margin:0 0 16px;color:var(--ink)}
+.fig .cap{font-size:14px;line-height:1.55;color:var(--slate);margin:14px 0 0}
+.fig .cap em{font-style:normal}
+.ch{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:22px 22px 16px;font-family:Figtree,sans-serif}
+.navy{background:var(--ink)}.navy2{background:#3A5185}.navy3{background:#6B83B8}.navy4{background:#9DB0D9}.lime{background:#C9D62A}.gray{background:#7A8094}
+.lg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--slate);margin:0 0 16px}
+.lg .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.hb .r{display:grid;grid-template-columns:minmax(130px,34%) 1fr;gap:0 16px;align-items:center;margin:0 0 10px}
+.hb .r.blk{grid-template-columns:1fr;gap:5px 0;margin:0 0 18px}
+.hb .lb{font-size:14px;line-height:1.3;color:var(--ink)}
+.hb .r.blk .lb{font-weight:600}
+.hb .tks{display:grid;gap:4px}
+.trk{position:relative;height:26px}
+.hb .r.blk .trk{height:20px}
+.bar{position:absolute;top:0;bottom:0;border-radius:3px}
+.vl{position:absolute;top:50%;transform:translateY(-50%);font:600 13px/1 Figtree,sans-serif;color:var(--ink);white-space:nowrap}
+.sl{position:absolute;top:50%;transform:translateY(-50%);text-align:center;font:600 12px/1 Figtree,sans-serif;white-space:nowrap;overflow:hidden}
+.vl.in{font-size:12px}
+.ref{position:absolute;top:-4px;bottom:-4px;border-left:2px dashed #7A8094;opacity:.9}
+.zero{position:absolute;top:-4px;bottom:-4px;border-left:1.5px solid var(--slate)}
+.gt{font:600 12px/1 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:20px 0 12px}
+.gt:first-child{margin-top:0}
+.axis{font-size:12px;color:var(--slate);margin:14px 0 0;padding-top:10px;border-top:1px solid var(--hair)}
+.note{font-size:12px;line-height:1.45;color:var(--slate);margin:8px 0 0}
+.rk{display:inline-block;width:0;height:11px;border-left:2px dashed #7A8094;margin-right:6px;vertical-align:-1px}
+/* vertical bars */
+.vchart{position:relative}
+.vplot{position:absolute;left:0;right:0;top:0;height:var(--h)}
+.vcols{position:relative;display:grid;grid-template-columns:repeat(var(--n),1fr);gap:6px}
+.vcol .vbars{height:var(--h);display:flex;gap:3px;justify-content:center;padding:0 6%}
+.vbw{position:relative;flex:1;max-width:64px}
+.vb{position:absolute;left:0;right:0;border-radius:3px 3px 0 0}
+.vv{position:absolute;left:50%;transform:translateX(-50%);font:600 12px/1 Figtree,sans-serif;color:var(--ink);white-space:nowrap;margin:3px 0}
+.vlab{font-size:13px;line-height:1.25;text-align:center;color:var(--ink);margin-top:10px;padding:0 2px}
+.vref{position:absolute;left:0;right:0;border-top:2px dashed #7A8094}
+.vzero{position:absolute;left:0;right:0;border-top:1.5px solid var(--slate)}
+/* line charts */
+.svgc{width:100%;height:auto;display:block}
+.svgc .gl{stroke:var(--hair);stroke-width:1}.svgc .zl{stroke:var(--slate);stroke-width:1.5}
+.svgc .tx{fill:var(--slate);font:13px Figtree,sans-serif}.svgc .vv2{fill:var(--ink);font:600 13px Figtree,sans-serif}
+.svgc .an{stroke:#7A8094;stroke-dasharray:3 4}.svgc .an-t{fill:var(--slate)}
+.alt{display:none}
+@media (max-width:620px){
+  .ch{padding:16px 14px 12px}
+  .hb .r{grid-template-columns:1fr;gap:4px 0;margin:0 0 14px}
+  .svgwrap{display:none}.alt{display:block}
+  .vlab{font-size:11px}.vv{font-size:11px}
+  .vcol .vbars{padding:0}.vcols{gap:2px}
+}
+</style>
+</head>
+<body class="essay" id="top">
+<aside class="rail" id="rail" aria-label="Chapters">
+  <div class="rh"><a class="back" href="/annebecheru-preview/writing/">← All essays</a><button type="button" class="rx" aria-label="Close chapters">×</button></div>
+  <p class="rcap">Essay</p><p class="rtitle">AI orchestration, costed: what AI marketing work really costs</p>
+  <p class="rs" id="rs">Overview · 3 min</p><div class="rbar"><i id="rbar"></i></div>
+  <ol><li><a href="#overview" data-i="0"><span class="d"></span><span class="t">Overview</span><span class="m">3m</span></a></li><li><a href="#what-ai-orchestration-is" data-i="1"><span class="d"></span><span class="t">What AI orchestration is</span><span class="m">1m</span></a></li><li><a href="#the-evidence-part-1-what-controlled-studies-measure" data-i="2"><span class="d"></span><span class="t">The evidence, part 1: what controlled studies measure</span><span class="m">2m</span></a></li><li><a href="#the-evidence-part-2-klarna-from-700-agents-to-lower-quality" data-i="3"><span class="d"></span><span class="t">The evidence, part 2: Klarna, from 700 agents to "lower quality"</span><span class="m">2m</span></a></li><li><a href="#original-research-what-seven-marketing-tasks-cost-in-tokens-and-in-people-time" data-i="4"><span class="d"></span><span class="t">Original research: what seven marketing tasks cost in tokens and in people time</span><span class="m">4m</span></a></li><li><a href="#a-framework-the-cost-stack" data-i="5"><span class="d"></span><span class="t">A framework: the Cost Stack</span><span class="m">1m</span></a></li><li><a href="#how-to-cost-an-ai-workflow-in-six-steps" data-i="6"><span class="d"></span><span class="t">How to cost an AI workflow in six steps</span><span class="m">1m</span></a></li><li><a href="#how-brave-new-media-builds-ai-flows" data-i="7"><span class="d"></span><span class="t">How Brave New Media builds AI flows</span><span class="m">1m</span></a></li><li><a href="#what-this-means-for-leaders" data-i="8"><span class="d"></span><span class="t">What this means for leaders</span><span class="m">1m</span></a></li><li><a href="#common-mistakes" data-i="9"><span class="d"></span><span class="t">Common mistakes</span><span class="m">1m</span></a></li><li><a href="#methodology" data-i="10"><span class="d"></span><span class="t">Methodology</span><span class="m">1m</span></a></li><li><a href="#frequently-asked-questions" data-i="11"><span class="d"></span><span class="t">Frequently asked questions</span><span class="m">1m</span></a></li><li class="rf"><a href="#references" data-i="12"><span class="d"></span><span class="t">References</span></a></li></ol>
+  <a class="rhome" href="/annebecheru-preview/">Anne <em>Becheru</em></a>
+</aside>
+<div class="rail-scrim" aria-hidden="true"></div>
+<button type="button" class="rail-fab" aria-expanded="false" aria-controls="rail"><span class="ic" aria-hidden="true"><i></i><i></i><i></i></span> <span id="fabl">Chapters</span></button>
+<main class="cmain">
+<section class="chap ov" id="overview" data-i="0" data-label="Overview · 3 min">
+  <header class="cover"><span class="eyebrow">Essay</span><h1>AI orchestration, costed: what AI marketing work really costs</h1><p class="meta"><span>Brave New Media</span><i class="dot"></i><span>Published <time datetime="2026-11-03"><b>3 November 2026</b></time></span><i class="dot"></i><span>20 min read</span></p>
+  <div class="acts"><a class="btn" href="#what-ai-orchestration-is">Start chapter 1 →</a><a class="btn ghost" href="#key-findings">Key findings ↓</a></div></header>
+  <div class="intro"><p><strong>AI orchestration is the design of a workflow in which AI models and people each handle defined steps, with set handoffs, checks and escalation rules between them.</strong> The term comes from computing, where orchestration means the automated configuration, coordination, deployment and management of computer systems and software.<a class="fn" href="#ref-1">[1]</a> In marketing and operations it has come to mean something more practical: deciding which work goes to a model, which stays with a person, and what the whole arrangement costs.</p>
+<p>This essay brings together four bodies of evidence. The first is controlled research on how much time AI tools save, and how well people judge that saving. The second is the public record of one large company, Klarna, that moved customer service to AI and then adjusted. The third is the published price list of the three largest model providers. The fourth is our own cost model, which prices seven common marketing and sales tasks in AI tokens and in human time at US Bureau of Labor Statistics wages. We close with a framework, the Cost Stack, and a step-by-step method any team can use to cost a workflow before it scales one.</p>
+<p><strong>Idea in brief</strong></p>
+<p><strong>The problem.</strong> Most AI business cases compare a subscription fee with a salary. That comparison leaves out the line that decides the result: the time people spend checking, fixing and approving AI output.</p>
+<p><strong>Why it happens.</strong> Model prices are published and easy to compare. Review time is not, and people misjudge it. In a randomized trial, experienced developers using early-2025 AI tools took 19% longer on their tasks while believing AI had made them 20% faster.<a class="fn" href="#ref-2">[2]</a></p>
+<p><strong>The gap (our data).</strong> We priced seven marketing tasks on 11 models from Anthropic, OpenAI and Google. A 1,500-word article draft costs $0.92 in tokens on the most expensive model we priced and less than one cent on the cheapest. One hour of review by a writer costs $52.83. In every task we modelled, people time made up between 77% and 98% of the cost of the AI workflow.</p>
+<p><strong>The answer.</strong> Cost the workflow, not the tool. Measure review minutes before you scale, set an escalation rule, and pick the model last.</p></div>
+  <section class="kf2" id="key-findings"><div class="kh"><h2>Key findings</h2><span>The essay in 3 minutes</span></div><ol class="kgrid"><li><span class="kn">Finding 1</span><span class="big">19%</span><h3>People misjudge AI time savings.</h3><p>In METR's 2025 trial, 16 experienced developers expected AI to make them 24% faster, <mark>took 19% longer</mark>, and afterwards still believed they had been 20% faster.<a class="fn" href="#ref-2">[2]</a></p></li><li><span class="kn">Finding 2</span><span class="big">40%</span><h3>The measured gains are real but uneven.</h3><p>Professionals given ChatGPT finished writing tasks in <mark>40% less time</mark> with 18% higher quality.<a class="fn" href="#ref-3">[3]</a> An AI assistant raised customer support output by 14% on average and by 34% for novice and low-skilled agents.<a class="fn" href="#ref-4">[4]</a></p></li><li><span class="kn">Finding 3</span><span class="big">100×</span><h3>Model prices vary a hundredfold.</h3><p>On 3 November 2026, published output prices across the 11 models we sampled ranged from <mark>$0.50 to $50</mark> per million tokens.<a class="fn" href="#ref-5">[5]</a><a class="fn" href="#ref-6">[6]</a><a class="fn" href="#ref-7">[7]</a></p></li><li><span class="kn">Finding 4</span><span class="big">$0.92</span><h3>Tokens are the smallest line.</h3><p>In our model, a 1,500-word article draft costs <mark>$0.92</mark> in tokens on the most expensive model and $53.75 in total once 60 minutes of review is added. Switching to the cheapest model saves $0.91. Doubling review time adds $52.83.</p></li><li><span class="kn">Finding 5</span><span class="big">70–78%</span><h3>Review time decides whether AI pays.</h3><p>Across seven tasks, the AI workflow cost <mark>70% to 78% less</mark> than doing the work by hand under our base assumptions. If review takes as long as the original work, the saving disappears.</p></li><li><span class="kn">Finding 6</span><span class="big">700</span><h3>A large company re-balanced after going all in.</h3><p>Klarna said in February 2024 that its AI assistant did the work of <mark>700 full-time agents</mark>.<a class="fn" href="#ref-8">[8]</a> In May 2025 its CEO said a focus on cost had led to "lower quality", and the company began recruiting people for customer service again.<a class="fn" href="#ref-9">[9]</a></p></li></ol></section>
+</section>
+<section class="chap" id="what-ai-orchestration-is" data-i="1" data-label="Chapter 1 of 11 · 16 min left">
+  <p class="clab">Chapter 1 · 1 min</p><h2>What AI orchestration is</h2>
+  <p>AI orchestration sits one level above the tools. A team can own five AI subscriptions and still have no orchestration, because nobody has decided which steps go where, who checks what, and what happens when the model is wrong. For a small or mid-sized business, the unit of orchestration is one workflow: what goes in, what the model does, what a person checks, and what triggers a handoff.</p>
+<h3 id="terms-used-in-this-essay">Terms used in this essay</h3>
+<div class="tbl"><table><thead><tr><th><strong>Term</strong></th><th><strong>Meaning</strong></th></tr></thead><tbody><tr><td>AI orchestration</td><td>Designing a workflow so that AI models and people each handle defined steps, with checks and handoffs between them.</td></tr><tr><td>Token</td><td>The unit AI providers bill by. OpenAI's rule of thumb is that one token is about 0.75 words of English text.[6]</td></tr><tr><td>Input and output tokens</td><td>Input is everything sent to the model (instructions, documents, the question). Output is what the model writes. Output is priced higher.</td></tr><tr><td>Reasoning tokens</td><td>Hidden working that some models produce before answering. Google states that thinking tokens are counted and billed.[7]</td></tr><tr><td>Loaded labour cost</td><td>Wages plus benefits. In US private industry, wages were 70.0% of total compensation in the second quarter of 2026.[10]</td></tr><tr><td>Human in the loop</td><td>A step where a person reviews, edits or approves AI output before it moves on.</td></tr><tr><td>Escalation rule</td><td>A rule that sends certain items straight to a person, such as refunds, complaints or legal terms.</td></tr></tbody></table></div>
+<h3 id="where-ai-orchestration-helps-and-where-it-does-not">Where AI orchestration helps, and where it does not</h3>
+<div class="tbl"><table><thead><tr><th><strong>Type of work</strong></th><th><strong>Send to AI</strong></th><th><strong>Keep with people</strong></th><th><strong>Why</strong></th></tr></thead><tbody><tr><td>First drafts of routine emails, posts and summaries</td><td>Yes</td><td>Final check</td><td>Fast to review, cheap to fix</td></tr><tr><td>Tagging, sorting, routing and data entry</td><td>Yes</td><td>Spot checks</td><td>High volume, clear right answer</td></tr><tr><td>Answers about policy, price or contract terms</td><td>Only with sources and limits</td><td>Anything unusual</td><td>Wrong answers carry legal and brand risk</td></tr><tr><td>Pricing, hiring, refunds above a limit, key accounts</td><td>No</td><td>Yes</td><td>High stakes, needs judgment and accountability</td></tr></tbody></table></div>
+<p>The Hive's primer on <a href="https://bravenewhive.com/ai-marketing/what-is-ai-marketing/">what AI marketing is</a> covers the marketing side of these choices.</p>
+  
+</section>
+<section class="chap" id="the-evidence-part-1-what-controlled-studies-measure" data-i="2" data-label="Chapter 2 of 11 · 15 min left">
+  <p class="clab">Chapter 2 · 2 min</p><h2>The evidence, part 1: what controlled studies measure</h2>
+  <p>Most claims about AI productivity come from surveys or vendor case studies. Each study below compared people working with and without AI and measured the result.</p>
+<figure class="fig" id="fig-1"><h4 class="ft">Figure 1. People feel faster with AI than they are</h4><div class="ch hb"><div class="r"><div class="lb">Developers&#x27; forecast before the study</div><div class="trk"><i class="bar navy" style="left:50.00%;width:40.00%"></i><b class="vl in" style="right:11.00%;color:var(--paper)">+24%</b><u class="zero" style="left:50.00%"></u></div></div><div class="r"><div class="lb">Developers&#x27; estimate after the study</div><div class="trk"><i class="bar navy" style="left:50.00%;width:33.33%"></i><b class="vl in" style="right:17.67%;color:var(--paper)">+20%</b><u class="zero" style="left:50.00%"></u></div></div><div class="r"><div class="lb">Measured effect (early-2025 tools)</div><div class="trk"><i class="bar lime" style="left:18.33%;width:31.67%"></i><b class="vl" style="right:calc(81.67% + 6px)">-19%</b><u class="zero" style="left:50.00%"></u></div></div><p class="axis">Effect on speed (%, positive = faster), -30 to +30</p></div><p class="cap"><em>Experienced open-source developers working on 246 real tasks in their own repositories, randomly assigned to allow or disallow AI tools. The measured effect is the increase in time taken, shown as negative speed. Source: METR, "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity", July 2025.</em></p></figure>
+<p>METR, a non-profit research group, recruited 16 experienced developers from large open-source projects and had them complete 246 real issues, each averaging about two hours.<a class="fn" href="#ref-2">[2]</a> For each issue, AI use was randomly allowed or not. With AI, the developers took 19% longer, with a confidence interval of +2% to +39%.<a class="fn" href="#ref-11">[11]</a> Before the study they had expected a 24% speedup, and afterwards they estimated they had been sped up by 20%.<a class="fn" href="#ref-2">[2]</a></p>
+<p>The gap between the feeling and the measurement is the finding that matters for anyone costing a workflow. If skilled people cannot tell from experience whether a tool saves them time, a manager cannot either. Daniel Kahneman's work on confident but wrong judgment, summarised in the Hive's notes on <a href="https://bravenewhive.com/readings/thinking-fast-and-slow-kahneman/"><em>Thinking, Fast and Slow</em></a>, explains why a stopwatch beats a hunch.</p>
+<p>The result also moved. In February 2026 METR published new data from 57 developers across more than 800 tasks.<a class="fn" href="#ref-11">[11]</a> For developers who had been in the original study, it estimated tasks took 18% less time with late-2025 tools, with a confidence interval from 38% less to 9% more. For newly recruited developers the estimate was 4% less time, with an interval from 15% less to 9% more. METR called the new data "only very weak evidence" of how much the speedup had grown, partly because 30% to 50% of developers said they were choosing not to submit some tasks they did not want to do without AI.<a class="fn" href="#ref-11">[11]</a></p>
+<figure class="fig" id="fig-2"><h4 class="ft">Figure 2. What randomized and field studies of AI at work have measured</h4><div class="tbl"><table><thead><tr><th><strong>Study</strong></th><th><strong>Who</strong></th><th><strong>Measure</strong></th><th><strong>Result</strong></th></tr></thead><tbody><tr><td>Noy and Zhang, Science, 2023</td><td>453 college-educated professionals</td><td>Time taken on writing tasks</td><td>40% less</td></tr><tr><td>Noy and Zhang, Science, 2023</td><td>453 college-educated professionals</td><td>Output quality</td><td>18% higher</td></tr><tr><td>Brynjolfsson, Li and Raymond, 2023 to 2025</td><td>5,179 customer support agents</td><td>Issues resolved per hour, all agents</td><td>14% more</td></tr><tr><td>Brynjolfsson, Li and Raymond, 2023 to 2025</td><td>5,179 customer support agents</td><td>Issues resolved per hour, novice and low-skilled agents</td><td>34% more</td></tr><tr><td>METR, July 2025</td><td>16 experienced developers, 246 tasks</td><td>Time per task, early-2025 tools</td><td>19% more</td></tr><tr><td>METR, February 2026</td><td>10 returning developers</td><td>Time per task, late-2025 tools</td><td>18% less (interval: 38% less to 9% more)</td></tr><tr><td>METR, February 2026</td><td>47 new developers</td><td>Time per task, late-2025 tools</td><td>4% less (interval: 15% less to 9% more)</td></tr></tbody></table></div><p class="cap"><em>Sources: Noy and Zhang, Science 381 (2023); Brynjolfsson, Li and Raymond, NBER Working Paper 31161, published in the Quarterly Journal of Economics 140(2), 2025; METR, July 2025 and February 2026.</em></p></figure>
+<p>Two patterns stand out. First, gains are largest on tasks with a clear format and a clear right answer, such as short professional writing and scripted support.<a class="fn" href="#ref-3">[3]</a><a class="fn" href="#ref-4">[4]</a> Second, gains are largest for less experienced workers. In the customer support study the tool raised output by 34% for novice and low-skilled agents, with minimal effect on experienced and highly skilled agents.<a class="fn" href="#ref-4">[4]</a> That matters for a marketing team: the person who saves the most time with AI is often the junior one, and the person who spends the most time reviewing is often the senior one.</p>
+<h3 id="limits-of-the-experimental-evidence">Limits of the experimental evidence</h3>
+<ul>
+<li>Each study measured one setting: writing tasks, one company's support desk, or open-source code. None measured a full marketing workflow from brief to published asset.</li>
+<li>The tools in these studies are older than the models priced later in this essay. METR's own results changed within a year.</li>
+<li>Time saved is not the same as money saved. A saved hour only counts if it goes to other paid work.</li>
+</ul>
+  
+</section>
+<section class="chap" id="the-evidence-part-2-klarna-from-700-agents-to-lower-quality" data-i="3" data-label="Chapter 3 of 11 · 13 min left">
+  <p class="clab">Chapter 3 · 2 min</p><h2>The evidence, part 2: Klarna, from 700 agents to "lower quality"</h2>
+  <p>Klarna, the payments company, is the most quoted public example of AI replacing customer service work. Its record is useful because the company published numbers at each stage.</p>
+<figure class="fig" id="fig-3"><h4 class="ft">Figure 3. Klarna's AI assistant, in the company's own numbers</h4><div class="tbl"><table><thead><tr><th><strong>Date</strong></th><th><strong>Metric</strong></th><th><strong>Value</strong></th></tr></thead><tbody><tr><td>Feb 2024</td><td>Conversations handled in the first month</td><td>2.3 million</td></tr><tr><td>Feb 2024</td><td>Share of customer service chats</td><td>Two-thirds</td></tr><tr><td>Feb 2024</td><td>Equivalent full-time agents</td><td>700</td></tr><tr><td>Feb 2024</td><td>Time to resolve an errand, before</td><td>11 minutes</td></tr><tr><td>Feb 2024</td><td>Time to resolve an errand, with the assistant</td><td>Less than 2 minutes</td></tr><tr><td>Feb 2024</td><td>Drop in repeat inquiries</td><td>25%</td></tr><tr><td>Feb 2024</td><td>Estimated 2024 profit improvement</td><td>$40 million</td></tr><tr><td>May 2025</td><td>Improvement in response times since launch</td><td>82%</td></tr><tr><td>Q2 2025</td><td>Revenue per employee (two years earlier: $0.4 million)</td><td>$1.0 million</td></tr><tr><td>Q4 2025</td><td>Revenue per employee</td><td>$1.24 million</td></tr><tr><td>Q4 2025</td><td>Headcount change since 2022</td><td>Down 49%</td></tr></tbody></table></div><p class="cap"><em>Sources: Klarna press release, 27 February 2024; CX Dive, 9 May 2025, quoting a Klarna spokesperson; Klarna Q2 2025 and Q4 2025 earnings releases.</em></p></figure>
+<p>In February 2024 Klarna said its assistant had held 2.3 million conversations in its first month, two-thirds of its customer service chats, and was "doing the equivalent work of 700 full-time agents".<a class="fn" href="#ref-8">[8]</a> It said customers resolved errands in less than 2 minutes against 11 minutes before, that repeat inquiries had fallen 25%, and that it expected a $40 million profit improvement in 2024.<a class="fn" href="#ref-8">[8]</a></p>
+<p>Fifteen months later, chief executive Sebastian Siemiatkowski told Bloomberg that "cost unfortunately seems to have been a too predominant evaluation factor" and that "what you end up having is lower quality", as reported by CX Dive.<a class="fn" href="#ref-9">[9]</a> Klarna began recruiting people for customer service again. A company spokesperson told CX Dive the chatbot still handled two-thirds of inquiries, that response times had improved by 82% since launch, and that repeat issues had dropped 25%.<a class="fn" href="#ref-9">[9]</a></p>
+<p>Klarna did not abandon AI. Its later earnings releases report revenue per employee of $1.0 million in the second quarter of 2025, up from $0.4 million two years earlier, and $1.24 million in the fourth quarter of 2025, with headcount down 49% since 2022.<a class="fn" href="#ref-12">[12]</a><a class="fn" href="#ref-13">[13]</a> What changed was the split between machine and person. That is an orchestration decision, and it is the one this essay is about.</p>
+<h3 id="limits-of-the-klarna-evidence">Limits of the Klarna evidence</h3>
+<ul>
+<li>The figures are the company's own, and the 700-agent figure is an equivalence Klarna calculated, not a count of jobs removed.</li>
+<li>Revenue per employee depends on revenue as well as headcount, so it cannot isolate the effect of AI.</li>
+<li>Klarna's customer service is high-volume consumer work. A B2B supplier with a few hundred accounts has a different cost of error per conversation.</li>
+</ul>
+<p>A second public case shows that cost of error. In Moffatt v. Air Canada, decided in 2024, a British Columbia tribunal found the airline liable for wrong bereavement-fare information its website chatbot gave a customer, and rejected the argument that the chatbot was "a separate legal entity that is responsible for its own actions". It awarded CA$812 in damages, plus interest and fees.<a class="fn" href="#ref-14">[14]</a> The award was small. The international coverage was not, and that is the <a href="https://bravenewhive.com/reputation/reputation-risk/">reputation risk</a> line that never appears on a software invoice.</p>
+<p>If you want an outside read on where AI already speaks for your business, and what a mistake there would cost, the <a href="https://brave-new.com/audit/">Brave New audit</a> is where we start.</p>
+  
+</section>
+<section class="chap" id="original-research-what-seven-marketing-tasks-cost-in-tokens-and-in-people-time" data-i="4" data-label="Chapter 4 of 11 · 11 min left">
+  <p class="clab">Chapter 4 · 4 min</p><h2>Original research: what seven marketing tasks cost in tokens and in people time</h2>
+  <p>The studies above measure time. We wanted to put a price on both sides of the comparison using only published data. So on 3 November 2026 we built a transparent cost model. It prices seven common marketing and sales tasks on 11 AI models, using each provider's published per-token rates, and compares the result with the cost of the same task done by hand at US median wages. The full method is at the end of this essay, and the scripts and data are published with it.</p>
+<h3 id="finding-1-model-prices-vary-a-hundredfold">Finding 1: model prices vary a hundredfold</h3>
+<figure class="fig" id="fig-4"><h4 class="ft">Figure 4. Published API prices for 11 AI models, 3 November 2026</h4><div class="ch hb"><div class="lg"><span><i class="sw navy"></i>Output price</span><span><i class="sw gray"></i>Input price</span></div><div class="r blk"><div class="lb">Claude Fable 5.1 (Anthropic)</div><div class="tks"><div class="trk"><i class="bar lime" style="left:0.00%;width:90.88%"></i><b class="vl in" style="right:10.12%;color:#0E1830">$50</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:69.71%"></i><b class="vl" style="left:calc(69.71% + 6px)">$10</b></div></div></div><div class="r blk"><div class="lb">gpt-6-astra (OpenAI)</div><div class="tks"><div class="trk"><i class="bar lime" style="left:0.00%;width:90.88%"></i><b class="vl in" style="right:10.12%;color:#0E1830">$50</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:69.71%"></i><b class="vl" style="left:calc(69.71% + 6px)">$10</b></div></div></div><div class="r blk"><div class="lb">Claude Opus 5.5 (Anthropic)</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:78.83%"></i><b class="vl" style="left:calc(78.83% + 6px)">$20</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:57.65%"></i><b class="vl" style="left:calc(57.65% + 6px)">$4</b></div></div></div><div class="r blk"><div class="lb">Claude Sonnet 5.5 (Anthropic)</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:69.71%"></i><b class="vl" style="left:calc(69.71% + 6px)">$10</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:48.53%"></i><b class="vl" style="left:calc(48.53% + 6px)">$2</b></div></div></div><div class="r blk"><div class="lb">gpt-6.1-sol (OpenAI)</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:69.71%"></i><b class="vl" style="left:calc(69.71% + 6px)">$10</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:48.53%"></i><b class="vl" style="left:calc(48.53% + 6px)">$2</b></div></div></div><div class="r blk"><div class="lb">Gemini 4 Argon (Google)</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:69.71%"></i><b class="vl" style="left:calc(69.71% + 6px)">$10</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:48.53%"></i><b class="vl" style="left:calc(48.53% + 6px)">$2</b></div></div></div><div class="r blk"><div class="lb">gpt-6.1-terra (OpenAI)</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:60.59%"></i><b class="vl" style="left:calc(60.59% + 6px)">$5</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:39.41%"></i><b class="vl" style="left:calc(39.41% + 6px)">$1</b></div></div></div><div class="r blk"><div class="lb">Gemini 3.8 Flash (Google)</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:56.80%"></i><b class="vl" style="left:calc(56.80% + 6px)">$3.75</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:35.63%"></i><b class="vl" style="left:calc(35.63% + 6px)">$0.75</b></div></div></div><div class="r blk"><div class="lb">Gemini 3.5 Flash-Lite (Google)</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:51.47%"></i><b class="vl" style="left:calc(51.47% + 6px)">$2.5</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:23.57%"></i><b class="vl" style="left:calc(23.57% + 6px)">$0.3</b></div></div></div><div class="r blk"><div class="lb">Claude Haiku 5.5 (Anthropic)</div><div class="tks"><div class="trk"><i class="bar lime" style="left:0.00%;width:30.29%"></i><b class="vl" style="left:calc(30.29% + 6px)">$0.5</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:9.12%"></i><b class="vl" style="left:calc(9.12% + 6px)">$0.1</b></div></div></div><div class="r blk"><div class="lb">gpt-6-luna (OpenAI)</div><div class="tks"><div class="trk"><i class="bar lime" style="left:0.00%;width:30.29%"></i><b class="vl" style="left:calc(30.29% + 6px)">$0.5</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:9.12%"></i><b class="vl" style="left:calc(9.12% + 6px)">$0.1</b></div></div></div><p class="axis">US dollars per million tokens (log scale)</p><p class="note">Lime marks the priciest and cheapest output prices: $50 against $0.50, a 100x spread.</p></div><p class="cap"><em>Standard pay-as-you-go prices for prompts under each provider's long-context threshold, without caching or batch discounts. Source: Anthropic, OpenAI and Google pricing pages, read 3 November 2026; Brave New Media analysis.</em></p></figure>
+<p>Output prices run from $0.50 to $50 per million tokens, a hundredfold spread. Prices also move. Google's page lists Gemini 4 Argon at $2 input and $10 output "through November 30, 2026", rising to $4 and $20 from 1 December 2026, and Gemini 3.8 Flash doubling from 1 January 2027.<a class="fn" href="#ref-7">[7]</a> Anthropic notes that its newer models use a tokenizer that "produces approximately 30% more tokens for the same text", so the same page can cost more on a model with a similar headline price.<a class="fn" href="#ref-5">[5]</a> We adjusted for that in the model.</p>
+<h3 id="finding-2-people-time-is-priced-in-tens-of-dollars-an-hour">Finding 2: people time is priced in tens of dollars an hour</h3>
+<figure class="fig" id="fig-5"><h4 class="ft">Figure 5. Loaded hourly cost of the people who do marketing work, United States</h4><div class="ch hb"><div class="lg"><span><i class="sw navy"></i>Loaded hourly cost</span><span><i class="sw gray"></i>Median hourly wage</span></div><div class="r blk"><div class="lb">Customer service representatives</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:23.66%"></i><b class="vl" style="left:calc(23.66% + 6px)">$30.76</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:16.56%"></i><b class="vl" style="left:calc(16.56% + 6px)">$21.53</b></div></div></div><div class="r blk"><div class="lb">Interpreters and translators</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:31.79%"></i><b class="vl" style="left:calc(31.79% + 6px)">$41.33</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:22.25%"></i><b class="vl" style="left:calc(22.25% + 6px)">$28.93</b></div></div></div><div class="r blk"><div class="lb">Graphic designers</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:33.26%"></i><b class="vl" style="left:calc(33.26% + 6px)">$43.24</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:23.28%"></i><b class="vl" style="left:calc(23.28% + 6px)">$30.27</b></div></div></div><div class="r blk"><div class="lb">Sales reps, wholesale and manufacturing</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:38.08%"></i><b class="vl" style="left:calc(38.08% + 6px)">$49.50</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:26.65%"></i><b class="vl" style="left:calc(26.65% + 6px)">$34.65</b></div></div></div><div class="r blk"><div class="lb">Public relations specialists</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:39.49%"></i><b class="vl" style="left:calc(39.49% + 6px)">$51.34</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:27.65%"></i><b class="vl" style="left:calc(27.65% + 6px)">$35.94</b></div></div></div><div class="r blk"><div class="lb">Writers and authors</div><div class="tks"><div class="trk"><i class="bar lime" style="left:0.00%;width:40.64%"></i><b class="vl" style="left:calc(40.64% + 6px)">$52.83</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:28.45%"></i><b class="vl" style="left:calc(28.45% + 6px)">$36.98</b></div></div></div><div class="r blk"><div class="lb">Editors</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:41.16%"></i><b class="vl" style="left:calc(41.16% + 6px)">$53.51</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:28.82%"></i><b class="vl" style="left:calc(28.82% + 6px)">$37.46</b></div></div></div><div class="r blk"><div class="lb">Market research analysts and marketing specialists</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:41.62%"></i><b class="vl" style="left:calc(41.62% + 6px)">$54.10</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:29.13%"></i><b class="vl" style="left:calc(29.13% + 6px)">$37.87</b></div></div></div><div class="r blk"><div class="lb">Marketing managers</div><div class="tks"><div class="trk"><i class="bar navy" style="left:0.00%;width:88.12%"></i><b class="vl in" style="right:12.88%;color:var(--paper)">$114.56</b></div><div class="trk"><i class="bar gray" style="left:0.00%;width:61.68%"></i><b class="vl" style="left:calc(61.68% + 6px)">$80.19</b></div></div></div><p class="axis">US dollars per hour</p></div><p class="cap"><em>Median hourly wage from BLS Occupational Employment and Wage Statistics, May 2025, national. Loaded cost divides the wage by 0.700, the wage share of total compensation for private industry workers in the BLS Employer Costs for Employee Compensation, Q2 2026. Source: US Bureau of Labor Statistics; Brave New Media analysis.</em></p></figure>
+<p>A marketing specialist at the national median costs about $54 an hour once benefits are included, and a marketing manager about $115. Those rates, not token prices, set the scale of every comparison that follows.</p>
+<h3 id="finding-3-tokens-are-the-smallest-line-in-the-ai-workflow">Finding 3: tokens are the smallest line in the AI workflow</h3>
+<figure class="fig" id="fig-6"><h4 class="ft">Figure 6. Cost per task: done by hand versus an AI workflow with human review</h4><div class="ch hb"><div class="lg"><span><i class="sw gray"></i>By hand</span><span><i class="sw navy"></i>AI workflow (with human review)</span></div><div class="r blk"><div class="lb">Tag and route an inbound RFQ email</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:16.83%"></i><b class="vl" style="left:calc(16.83% + 6px)">$1.54</b></div><div class="trk"><i class="bar navy" style="left:0.00%;width:0.35%"></i><b class="vl" style="left:calc(0.00% + 6px)">$0.33</b></div></div></div><div class="r blk"><div class="lb">Reply to a routine customer email</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:27.20%"></i><b class="vl" style="left:calc(27.20% + 6px)">$3.08</b></div><div class="trk"><i class="bar navy" style="left:0.00%;width:8.96%"></i><b class="vl" style="left:calc(8.96% + 6px)">$0.91</b></div></div></div><div class="r blk"><div class="lb">Summarise a 45-minute sales call into CRM notes</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:52.31%"></i><b class="vl" style="left:calc(52.31% + 6px)">$16.50</b></div><div class="trk"><i class="bar navy" style="left:0.00%;width:30.02%"></i><b class="vl" style="left:calc(30.02% + 6px)">$3.72</b></div></div></div><div class="r blk"><div class="lb">Write a 200-word product description from a spec sheet</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:65.77%"></i><b class="vl" style="left:calc(65.77% + 6px)">$40.57</b></div><div class="trk"><i class="bar navy" style="left:0.00%;width:43.60%"></i><b class="vl" style="left:calc(43.60% + 6px)">$9.22</b></div></div></div><div class="r blk"><div class="lb">Turn one article into five LinkedIn posts</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:70.07%"></i><b class="vl" style="left:calc(70.07% + 6px)">$54.10</b></div><div class="trk"><i class="bar navy" style="left:0.00%;width:49.84%"></i><b class="vl" style="left:calc(49.84% + 6px)">$13.99</b></div></div></div><div class="r blk"><div class="lb">Localise a 1,000-word product page into one new language</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:82.48%"></i><b class="vl in" style="right:18.52%;color:#FFFFFF">$123.99</b></div><div class="trk"><i class="bar navy" style="left:0.00%;width:62.05%"></i><b class="vl" style="left:calc(62.05% + 6px)">$31.64</b></div></div></div><div class="r blk"><div class="lb">Draft a 1,500-word blog article</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:90.45%"></i><b class="vl in" style="right:10.55%;color:#FFFFFF">$211.31</b></div><div class="trk"><i class="bar navy" style="left:0.00%;width:69.97%"></i><b class="vl" style="left:calc(69.97% + 6px)">$53.75</b></div></div></div><p class="axis">US dollars per task (log scale)</p><p class="note">AI workflow split, model tokens versus human review: RFQ tagging $0.08 and $0.25; routine reply $0.14 and $0.77; call summary $0.42 and $3.30; product description $0.21 and $9.01; five LinkedIn posts $0.46 and $13.53; localised page $0.65 and $30.99; blog article $0.92 and $52.83.</p></div><p class="cap"><em>Token cost uses Claude Fable 5.1 at $10 input and $50 output per million tokens, with two attempts per task, 1,000 words of instructions per call and two hidden reasoning tokens per visible output token. Task sizes and minutes are Brave New Media assumptions, listed in the Methodology. Source: Brave New Media cost model, 3 November 2026.</em></p></figure>
+<p>Even on the most expensive model we priced, and with generous allowances for instructions, reasoning and a second attempt, tokens never cost more than $0.92 per task. The cheapest model brought the same article draft under one cent ($0.0071 on gpt-6-luna). People time made up 77% of the AI workflow's cost for the smallest task and 98% for the largest.</p>
+<p>Under our base assumptions, the AI workflow cost 70% to 78% less than doing each task by hand. That saving comes almost entirely from the assumption that review takes about a quarter of the original time. Which is why the next figure matters more than the last one.</p>
+<h3 id="finding-4-review-time-not-model-choice-moves-the-total">Finding 4: review time, not model choice, moves the total</h3>
+<figure class="fig" id="fig-7"><h4 class="ft">Figure 7. What changes the cost of one 1,500-word article draft</h4><div class="ch hb"><div class="r"><div class="lb">Review time halves (30 min)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:11.39%"></i><b class="vl" style="left:calc(11.39% + 6px)">$27.33</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Cheapest model in sample (gpt-6-luna)</div><div class="trk"><i class="bar gray" style="left:0.00%;width:22.02%"></i><b class="vl" style="left:calc(22.02% + 6px)">$52.84</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Base case (Claude Fable 5.1, 2 attempts, 60 min review)</div><div class="trk"><i class="bar lime" style="left:0.00%;width:22.40%"></i><b class="vl" style="left:calc(22.40% + 6px)">$53.75</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Model prices double</div><div class="trk"><i class="bar gray" style="left:0.00%;width:22.78%"></i><b class="vl" style="left:calc(22.78% + 6px)">$54.67</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Agent loop: 10x the tokens</div><div class="trk"><i class="bar gray" style="left:0.00%;width:25.84%"></i><b class="vl" style="left:calc(25.84% + 6px)">$62.02</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Review time doubles (120 min)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:44.41%"></i><b class="vl" style="left:calc(44.41% + 6px)">$106.58</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Agent loop: 100x the tokens</div><div class="trk"><i class="bar gray" style="left:0.00%;width:60.29%"></i><b class="vl" style="left:calc(60.29% + 6px)">$144.70</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Human-only baseline (240 min)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:88.05%"></i><b class="vl in" style="right:12.95%;color:var(--paper)">$211.31</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><div class="r"><div class="lb">Review time equals writing time (240 min)</div><div class="trk"><i class="bar navy" style="left:0.00%;width:88.43%"></i><b class="vl in" style="right:12.57%;color:var(--paper)">$212.23</b><u class="ref" style="left:22.40%"></u><u class="ref" style="left:88.05%"></u></div></div><p class="note"><u class="rk"></u> Base case: $53.75</p><p class="note"><u class="rk"></u> Human-only baseline: $211.31</p><p class="axis">US dollars per article</p></div><p class="cap"><em>One article drafted by a model and reviewed by a writer at a loaded $52.83 an hour. Source: Brave New Media cost model, 3 November 2026.</em></p></figure>
+<p>Moving from the most expensive model to the cheapest saves $0.91 per article, under 2%. A doubling of every model price adds $0.92. A doubling of review time adds $52.83, almost doubling the total. Only one model-side change came close: an agent that loops 100 times over the same material, re-reading and rewriting, which pushed the article to $144.70. Agent workflows can do that, and it is one reason to cap how many steps an agent may take.</p>
+<p>The last two rows are the METR lesson in money. If review and repair take as long as writing from scratch, the AI workflow costs slightly more than the human one, and nobody notices unless someone measured both.</p>
+<h3 id="finding-5-what-this-looks-like-over-a-month">Finding 5: what this looks like over a month</h3>
+<figure class="fig" id="fig-8"><h4 class="ft">Figure 8. A month of marketing and sales tasks for a hypothetical industrial supplier</h4><div class="ch hb"><div class="lg"><span><i class="sw gray"></i>By hand</span><span><i class="sw lime"></i>AI workflow</span></div><div class="r blk"><div class="lb">Tag and route an inbound RFQ email</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:61.60%"></i><b class="vl" style="left:calc(61.60% + 6px)">$924</b></div><div class="trk"><i class="bar lime" style="left:0.00%;width:13.20%"></i><b class="vl" style="left:calc(13.20% + 6px)">$198</b></div></div></div><div class="r blk"><div class="lb">Reply to a routine customer email</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:82.13%"></i><b class="vl in" style="right:18.87%;color:#FFFFFF">$1,232</b></div><div class="trk"><i class="bar lime" style="left:0.00%;width:24.27%"></i><b class="vl" style="left:calc(24.27% + 6px)">$364</b></div></div></div><div class="r blk"><div class="lb">Summarise a 45-minute sales call into CRM notes</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:88.00%"></i><b class="vl in" style="right:13.00%;color:#FFFFFF">$1,320</b></div><div class="trk"><i class="bar lime" style="left:0.00%;width:19.87%"></i><b class="vl" style="left:calc(19.87% + 6px)">$298</b></div></div></div><div class="r blk"><div class="lb">Write a 200-word product description from a spec sheet</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:54.07%"></i><b class="vl" style="left:calc(54.07% + 6px)">$811</b></div><div class="trk"><i class="bar lime" style="left:0.00%;width:12.27%"></i><b class="vl" style="left:calc(12.27% + 6px)">$184</b></div></div></div><div class="r blk"><div class="lb">Turn one article into five LinkedIn posts</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:28.87%"></i><b class="vl" style="left:calc(28.87% + 6px)">$433</b></div><div class="trk"><i class="bar lime" style="left:0.00%;width:7.47%"></i><b class="vl" style="left:calc(7.47% + 6px)">$112</b></div></div></div><div class="r blk"><div class="lb">Localise a 1,000-word product page into one new language</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:66.13%"></i><b class="vl" style="left:calc(66.13% + 6px)">$992</b></div><div class="trk"><i class="bar lime" style="left:0.00%;width:16.87%"></i><b class="vl" style="left:calc(16.87% + 6px)">$253</b></div></div></div><div class="r blk"><div class="lb">Draft a 1,500-word blog article</div><div class="tks"><div class="trk"><i class="bar gray" style="left:0.00%;width:56.33%"></i><b class="vl" style="left:calc(56.33% + 6px)">$845</b></div><div class="trk"><i class="bar lime" style="left:0.00%;width:14.33%"></i><b class="vl" style="left:calc(14.33% + 6px)">$215</b></div></div></div><p class="axis">US dollars per month</p></div><p class="cap"><em>This company is made up, but the volumes are typical of a mid-sized B2B supplier. Same assumptions as Figure 6. Source: Brave New Media cost model, 3 November 2026.</em></p></figure>
+<p>For this made-up supplier, the work takes about 160 hours a month by hand and costs $6,557. The AI workflow needs about 36 hours of review and costs $1,624, of which $153 is model spend on the most expensive model, or $31 on a mid-tier model such as Claude Sonnet 5.5. The freed time is worth something only if it moves to other paid work, such as calling the accounts the summaries flagged or opening a new market.</p>
+<h3 id="limits-of-our-cost-model">Limits of our cost model</h3>
+<ul>
+<li>Task sizes, human minutes and review minutes are our assumptions, not measurements. They are stated in full so you can replace them with your own.</li>
+<li>We priced standard rates only. Caching and batch discounts would lower token costs further, which would not change the conclusion.</li>
+<li>Wages are US national medians. Rates vary by region, seniority and country.</li>
+<li>The model has no line for errors that get through, setup, software seats or maintenance. Those lines exist, and the next section adds them.</li>
+</ul>
+  
+</section>
+<section class="chap" id="a-framework-the-cost-stack" data-i="5" data-label="Chapter 5 of 11 · 7 min left">
+  <p class="clab">Chapter 5 · 1 min</p><h2>A framework: the Cost Stack</h2>
+  <p>The research points to a fixed order of cost lines, from the most visible to the most decisive. Most business cases stop at the first two rows. The money is in the last three.</p>
+<div class="tbl"><table><thead><tr><th><strong>Layer</strong></th><th><strong>What it covers</strong></th><th><strong>Evidence</strong></th><th><strong>How to measure it</strong></th></tr></thead><tbody><tr><td>1. Tokens</td><td>Model usage per task</td><td>Under $1 per task on the priciest model we sampled (Figure 6)</td><td>Provider usage dashboard, cost per task</td></tr><tr><td>2. Seats and tools</td><td>Subscriptions, connectors, hosting</td><td>Fixed monthly fees, often overlapping</td><td>Invoice review</td></tr><tr><td>3. Setup and upkeep</td><td>Prompts, testing, integrations, re-testing when models change</td><td>Prices and models changed within months (Figure 4)</td><td>Hours logged, spread over the workflow's life</td></tr><tr><td>4. Review</td><td>Reading, correcting and approving output</td><td>77% to 98% of AI workflow cost in our model (Figure 6)</td><td>Stopwatch on a sample of items</td></tr><tr><td>5. Errors</td><td>What a mistake costs when it gets through</td><td>Klarna's "lower quality"; Air Canada's liability ruling</td><td>Error rate times average cost to fix</td></tr></tbody></table></div>
+<p>The order matters because each layer is larger and harder to see than the one above it. A team that negotiates a 20% discount on tokens and ignores review has optimised the smallest number on the page.</p>
+  
+</section>
+<section class="chap" id="how-to-cost-an-ai-workflow-in-six-steps" data-i="6" data-label="Chapter 6 of 11 · 6 min left">
+  <p class="clab">Chapter 6 · 1 min</p><h2>How to cost an AI workflow in six steps</h2>
+  <p>You can cost any AI workflow with a spreadsheet and two weeks of honest timing.</p>
+<h3 id="step-1-time-the-work-as-it-is-today">Step 1: Time the work as it is today</h3>
+<p>Pick one workflow. Count the items handled a month, time a sample of ten by hand, and multiply by the loaded hourly cost of the person doing it. Use your own payroll figures, or the BLS rates in Figure 5 as a starting point. Without this baseline you cannot prove anything later.</p>
+<h3 id="step-2-design-the-split-and-the-escalation-rule">Step 2: Design the split and the escalation rule</h3>
+<p>Write down which steps the model does, which a person does, and which items go straight to a person. Decide the escalation rule before the pilot, for example "anything about refunds, complaints, pricing or contract terms goes to a human".</p>
+<h3 id="step-3-price-the-tokens">Step 3: Price the tokens</h3>
+<p>Count the words that go in and come out of a typical item, convert at about 0.75 words per token, and multiply by the provider's published rate.<a class="fn" href="#ref-6">[6]</a> Add your instructions to every call, and allow for reasoning tokens and retries. It will almost always be the smallest number in the table, which is the point of checking it.</p>
+<h3 id="step-4-time-the-review">Step 4: Time the review</h3>
+<p>During a short pilot, time how long a person takes to read, fix and approve each item. Do not ask people to estimate it. The METR study shows that estimates can point the wrong way.<a class="fn" href="#ref-2">[2]</a></p>
+<h3 id="step-5-count-the-errors">Step 5: Count the errors</h3>
+<p>Track what share of items needed a real correction after approval, and what each one cost to fix. Multiply the two.</p>
+<h3 id="step-6-run-the-sensitivity-check-then-re-cost-at-30-and-90-days">Step 6: Run the sensitivity check, then re-cost at 30 and 90 days</h3>
+<p>Change review time and error rate and watch the total. If a small change turns a saving into a loss, the workflow is fragile. Re-time the work after 30 and 90 days, because models, prices and your team's habits all change.</p>
+<p class="tip"><strong>Tip:</strong> Count only time that moves to other paid work. If a saved hour becomes a longer lunch, it is a nicer week, not a cost saving.</p>
+<h3 id="which-workflows-to-cost-first">Which workflows to cost first</h3>
+<div class="tbl"><table><thead><tr><th><strong>Workflow type</strong></th><th><strong>Volume</strong></th><th><strong>Cost of an error</strong></th><th><strong>Review time</strong></th><th><strong>Start here?</strong></th></tr></thead><tbody><tr><td>Tagging and routing inbound requests</td><td>High</td><td>Low</td><td>Seconds</td><td>Yes</td></tr><tr><td>Call summaries into the CRM</td><td>Medium</td><td>Low to medium</td><td>A few minutes</td><td>Yes</td></tr><tr><td>Routine customer replies with an escalation rule</td><td>High</td><td>Medium</td><td>A minute or two</td><td>Yes, with a pilot</td></tr><tr><td>Product pages and localisation for new markets</td><td>Low to medium</td><td>Medium</td><td>Large share of the original</td><td>After a pilot</td></tr><tr><td>Long-form thought leadership</td><td>Low</td><td>High for the brand</td><td>Close to the original</td><td>Last</td></tr></tbody></table></div>
+  
+</section>
+<section class="chap" id="how-brave-new-media-builds-ai-flows" data-i="7" data-label="Chapter 7 of 11 · 5 min left">
+  <p class="clab">Chapter 7 · 1 min</p><h2>How Brave New Media builds AI flows</h2>
+  <p>At Brave New Media, an AI flow is AI orchestration pointed at growth: a designed workflow that helps a business take one clear idea to more channels, more markets and more buyers, without adding headcount at the same rate. The Cost Stack applies to every flow we build.</p>
+<p>Every flow has five parts: signals (what a buyer already did, such as an RFQ or a spec sheet download), segmentation, the flow of messages itself, the automation that connects your existing tools, and tracking to pipeline and revenue. In each part a person holds a defined place. Nothing sends without a person approving the messages the flow can send, and a person reads the numbers and decides what runs next. Human approval is review time, so we budget it, and tracking to revenue gives the baseline and the 90-day review.</p>
+  
+</section>
+<section class="chap" id="what-this-means-for-leaders" data-i="8" data-label="Chapter 8 of 11 · 4 min left">
+  <p class="clab">Chapter 8 · 1 min</p><h2>What this means for leaders</h2>
+  <p>For a manufacturing or supply-chain business, the case for AI orchestration is rarely about cutting a team. It is about what the same team can reach. In our made-up supplier, the largest cost lines by hand were call summaries, customer replies and RFQ handling: the daily work that keeps existing accounts served. Moving that work to a reviewed AI flow frees time for the tasks that grow a customer base, such as following up on every signal from a new region or localising product pages for a market the company has never sold into.</p>
+<p>That expansion angle is where token prices start to matter in a good way. Localising a 1,000-word product page cost $0.65 in tokens on the most expensive model we sampled, against $124 for a translator working from scratch. Review by a fluent person is still needed, and in regulated or technical categories it should be. But in our model a reviewed AI workflow localised a page for $31.64, about a quarter of the $124 cost by hand, so a mid-sized manufacturer can test several new markets for the price of one and keep the ones that answer. We see that pattern across supply chain and manufacturing: long sales cycles, few buyers per market, and a strong product that nobody abroad has heard of yet.</p>
+<p>The Klarna record gives the warning. Scale without quality control turns into "lower quality", and a brand pays for that in trust, which the Hive's entry on <a href="https://bravenewhive.com/reputation/trust-architecture/">trust architecture</a> explains in more depth.<a class="fn" href="#ref-9">[9]</a> Your <a href="https://bravenewhive.com/reputation/brand-versus-reputation/">brand and your reputation</a> are built on the parts that still sound like you.</p>
+<p>If you want an AI flow that takes a proven offer to more buyers and more markets, costed line by line before it scales, start with the <a href="https://brave-new.com/audit/">Brave New audit</a>.</p>
+  
+</section>
+<section class="chap" id="common-mistakes" data-i="9" data-label="Chapter 9 of 11 · 3 min left">
+  <p class="clab">Chapter 9 · 1 min</p><h2>Common mistakes</h2>
+  <ul>
+<li><strong>Comparing a subscription with a salary.</strong> The subscription and the tokens are the smallest lines in the Cost Stack.</li>
+<li><strong>Trusting the feeling of speed.</strong> People in the METR study felt 20% faster while taking 19% longer.<a class="fn" href="#ref-2">[2]</a></li>
+<li><strong>Picking the model first.</strong> In our model, switching from the priciest to the cheapest model changed the cost of an article by under 2%.</li>
+<li><strong>Letting agents loop without a cap.</strong> An agent that reprocesses the same material 100 times nearly tripled the cost of an article in our sensitivity test.</li>
+<li><strong>No escalation rule.</strong> Without a clear path to a person, mistakes reach customers. Air Canada learned this in a tribunal.<a class="fn" href="#ref-14">[14]</a></li>
+<li><strong>Counting time saved that is not reused.</strong> Freed hours only pay if they move to other paid work.</li>
+</ul>
+  
+</section>
+<section class="chap" id="methodology" data-i="10" data-label="Chapter 10 of 11 · 2 min left">
+  <p class="clab">Chapter 10 · 1 min</p><h2>Methodology</h2>
+  <p><strong>Prices.</strong> On 3 November 2026 we downloaded the public pricing pages of Anthropic (docs.claude.com), OpenAI (developers.openai.com, Markdown version of the pricing page) and Google (ai.google.dev, Gemini API pricing) with a script that identified itself as "BraveNewResearch/1.0" with a link to brave-new.com. OpenAI's marketing pricing page returned HTTP 403 to that script; its developer documentation page did not. We used standard pay-as-you-go rates for short-context prompts, without caching, batch or priority discounts. We chose 11 models covering three tiers from each provider. For Anthropic models we multiplied token counts by 1.3, following Anthropic's note that its newer tokenizer produces approximately 30% more tokens for the same text.</p>
+<p><strong>Wages.</strong> We pulled national median hourly wages for nine occupations from the BLS Occupational Employment and Wage Statistics, May 2025, through the public BLS API (series OEUN000000000000 plus the occupation code and data type 08). We converted wages to loaded cost by dividing by 0.700, the share of wages and salaries in total compensation for private industry workers in the BLS Employer Costs for Employee Compensation, second quarter of 2026 (series CMU2020000000000P).</p>
+<p><strong>Tasks.</strong> Seven tasks, each with a stated input size, output size, human minutes, review minutes and occupation. These are our assumptions:</p>
+<div class="tbl"><table><thead><tr><th><strong>Task</strong></th><th><strong>Occupation</strong></th><th><strong>Input words</strong></th><th><strong>Output words</strong></th><th><strong>Minutes by hand</strong></th><th><strong>Review minutes</strong></th></tr></thead><tbody><tr><td>Tag and route an inbound RFQ email</td><td>Customer service representatives</td><td>500</td><td>50</td><td>3</td><td>0.5</td></tr><tr><td>Reply to a routine customer email</td><td>Customer service representatives</td><td>800</td><td>150</td><td>6</td><td>1.5</td></tr><tr><td>Summarise a 45-minute sales call</td><td>Sales reps, wholesale and manufacturing</td><td>6,500</td><td>300</td><td>20</td><td>4</td></tr><tr><td>200-word product description</td><td>Marketing specialists</td><td>2,000</td><td>200</td><td>45</td><td>10</td></tr><tr><td>Five LinkedIn posts from an article</td><td>Marketing specialists</td><td>1,800</td><td>700</td><td>60</td><td>15</td></tr><tr><td>Localise a 1,000-word product page</td><td>Interpreters and translators</td><td>1,200</td><td>1,100</td><td>180</td><td>45</td></tr><tr><td>1,500-word blog article draft</td><td>Writers and authors</td><td>3,000</td><td>1,500</td><td>240</td><td>60</td></tr></tbody></table></div>
+<p><strong>Token cost.</strong> For each task: two attempts, each sending the task input plus 1,000 words of instructions, and each producing the visible output plus two hidden reasoning tokens per visible output token. Words convert to tokens at 0.75 words per token, OpenAI's stated rule of thumb for English.</p>
+<p><strong>Limits.</strong> This is a model, not a measurement of any company's work. It leaves out errors, setup, seats and upkeep. It uses US national wages, and the human and review minutes are illustrative. Its value is that every input is visible and can be swapped for your own.</p>
+<p>The scripts, the raw pricing and wage downloads, and the data behind every figure are published with this essay as CSV files.</p>
+  
+</section>
+<section class="chap" id="frequently-asked-questions" data-i="11" data-label="Chapter 11 of 11 · 1 min left">
+  <p class="clab">Chapter 11 · 1 min</p><h2>Frequently asked questions</h2>
+  <div class="faqs"><details class="faq"><summary>What is AI orchestration in simple terms?</summary><p>AI orchestration means planning how AI models and people share a piece of work. You decide which steps the model handles, which steps a person checks or does, and which items go straight to a person. For most businesses it is less about software and more about designing one workflow carefully, then measuring whether it saves money.</p></details><details class="faq"><summary>How much does it cost to run an AI model on a marketing task?</summary><p>Less than most people expect. In our cost model, using published prices from 3 November 2026, a 1,500-word article draft cost $0.92 in tokens on the most expensive model we priced and under one cent on the cheapest. The larger cost is the person who reviews the draft, about $53 for an hour of a writer's time.</p></details><details class="faq"><summary>Does AI workflow automation save money?</summary><p>It can, if review is fast. In our model the AI workflow cost 70% to 78% less than doing seven marketing tasks by hand, assuming review takes about a quarter of the original time. If review takes as long as the original work, the saving disappears. Time a sample of real items before you decide.</p></details><details class="faq"><summary>How can you tell if an AI tool is saving your team time?</summary><p>Time the task by hand first, then time it with the tool, including checking and fixing the output. Do not rely on how fast it feels. In METR's 2025 trial, experienced developers using AI took 19% longer while believing they had been 20% faster. A short pilot with a stopwatch settles the question.</p></details><details class="faq"><summary>Which AI model should a small business choose to keep costs down?</summary><p>Choose on quality and review time first, price second. Output prices across the 11 models we sampled ranged from $0.50 to $50 per million tokens, yet switching from the priciest to the cheapest model changed the total cost of an article draft by under 2%. A model that needs less fixing usually saves more than a cheaper one.</p></details></div>
+  <section class="next"><h2>Your next step</h2><p>This week, pick one workflow you have automated, or want to, and time ten items by hand with a stopwatch. Then run the same ten through your AI tool and time the review, including every fix. Put both numbers into the Cost Stack. That one table will tell you more than any vendor demo.</p>
+<p>If you want a team to build and cost an AI flow that takes a proven offer into more markets, start with the <a href="https://brave-new.com/audit/">Brave New audit</a>.</p>
+<p><em>Brave New Media is a marketing agency that builds AI flows to help companies scale their ideas, grow their customer base and expand into new markets, with experience across supply chain and manufacturing.</em></p></section><section class="seealso"><h2>See also</h2><ul>
+<li><a href="https://bravenewhive.com/ai-marketing/what-is-ai-marketing/">What is AI marketing</a>, Brave New Hive</li>
+<li><a href="https://bravenewhive.com/reputation/reputation-risk/">Reputation risk</a>, Brave New Hive</li>
+<li><a href="https://bravenewhive.com/reputation/trust-architecture/">Trust architecture</a>, Brave New Hive</li>
+<li><a href="https://bravenewhive.com/readings/thinking-fast-and-slow-kahneman/">Thinking, Fast and Slow</a>, Brave New Hive</li>
+<li><a href="https://brave-new.com/journal/">The Brave New Business Journal</a>, weekly thinking on business, money and AI</li>
+<li><a href="https://brave-new.com/qa/">Brave New Q&amp;A</a>, answers to common questions about how we work</li>
+</ul></section><nav class="pn" aria-label="More essays"><a class="pv" href="/annebecheru-preview/writing/empires-start-as-stories/"><small>Previous essay</small><span>Empires start as stories</span></a><a class="nx" href="/annebecheru-preview/writing/plans-hide-risk/"><small>Next essay</small><span>Plans hide risk</span></a></nav>
+</section>
+<section class="chap refs" id="references" data-i="12" data-label="References">
+  <h2>References</h2><p class="ref" id="ref-1"><span>1.</span> "Orchestration (computing)." Wikipedia, read 3 November 2026. <a href="https://en.wikipedia.org/wiki/Orchestration_(computing">en.wikipedia.org/wiki/Orchestration_(computing)</a>)</p><p class="ref" id="ref-2"><span>2.</span> METR. "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity." 10 July 2025. <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">metr.org</a>. Paper: Becker, J., Rush, N., Barnes, E. and Rein, D. <a href="https://arxiv.org/abs/2507.09089">arxiv.org/abs/2507.09089</a></p><p class="ref" id="ref-3"><span>3.</span> Noy, S. and Zhang, W. "Experimental evidence on the productivity effects of generative artificial intelligence." Science 381(6654), 187 to 192, 2023. <a href="https://pubmed.ncbi.nlm.nih.gov/37440646/">pubmed.ncbi.nlm.nih.gov/37440646</a></p><p class="ref" id="ref-4"><span>4.</span> Brynjolfsson, E., Li, D. and Raymond, L. "Generative AI at Work." NBER Working Paper 31161, 2023; Quarterly Journal of Economics 140(2), 2025. <a href="https://www.nber.org/papers/w31161">nber.org/papers/w31161</a></p><p class="ref" id="ref-5"><span>5.</span> Anthropic. "Pricing." Claude documentation, read 3 November 2026. <a href="https://docs.claude.com/en/docs/about-claude/pricing">docs.claude.com</a></p><p class="ref" id="ref-6"><span>6.</span> OpenAI. "Pricing" and "Key concepts." API documentation, read 3 November 2026. <a href="https://developers.openai.com/api/docs/pricing">developers.openai.com</a></p><p class="ref" id="ref-7"><span>7.</span> Google. "Gemini Developer API pricing." Read 3 November 2026. <a href="https://ai.google.dev/gemini-api/docs/pricing">ai.google.dev</a></p><p class="ref" id="ref-8"><span>8.</span> Klarna. "Klarna AI assistant handles two-thirds of customer service chats in its first month." 27 February 2024. <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/">klarna.com</a></p><p class="ref" id="ref-9"><span>9.</span> Doerer, K. "Klarna changes its AI tune and again recruits humans for customer service." CX Dive, 9 May 2025. <a href="https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/">customerexperiencedive.com</a></p><p class="ref" id="ref-10"><span>10.</span> US Bureau of Labor Statistics. Employer Costs for Employee Compensation, private industry, Q2 2026, and Occupational Employment and Wage Statistics, May 2025. <a href="https://www.bls.gov/oes/">bls.gov/oes</a></p><p class="ref" id="ref-11"><span>11.</span> METR. "We are Changing our Developer Productivity Experiment Design." 24 February 2026. <a href="https://metr.org/blog/2026-02-24-uplift-update/">metr.org</a></p><p class="ref" id="ref-12"><span>12.</span> Klarna Group plc. Second Quarter 2025 Results. <a href="https://s205.q4cdn.com/644747736/files/doc_financials/2025/q2/Q2-25-Klarna-Group-plc-Earnings-Release.pdf">s205.q4cdn.com</a></p><p class="ref" id="ref-13"><span>13.</span> Klarna Group plc. Fourth Quarter 2025 Results. <a href="https://s205.q4cdn.com/644747736/files/doc_earnings/2025/q4/earnings-result/Q4-25-Klarna-Group-plc-Earnings-Release.pdf">s205.q4cdn.com</a></p><p class="ref" id="ref-14"><span>14.</span> Moffatt v. Air Canada, 2024 BCCRT 149. Summary: <a href="https://en.wikipedia.org/wiki/Moffatt_v._Air_Canada">en.wikipedia.org/wiki/Moffatt_v._Air_Canada</a></p><p class="ref" id="ref-15"><span>15.</span> Brave New Media. Cost model of seven marketing tasks on 11 AI models, 3 November 2026. Data published with this essay.</p>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap">
+      <div style="max-width:520px"><b style="color:#F2F4F8;font-family:'Hanken Grotesk';font-size:20px">Anne Becheru</b><p style="margin:8px 0 0">AI marketer, founder of Brave New and the Brave New Hive, investor.</p></div>
+      <div><a href="https://www.linkedin.com/in/anne-becheru">LinkedIn</a><a href="https://brave-new.com/">Brave New</a><a href="https://bravenewhive.com/">The Hive</a><a href="https://www.youtube.com/@BraveNewMediaOfficial">YouTube</a><a href="https://www.instagram.com/bravenew.media/">Instagram</a><a href="https://www.linkedin.com/company/brave-new/">Brave New on LinkedIn</a><a href="mailto:anne@brave-new.com">Email</a></div>
+    </div>
+    <div class="word">Anne <em>Becheru</em></div>
+    <p style="margin-top:28px;font-size:14px">© 2026 Anne Becheru · A Brave New production · Last updated 26 October 2026</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var chs=[].slice.call(document.querySelectorAll('.chap'));if(!chs.length)return;
+  var links=[].slice.call(document.querySelectorAll('.rail ol a')),rs=document.getElementById('rs'),
+      bar=document.getElementById('rbar'),fab=document.querySelector('.rail-fab'),fabl=document.getElementById('fabl'),
+      list=document.querySelector('.rail ol'),cur=-1,ticking=false;
+  function close(){document.body.classList.remove('rail-open');fab.setAttribute('aria-expanded','false');}
+  function update(){
+    ticking=false;
+    var y=window.scrollY,line=window.innerHeight*0.3,on=0;
+    for(var k=0;k<chs.length;k++){if(chs[k].getBoundingClientRect().top<=line)on=k;}
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    if(h>0&&y>=h-4)on=chs.length-1;
+    bar.style.width=(h>0?Math.min(100,y/h*100):0)+'%';
+    if(on===cur)return;cur=on;
+    var ch=chs[on],i=+ch.getAttribute('data-i');
+    links.forEach(function(a){var j=+a.getAttribute('data-i');a.classList.toggle('done',j<i);
+      if(j===i){a.setAttribute('aria-current','true');
+        var r=a.getBoundingClientRect(),lr=list.getBoundingClientRect();
+        if(r.top<lr.top+8||r.bottom>lr.bottom-8)list.scrollTop+=r.top-lr.top-lr.height/3;}
+      else a.removeAttribute('aria-current');});
+    rs.textContent=ch.getAttribute('data-label');fabl.textContent=ch.getAttribute('data-label').split(' · ')[0];
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
+  window.addEventListener('resize',update);update();
+  document.querySelector('.rail').addEventListener('click',function(ev){if(ev.target.closest('ol a'))close();});
+  fab.addEventListener('click',function(){var o=document.body.classList.toggle('rail-open');fab.setAttribute('aria-expanded',o?'true':'false');});
+  document.querySelector('.rail-scrim').addEventListener('click',close);
+  document.querySelector('.rx').addEventListener('click',close);
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape')close();});
+})();
+</script>
+<script>
+(function(){
+  // Footnotes: on wide screens each reference sits in the right margin level with its marker;
+  // narrower, a tap opens the reference under the paragraph. The References list stays at the end.
+  var main=document.querySelector('.cmain');if(!main)return;
+  var fns=[].slice.call(document.querySelectorAll('.chap:not(.refs) a.fn'));
+  function refText(n){var r=document.getElementById('ref-'+n);if(!r)return '';var c=r.cloneNode(true);var sp=c.querySelector('span');if(sp)sp.remove();return c.innerHTML.trim();}
+  function place(){
+    [].slice.call(main.querySelectorAll('.sn')).forEach(function(x){x.remove();});
+    if(window.innerWidth<1300)return;
+    var mt=main.getBoundingClientRect().top+window.scrollY,lastBottom=-1;
+    fns.forEach(function(a){
+      var n=a.getAttribute('href').slice(5),y=a.getBoundingClientRect().top+window.scrollY-mt-4;
+      var s=document.createElement('aside');s.className='sn';s.innerHTML='<b>'+n+'</b>'+refText(n);
+      main.appendChild(s);if(y<lastBottom+10)y=lastBottom+10;s.style.top=y+'px';lastBottom=y+s.offsetHeight;
+      a._sn=s;});
+  }
+  fns.forEach(function(a){
+    a.addEventListener('mouseenter',function(){if(a._sn)a._sn.classList.add('hi');});
+    a.addEventListener('mouseleave',function(){if(a._sn)a._sn.classList.remove('hi');});
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();if(window.innerWidth>=1300)return;
+      var blk=a.closest('p,li,figure,td')||a.parentNode,nx=blk.nextElementSibling;
+      if(nx&&nx.classList.contains('fnpop')){nx.remove();return;}
+      var n=a.getAttribute('href').slice(5),d=document.createElement('div');d.className='fnpop';d.setAttribute('role','note');
+      d.innerHTML='<b>'+n+'</b>'+refText(n)+'<button type="button" aria-label="Close">×</button>';
+      d.querySelector('button').addEventListener('click',function(){d.remove();});blk.after(d);});
+  });
+  var t;function later(){clearTimeout(t);t=setTimeout(place,150);}
+  window.addEventListener('resize',later);window.addEventListener('load',place);
+  [].slice.call(document.querySelectorAll('details')).forEach(function(d){d.addEventListener('toggle',later);});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(place);place();
+})();
+</script>
+</body>
+</html>
