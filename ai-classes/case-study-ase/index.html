@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study: Teaching AI at ASE Bucharest | Anne Becheru</title>
+<meta name="description" content="Four rooms, one week, one method: how students and faculty at ASE Bucharest built AI agents on their own work in November 2026.">
+<link rel="canonical" href="https://annebecheru.com/ai-classes/case-study-ase/">
+<meta property="og:title" content="Case Study: Teaching AI at ASE Bucharest | Anne Becheru">
+<meta property="og:description" content="Four rooms, one week, one method: how students and faculty at ASE Bucharest built AI agents on their own work in November 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://annebecheru.com/ai-classes/case-study-ase/">
+<meta property="og:site_name" content="Anne Becheru">
+<meta property="og:image" content="https://annebecheru.com/img/share/ai-classes-case-study-ase.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case Study: Teaching AI at ASE Bucharest | Anne Becheru">
+<meta name="twitter:description" content="Four rooms, one week, one method: how students and faculty at ASE Bucharest built AI agents on their own work in November 2026.">
+<meta name="twitter:image" content="https://annebecheru.com/img/share/ai-classes-case-study-ase.jpg">
+<meta name="theme-color" content="#0E1830">
+<link rel="icon" href="/annebecheru-preview/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/annebecheru-preview/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/annebecheru-preview/apple-touch-icon.png">
+<link rel="preload" href="/annebecheru-preview/fonts/figtree-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/annebecheru-preview/fonts/hanken-grotesk-normal-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style id="fonts">@font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(/annebecheru-preview/fonts/figtree-normal-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(/annebecheru-preview/fonts/figtree-normal-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Figtree';font-style:normal;font-weight:500;font-display:swap;src:url(/annebecheru-preview/fonts/figtree-normal-500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Figtree';font-style:normal;font-weight:500;font-display:swap;src:url(/annebecheru-preview/fonts/figtree-normal-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Figtree';font-style:normal;font-weight:600;font-display:swap;src:url(/annebecheru-preview/fonts/figtree-normal-600-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Figtree';font-style:normal;font-weight:600;font-display:swap;src:url(/annebecheru-preview/fonts/figtree-normal-600-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:400;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-600-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:600;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-600-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-700-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(/annebecheru-preview/fonts/hanken-grotesk-normal-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url(/annebecheru-preview/fonts/instrument-serif-italic-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url(/annebecheru-preview/fonts/instrument-serif-italic-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://annebecheru.com/ai-classes/case-study-ase/#webpage",
+      "url": "https://annebecheru.com/ai-classes/case-study-ase/",
+      "name": "Case Study: Teaching AI at ASE Bucharest | Anne Becheru",
+      "description": "Four rooms, one week, one method: how students and faculty at ASE Bucharest built AI agents on their own work in November 2026.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://annebecheru.com/#website"
+      },
+      "about": {
+        "@id": "https://annebecheru.com/#person"
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://annebecheru.com/#person",
+        "name": "Anne Becheru",
+        "url": "https://annebecheru.com/"
+      },
+      "publisher": {
+        "@id": "https://brave-new.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anne Becheru",
+          "item": "https://annebecheru.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI classes",
+          "item": "https://annebecheru.com/ai-classes/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Case study: ASE",
+          "item": "https://annebecheru.com/ai-classes/case-study-ase/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://annebecheru.com/ai-classes/case-study-ase/#article",
+      "headline": "Teaching AI at ASE: four rooms, one week, one method.",
+      "description": "Four rooms, one week, one method: how students and faculty at ASE Bucharest built AI agents on their own work in November 2026.",
+      "author": {
+        "@type": "Person",
+        "@id": "https://annebecheru.com/#person",
+        "name": "Anne Becheru",
+        "url": "https://annebecheru.com/"
+      },
+      "publisher": {
+        "@id": "https://brave-new.com/#org"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://annebecheru.com/ai-classes/case-study-ase/#webpage"
+      },
+      "image": "https://annebecheru.com/img/share/ai-classes-case-study-ase.jpg",
+      "datePublished": "2026-11-25T00:00:00+02:00",
+      "about": {
+        "@type": "CollegeOrUniversity",
+        "name": "Bucharest University of Economic Studies (ASE)"
+      }
+    }
+  ]
+}
+</script>
+<style>
+/* footer Cookie settings link-button: was unstyled on the homepage (2026-11-25) */
+.cookie-settings{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+footer a{white-space:nowrap;display:inline-block}footer p a{margin-right:0}  /* links wrap whole; even gaps in the legal row (2026-11-25) */
+:root{--night:#0E1830;--night2:#0B1426;--line:#24365C;--lime:#C9D62A;--paper:#F7F6F2;--ink:#0E1830;--slate:#4B5266;--soft:#AEB6CC;--card:#FFFFFF;--hair:#E2E5EC;--slot:#FFF3CD;--accent-ink:#5E6900;--r:24px;--g:20px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0B1020;--ink:#EEF1F7;--slate:#A9B1C7;--card:#131B30;--hair:#24304D;--slot:#4A3F12;--accent-ink:#C9D62A}}
+:root[data-theme="dark"]{--paper:#0B1020;--ink:#EEF1F7;--slate:#A9B1C7;--card:#131B30;--hair:#24304D;--slot:#4A3F12;--accent-ink:#C9D62A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Figtree,system-ui,Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:"Hanken Grotesk",Figtree,Arial,sans-serif;font-weight:600;letter-spacing:-.02em;margin:0;line-height:1.04}
+em.s{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0;color:var(--accent-ink)}
+.hero em.s,.band em.s,footer em.s{color:var(--lime)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--lime) 28%,transparent);margin:0 0 22px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:14px 24px;border-radius:999px;background:var(--lime);color:#0E1830;white-space:nowrap}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.slot{background:var(--slot);color:#3a3000;padding:0 4px;border-radius:3px}
+section{padding:88px 0}
+.h1{font-size:clamp(46px,5.4vw,88px)}.h2{font-size:clamp(38px,5vw,68px)}.h3{font-size:24px}
+.lead{font-size:clamp(18px,1.7vw,22px);color:var(--slate);max-width:640px;margin:22px 0 0}
+/* hero: cinematic frame */
+.hero{margin:var(--g);border-radius:var(--r);background:radial-gradient(120% 80% at 75% 30%,#1C2C55 0%,#0E1830 55%,#0B1426 100%);color:#F2F4F8;position:relative;overflow:hidden;min-height:calc(100vh - 40px);display:grid;grid-template-columns:1.15fr .85fr;padding:0}
+.hero .frame{position:absolute;inset:22px;pointer-events:none}
+.hero .frame i{position:absolute;width:26px;height:26px;border-color:rgba(242,244,248,.55);border-style:solid}
+.hero .frame i:nth-child(1){top:0;left:0;border-width:1.5px 0 0 1.5px}.hero .frame i:nth-child(2){top:0;right:0;border-width:1.5px 1.5px 0 0}.hero .frame i:nth-child(3){bottom:0;left:0;border-width:0 0 1.5px 1.5px}.hero .frame i:nth-child(4){bottom:0;right:0;border-width:0 1.5px 1.5px 0}
+.hero .ticks{position:absolute;top:90px;bottom:90px;width:14px;background:repeating-linear-gradient(180deg,rgba(242,244,248,.35) 0 1px,transparent 1px 18px)}
+.hero .ticks.l{left:30px}.hero .ticks.r{right:30px}
+.hero nav{position:absolute;top:44px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:3}
+.hero nav .brand{font-family:"Hanken Grotesk";font-weight:700;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.hero nav .brand em{font-family:"Instrument Serif";font-weight:400;color:var(--lime)}
+.hero nav div a{text-decoration:none;font-size:15px;margin-left:28px;color:#F2F4F8}
+.hero .copy{padding:200px 64px 80px 72px;position:relative;z-index:2;align-self:end}
+.hero .copy .lead{color:#C9D0E0}
+.hero .ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero .photo{position:relative}
+.hero .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(.1) contrast(1.03)}
+.hero .photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0E1830 0%,rgba(14,24,48,0) 38%),linear-gradient(0deg,rgba(14,24,48,.85) 0%,rgba(14,24,48,0) 30%),linear-gradient(180deg,rgba(14,24,48,.7) 0%,rgba(14,24,48,0) 16%),rgba(28,44,85,.42)}
+.hero .roles{position:absolute;right:64px;bottom:56px;z-index:3;text-align:right;font-size:14px;color:#C9D0E0;line-height:1.8}
+.hero .roles b{color:#fff;font-weight:600}
+/* manifesto */
+.manifesto p.big{font-family:"Hanken Grotesk";font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.2;letter-spacing:-.015em;max-width:980px;margin:0}
+.manifesto p.big span{color:var(--slate)}
+/* shift cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.card{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:32px}
+.card .k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.card h3{font-size:24px;margin:14px 0 10px}
+.card p{margin:0;color:var(--slate);font-size:16px}
+.card .from{font-size:15px;color:var(--slate);text-decoration:line-through;text-decoration-color:var(--lime);margin-top:12px}
+/* dark band */
+.band{background:var(--night);color:#F2F4F8;margin:0 var(--g);border-radius:var(--r)}
+.band .lead{color:#C9D0E0}
+.band .card{background:#13204A;border-color:var(--line)}
+.band .card p,.band .card .k{color:#AEB6CC}
+.band .card h3{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.steps .n{font-family:"Instrument Serif";font-style:italic;font-size:56px;line-height:1;color:var(--lime)}
+/* values */
+.vals{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hair);margin-top:48px}
+.vals div{padding:34px 28px 34px 0;border-bottom:1px solid var(--hair)}
+.vals h3{font-size:22px;margin:0 0 10px}
+.vals p{margin:0;color:var(--slate);font-size:16px;max-width:320px}
+/* proof chips */
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.chip{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:16px 18px}
+.chip i{flex:none;width:40px;height:40px;border-radius:50%;background:var(--paper);border:1px solid var(--hair);display:grid;place-items:center;font-style:normal;font-weight:700;color:var(--lime);background:#0E1830}
+.chip b{display:block;font-family:"Hanken Grotesk";font-weight:600;font-size:17px;letter-spacing:-.01em}
+.chip span{color:var(--slate);font-size:14px}
+/* doors */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.door{border-radius:20px;padding:36px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none}
+.door h3{font-size:30px}
+.door p{margin:12px 0 0;font-size:16px}
+.d1{background:var(--night);color:#F2F4F8}.d1 p{color:#C9D0E0}
+.d2{background:var(--lime);color:#0E1830}
+.d3{background:var(--card);border:1px solid var(--hair)}.d3 p{color:var(--slate)}
+.arrow{font-size:15px;font-weight:600;margin-top:28px}
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:40px}
+.faq div{padding:24px 0;border-top:1px solid var(--hair)}
+.faq h3{font-size:19px;margin:0 0 8px}
+.faq p{margin:0;color:var(--slate);font-size:16px}
+footer{background:var(--night2);color:#AEB6CC;margin:var(--g);border-radius:var(--r);padding:72px 0 40px}
+footer .word{font-family:"Hanken Grotesk";font-weight:700;font-size:clamp(56px,10vw,150px);letter-spacing:-.04em;color:#F2F4F8;line-height:.9;margin-top:56px}
+footer .word em{font-family:"Instrument Serif";font-weight:400;color:var(--lime)}
+footer a{color:#C9D0E0;text-decoration:none;margin-right:22px}
+.sub{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.sub input{flex:1;min-width:220px;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:#13204A;color:#fff;font:inherit}
+@media (max-width:900px){
+  .wrap{padding:0 20px}section{padding:72px 0}
+  .hero{grid-template-columns:1fr;min-height:0}.hero nav{left:28px;right:28px;top:34px}.hero nav div{display:none}
+  .hero .copy{padding:120px 28px 40px}.hero .photo{min-height:420px}.hero .roles{position:static;text-align:left;padding:0 28px 40px}
+  .hero .ticks{display:none}
+  .hero .photo:after{background:linear-gradient(180deg,#0E1830 0%,rgba(14,24,48,0) 30%),linear-gradient(0deg,#0E1830 0%,rgba(14,24,48,0) 30%),rgba(28,44,85,.42)}
+  .grid3,.steps,.vals,.doors,.faq,.workgrid,.chips,#journal .card{grid-template-columns:1fr !important}
+  #journal .card{padding:40px 24px !important}
+}
+
+/* left content bar (after atlas.attio.com) */
+@media (min-width:901px) and (max-width:1100px){.chips{grid-template-columns:repeat(2,1fr)}}
+.band.ess .ecard .k{color:#C9D62A}.band.ess .ecard .ft{border-color:#24365C}.band.ess .ecard .ft b{color:#C9D62A}
+.ess .top h2{max-width:760px}.ess .top{display:flex;justify-content:space-between;align-items:end;gap:32px}
+.ess .ecard{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:inherit}
+.ess .ecard .k{color:var(--accent-ink)}
+.ess .ecard h3{margin:0;font-size:24px;line-height:1.15}
+.ess .ecard p{font-size:16px}
+.ess .ecard .ft{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;font-size:14px;color:var(--slate)}
+.ess .ecard .ft b{color:var(--accent-ink);font-weight:600}
+.btn.line{background:var(--card);color:var(--ink);border:1.5px solid var(--hair)}
+
+/* typesetting pass */
+h1,h2,h3,.manifesto p.big{text-wrap:balance}
+p,.lead,.card p,.roles{text-wrap:pretty}
+.h2 em.s,.h1 em.s{white-space:normal}
+.nb{white-space:nowrap}
+.band.ess .ecard .ft{color:#AEB6CC}
+@media (min-width:901px){h2.h2 em.s::before{content:"\A";white-space:pre}}
+@media (max-width:1100px){.card h3,.ess .ecard h3{font-size:21px}.card{padding:26px}}
+@media (max-width:900px){.ess .top{flex-direction:column;align-items:flex-start;gap:20px}.h1{font-size:44px;line-height:1.05}.h2{font-size:34px;line-height:1.08}.manifesto p.big{font-size:26px}}
+
+.vz{display:grid;grid-template-columns:1fr 1fr;gap:56px 72px}
+.vz .st{grid-column:1/-1;font-family:"Hanken Grotesk";font-weight:600;font-size:clamp(34px,4.6vw,64px);line-height:1.06;letter-spacing:-.025em;max-width:1050px;text-wrap:balance}
+.vz .mid{font-family:"Hanken Grotesk";font-weight:500;font-size:26px;line-height:1.3;letter-spacing:-.01em;color:var(--slate);text-wrap:pretty;padding-top:28px;border-top:1px solid var(--hair)}
+.vz .mid em.s{font-size:1.15em}
+.vz .rt{font-size:19px;line-height:1.65;color:var(--slate);text-wrap:pretty;padding-top:28px;border-top:1px solid var(--hair)}
+.vz .rt b{color:var(--ink);font-weight:600}
+@media (max-width:900px){.vz{grid-template-columns:1fr;gap:28px}.vz .st{font-size:34px}.vz .mid{font-size:22px}}
+
+/* cookie consent banner (from brave-new.com) */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:99999;background:rgba(14,24,48,0.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid rgba(201,214,42,0.18);padding:20px 48px;transform:translateY(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);display:none;font-family:Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}#cookie-banner.cb-show{display:block}#cookie-banner.cb-visible{transform:translateY(0)}.cb-inner{max-width:1200px;margin:0 auto}.cb-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.cb-copy{flex:1;min-width:260px}.cb-copy strong{display:block;font-size:14px;font-weight:600;color:#fff;margin-bottom:5px;letter-spacing:-.01em}.cb-copy p{font-size:12px;color:rgba(244,248,251,.55);line-height:1.65;margin:0}.cb-copy a{color:#C9D62A;text-decoration:underline;text-decoration-color:rgba(201,214,42,.45);text-underline-offset:2px;transition:text-decoration-color .2s}.cb-copy a:hover{text-decoration-color:#C9D62A}.cb-btns{display:flex;gap:8px;align-items:center;flex-wrap:wrap;flex-shrink:0}.cb-btn{padding:9px 22px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;font-family:Figtree,-apple-system,BlinkMacSystemFont,sans-serif;white-space:nowrap;transition:background .2s,border-color .2s,color .2s;border:none;line-height:1;}.cb-btn-accept{background:#C9D62A;color:#0E1830}.cb-btn-accept:hover{background:#B6C322}.cb-btn-reject{background:rgba(255,255,255,0.08);color:rgba(244,248,251,.85);border:1px solid rgba(255,255,255,.20)}.cb-btn-reject:hover{background:rgba(255,255,255,0.14);color:#fff;border-color:rgba(255,255,255,.35)}.cb-btn-manage{background:none;border:none;padding:9px 2px;font-size:12px;font-weight:400;font-family:Figtree,-apple-system,BlinkMacSystemFont,sans-serif;color:rgba(244,248,251,.60);cursor:pointer;text-decoration:underline;white-space:nowrap;transition:color .2s;}.cb-btn-manage:hover{color:rgba(244,248,251,.85)}.cb-prefs{display:none;padding-top:16px;margin-top:16px;border-top:1px solid rgba(255,255,255,.08)}.cb-prefs.cb-open{display:block}.cb-prefs-title{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,248,251,.30);margin-bottom:14px}.cb-cat{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}.cb-cat:last-of-type{border-bottom:none}.cb-cat-info h5{font-size:13px;font-weight:600;color:#fff;margin:0 0 4px;letter-spacing:-.01em}.cb-cat-info p{font-size:11px;color:rgba(244,248,251,.45);line-height:1.6;margin:0;max-width:640px}.cb-toggle{position:relative;display:inline-block;width:36px;height:20px;flex-shrink:0;margin-top:2px}.cb-toggle input{opacity:0;width:0;height:0;position:absolute}.cb-slider{position:absolute;cursor:pointer;inset:0;background:rgba(255,255,255,.18);border-radius:20px;transition:.25s}.cb-slider::before{content:"";position:absolute;height:14px;width:14px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.25s}.cb-toggle input:checked+.cb-slider{background:#C9D62A}.cb-toggle input:checked+.cb-slider::before{transform:translateX(16px);background:#0E1830}.cb-toggle input:disabled+.cb-slider{opacity:.5;cursor:not-allowed}.cb-prefs-footer{display:flex;justify-content:flex-end;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.07)}button.cb-reopen{background:none;border:none;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;transition:color .2s}@media(max-width:640px){#cookie-banner{padding:16px 20px}.cb-btns{width:100%}.cb-btn{flex:1;text-align:center}.cb-btn-manage{flex:none}}
+
+/* essay page */
+/* Type system. Two families, per Anne's spec: Hanken Grotesk for titles (h1-h3, figure titles, FAQ
+   questions, prev/next), Figtree for everything else. Sizes: 12 caps labels, 13 chart text, 14 UI and
+   notes, 15 tables and lists in the chrome, 18 running text, 21 lede, 22 h3, 26-30 h2, 34-48 h1.
+   Weights: 400 text, 500 UI, 600 emphasis and titles. font-synthesis:none stops the browser faking a
+   bold we do not load. */
+html{font-synthesis:none;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+strong,b{font-weight:600}
+article h1{text-wrap:balance}
+article h2,article h3,.fig .ft,.faq summary,.pn span{text-wrap:pretty}
+article p,article li{text-wrap:pretty}
+.ch,table,.rail .m,.clab,.meta{font-variant-numeric:tabular-nums}
+.crumb{display:inline-block;margin:44px 0 0;font-size:14px;font-weight:500;text-decoration:none;color:var(--slate)}
+.crumb:hover{color:var(--ink)}
+article{max-width:680px;padding:40px 0 64px;counter-reset:sec}
+article h1{font-size:clamp(34px,3.6vw,48px);line-height:1.1;letter-spacing:-.025em;margin:0 0 22px}
+article .meta{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;font-size:14px;color:var(--slate);margin:0 0 26px;padding:0 0 22px;border-bottom:3px solid var(--lime)}
+article .meta b{font-weight:600;color:var(--ink)}
+article .meta .dot{width:4px;height:4px;border-radius:50%;background:var(--slate);opacity:.6}
+article h2{font-size:clamp(26px,2.4vw,30px);line-height:1.2;letter-spacing:-.02em;margin:0 0 18px;scroll-margin-top:24px}
+article h3{font-size:22px;line-height:1.3;letter-spacing:-.01em;margin:36px 0 10px;scroll-margin-top:24px}
+article p,article li{font-size:18px;line-height:1.65}
+article p{margin:0 0 20px}
+article ul{margin:0 0 24px;padding-left:22px}
+article li{margin:0 0 10px}
+article li::marker{color:var(--accent-ink)}
+article a{color:var(--ink);text-decoration-color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1.5px}
+article a.fn{text-decoration:none;font-size:.7em;vertical-align:super;line-height:0;color:var(--accent-ink);font-weight:600}
+article .tip{background:color-mix(in srgb,var(--lime) 12%,var(--card));border:1px solid var(--hair);padding:16px 20px;border-radius:12px}
+.faqs .faq{display:block;margin:0;border-top:1px solid var(--hair)}
+.faqs .faq>p,.faqs .faq>ul{color:var(--ink);margin:0 0 18px}
+.faqs .faq:last-child{border-bottom:1px solid var(--hair)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;font:600 18px/1.35 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.005em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font:400 26px/1 Figtree;color:var(--accent-ink)}
+.faq[open] summary::after{content:"\2212"}
+.faq p{font-size:17px}
+.refs .ref{font-size:15px;line-height:1.55;margin:0 0 10px;padding-left:30px;position:relative;color:var(--slate);scroll-margin-top:24px}
+.refs .ref{top:auto;bottom:auto;border-left:0;opacity:1}
+.refs .ref span{position:absolute;left:0;font-weight:600;color:var(--ink)}
+.refs .ref:target{background:rgba(201,214,42,.25)}
+.seealso li{font-size:17px;margin-bottom:8px}
+.next{background:var(--night);color:#F2F4F8;border-radius:20px;padding:36px 36px 16px;margin:48px 0 0}
+.next h2{color:#F2F4F8}
+.next p{color:#D5DAE7}
+.next a{color:var(--lime);text-decoration-color:var(--lime)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:680px;margin:0 0 88px}
+.pn a{display:block;text-decoration:none;border:1px solid var(--hair);background:var(--card);border-radius:14px;padding:16px 20px}
+.pn a:hover{border-color:var(--lime)}
+.pn small{display:block;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:0 0 4px}
+.pn span{font:600 18px/1.25 "Hanken Grotesk",Figtree,sans-serif}
+.pn .nx{text-align:right;grid-column:2}
+.tbl{overflow-x:auto;margin:8px 0 28px;border:1px solid var(--hair);border-radius:14px;background:var(--card)}
+.fig .tbl{margin:0}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--hair)}
+th{font-weight:600;font-size:14px;background:var(--paper)}
+tr:last-child td{border-bottom:0}
+@media (max-width:620px){
+  article p,article li{font-size:17px}
+  .toc ol{columns:1}
+  .kf{padding:20px 18px 6px}.next{padding:26px 22px 8px}
+  .pn{grid-template-columns:1fr}.pn .nx{grid-column:1}
+  th,td{padding:10px 12px;font-size:14px}
+}
+
+/* O1 paper grain: a faint tiled noise baked into the page background (cards stay clean white) */
+body.essay,.rail{background-color:var(--paper);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .05 0 0 0 0 .09 0 0 0 0 .19 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px 180px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body.essay,:root:not([data-theme="light"]) .rail{background-blend-mode:screen}}
+:root[data-theme="dark"] body.essay,:root[data-theme="dark"] .rail{background-blend-mode:screen}
+body.essay{overflow-x:clip}
+/* chapters layout: left rail, one screen per chapter */
+body.essay{padding-left:320px}
+.rail{position:fixed;top:0;left:0;bottom:0;width:320px;box-sizing:border-box;border-right:1px solid var(--hair);display:flex;flex-direction:column;padding:22px 0 0;z-index:40;overflow:hidden}
+.rh{display:flex;justify-content:space-between;align-items:center;padding:0 22px 18px}
+.rh .back{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none;display:inline-block;padding:10px 0;margin:-10px 0}.rh .back:hover{color:var(--ink)}
+.rx{display:none;border:0;background:var(--card);color:var(--ink);width:34px;height:34px;border-radius:50%;font:400 22px/1 Figtree,sans-serif;cursor:pointer}
+.rcap{margin:0 22px 6px;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+.rtitle{margin:0 22px 10px;font:600 17px/1.3 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.01em;text-wrap:balance}
+.rs{margin:0 22px 10px;font-size:13px;color:var(--slate);font-variant-numeric:tabular-nums}
+.rbar{margin:0 22px 14px;height:4px;border-radius:4px;background:var(--hair);overflow:hidden}.rbar i{display:block;height:100%;width:0;background:var(--lime);border-radius:4px;transition:width .5s cubic-bezier(.16,1,.3,1)}
+.rail ol{list-style:none;margin:0;padding:4px 10px 16px;overflow-y:auto;flex:1;scrollbar-width:thin;border-top:1px solid var(--hair)}
+.rail ol a{display:grid;grid-template-columns:18px 1fr auto;gap:10px;align-items:start;padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--slate);font-size:14px;line-height:1.35}
+.rail ol a:hover{background:var(--card);color:var(--ink)}
+.rail ol .d{width:12px;height:12px;margin-top:3px;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--slate) 45%,transparent);box-sizing:border-box}
+.rail ol a.done .d{background:var(--ink);border-color:var(--ink)}
+.rail ol a[aria-current]{color:var(--ink);font-weight:600;background:var(--card)}
+.rail ol a[aria-current] .d{background:var(--lime);border-color:var(--lime);box-shadow:0 0 0 4px color-mix(in srgb,var(--lime) 30%,transparent)}
+.rail ol .m{font-size:12px;color:var(--slate);font-weight:500;font-variant-numeric:tabular-nums}
+.rail ol .rf{margin-top:6px;padding-top:6px;border-top:1px solid var(--hair)}
+.rhome{display:block;padding:16px 22px;border-top:1px solid var(--hair);font:700 16px "Hanken Grotesk",Figtree,sans-serif;text-decoration:none;color:var(--ink);letter-spacing:-.01em}
+.rhome em{font-family:"Instrument Serif";font-weight:400;color:var(--accent-ink)}
+.rail-scrim,.rail-fab{display:none}
+.cmain{max-width:760px;margin:0 auto;padding:32px 40px 72px}
+.chap{counter-reset:none}
+html{scroll-behavior:smooth}
+.chap{scroll-margin-top:24px}
+.chap+.chap{margin-top:64px;padding-top:56px;border-top:1px solid var(--hair)}
+.chap.ov+.chap{margin-top:40px}
+.chap.refs .ref{font-size:15px}
+.cover{color:#F2F4F8;position:relative;isolation:isolate;padding:72px 0 52px;margin:-32px 0 28px}
+.cover .eyebrow{background:var(--lime);color:#0E1830}
+.cover h1{font-size:clamp(32px,3.4vw,46px);line-height:1.08;letter-spacing:-.025em;margin:0 0 18px;color:#fff;text-wrap:balance}
+.cover .byline{font-size:15px;color:#C9D0E0;margin:0 0 10px}.cover .byline a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.cover .meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:14px;color:#C9D0E0;margin:0 0 24px}
+.cover .meta b{color:#fff;font-weight:600}.cover .meta .dot{width:4px;height:4px;border-radius:50%;background:#AEB6CC;opacity:.7}
+.cover .acts{display:flex;gap:10px;flex-wrap:wrap}.cover .btn.ghost{color:#F2F4F8}
+.chap .intro{margin:0 0 36px}
+.chap .intro>p:first-child{font-size:clamp(19px,1.6vw,21px);line-height:1.6;color:var(--ink)}
+.kf2{margin:0 0 32px;scroll-margin-top:24px}
+.kf2 .kh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--hair);padding-bottom:12px;margin-bottom:6px}
+.kf2 h2{font-size:clamp(26px,2.4vw,30px);margin:0}
+.kf2 .kh span{font-size:13px;color:var(--slate)}
+/* key findings as cards, each with its headline number */
+.kf2 ol.kgrid{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.kf2 ol.kgrid li{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:22px 22px 20px}
+.kf2 .big{font:600 46px/1 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.03em;color:var(--ink);font-variant-numeric:tabular-nums}
+.kf2 .big small{font-size:.38em;letter-spacing:0;color:var(--slate);font-weight:500;margin-left:6px}
+.kf2 .kn{font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);margin-top:10px}
+.kf2 ol.kgrid h3{margin:0;font-size:18px}
+.kf2 ol.kgrid p{margin:0;font-size:15px;line-height:1.55;color:var(--slate)}
+.kf2 mark{background:none;color:var(--ink);font-weight:600;box-shadow:inset 0 -.42em 0 color-mix(in srgb,var(--lime) 45%,transparent)}
+.kf2 ol.kgrid li:first-child{grid-column:1/-1;background:var(--night);border-color:var(--night);display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:center}
+.kf2 ol.kgrid li:first-child .big{color:var(--lime);font-size:84px;grid-row:1/4}
+.kf2 ol.kgrid li:first-child h3{color:#fff;font-size:22px}.kf2 ol.kgrid li:first-child p{color:#C9D0E0}.kf2 ol.kgrid li:first-child mark{color:#fff}
+.kf2 ol.kgrid li:first-child .kn{color:#C9D62A;margin:0}
+@media (max-width:620px){.kf2 ol.kgrid{grid-template-columns:1fr}.kf2 ol.kgrid li:first-child{display:flex;align-items:flex-start;text-align:left}.kf2 ol.kgrid li:first-child .big{font-size:64px}}
+/* footnotes: sidenotes in the right margin on wide screens, a tap-to-open note below the paragraph otherwise */
+@media (min-width:1300px){
+  .cmain{max-width:1040px;margin:0 auto;padding-left:56px;padding-right:32px}
+  .cmain>.chap{max-width:680px}
+  .cmain{position:relative}
+  .sn{position:absolute;left:calc(56px + 680px + 40px);width:250px;font-size:13px;line-height:1.5;color:var(--slate);padding-left:12px;transition:background .2s}
+  .sn b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:color-mix(in srgb,var(--lime) 45%,transparent);color:var(--ink);font:600 11px Figtree,sans-serif;margin-right:6px}
+  .sn a{color:var(--slate)}
+  .sn.hi{color:var(--ink)}
+  .fnpop{display:none !important}
+}
+.fnpop{display:block;margin:-6px 0 20px;background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:12px 14px 12px 14px;font-size:14px;line-height:1.5;color:var(--slate);box-shadow:0 8px 24px rgba(14,24,48,.1);position:relative}
+.fnpop b{display:inline-grid;place-items:center;min-width:18px;height:18px;border-radius:9px;background:color-mix(in srgb,var(--lime) 45%,transparent);color:var(--ink);font:600 11px Figtree,sans-serif;margin-right:6px}
+.fnpop button{position:absolute;top:6px;right:8px;border:0;background:none;font:400 18px Figtree;color:var(--slate);cursor:pointer}
+.fnpop a{color:var(--slate)}
+.clab{margin:0 0 10px;font:600 12px/1.4 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.chap>h2{font-size:clamp(28px,2.8vw,38px);line-height:1.12;letter-spacing:-.025em;margin:0 0 22px;text-wrap:balance}
+.chap p,.chap li{font-size:18px;line-height:1.65}
+.chap>p,.chap .faq p{margin:0 0 20px}
+.chap ul{margin:0 0 24px;padding-left:22px}.chap li{margin:0 0 10px}.chap li::marker{color:var(--accent-ink)}
+.chap h3{font-size:22px;line-height:1.3;letter-spacing:-.01em;margin:36px 0 10px;scroll-margin-top:24px}
+.chap a{color:var(--ink);text-decoration-color:var(--accent-ink);text-underline-offset:3px;text-decoration-thickness:1.5px}
+.chap a.fn{text-decoration:none;font-size:.7em;vertical-align:super;line-height:0;color:var(--accent-ink);font-weight:600}
+.chap a.btn,.pn a{text-decoration:none}
+.chap .tip{background:color-mix(in srgb,var(--lime) 12%,var(--card));border:1px solid var(--hair);padding:16px 20px;border-radius:12px}
+.chap p,.chap li,.kf2 h3,.faq summary{text-wrap:pretty}
+.seealso{margin:36px 0 0}.seealso h2{font-size:22px;margin:0 0 12px}.seealso li{font-size:17px;margin-bottom:8px}
+.next h2{font-size:26px;margin:0 0 14px}
+.pn{margin:28px 0 0}
+@media (max-width:1099px){
+  body.essay{padding-left:0}
+  .rail{width:min(340px,88vw);transform:translateX(calc(-100% - 60px));transition:transform .3s cubic-bezier(.4,0,1,1);box-shadow:18px 0 50px rgba(14,24,48,.22);border-radius:0 20px 20px 0;z-index:62}
+  body.rail-open .rail{transform:none;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+  .rx{display:block}
+  .rail-scrim{display:block;position:fixed;inset:0;z-index:61;background:rgba(14,24,48,.38);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+  body.rail-open .rail-scrim{opacity:1;visibility:visible;transition:opacity .35s}
+  .rail-fab{display:inline-flex;align-items:center;gap:10px;position:fixed;right:16px;bottom:16px;z-index:60;border:0;cursor:pointer;background:var(--night);color:#fff;font:600 14px Figtree,sans-serif;padding:12px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(14,24,48,.3)}
+  .rail-fab .ic{display:grid;gap:3px;width:16px}.rail-fab .ic i{display:block;height:2px;border-radius:2px;background:var(--lime)}.rail-fab .ic i:nth-child(2){width:70%}
+  body.rail-open .rail-fab{opacity:0;pointer-events:none}
+}
+@media (max-width:620px){
+  .cmain{padding:20px 18px 96px}
+  .cover{padding:28px 22px 26px;border-radius:20px}
+  .chap p,.chap li{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rail,.rail-scrim,.rbar i{transition-duration:.01s !important}}
+@media print{.rail,.rail-fab,.rail-scrim{display:none !important}body.essay{padding-left:0}}
+/* legal pages */
+.legal .wrap{max-width:760px;padding-top:56px;padding-bottom:88px}
+.legal h2{font-size:26px;margin:44px 0 12px;letter-spacing:-.015em}
+.legal h3{font-size:19px;margin:26px 0 8px}
+.legal p,.legal li{font-size:17px;line-height:1.65;color:var(--ink);text-wrap:pretty}
+.legal p{margin:0 0 14px}.legal ul{padding-left:22px;margin:0 0 16px}.legal li{margin:0 0 8px}
+.legal a{color:var(--ink);text-decoration-color:var(--accent-ink);text-underline-offset:3px}
+.cookie-settings{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+/* essays page */
+.vh{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ehead{min-height:0 !important;display:block !important;padding:0 !important}
+@media (max-width:900px){.ehead nav div{display:flex !important;gap:18px}.ehead nav div a{margin-left:0 !important;font-size:14px}}
+.ehead .copy{padding:180px 72px 64px !important;align-self:auto !important;display:flex;justify-content:space-between;align-items:end;gap:48px}
+.ehead .copy .lead{max-width:560px;margin-top:20px}
+.by{display:flex;align-items:center;gap:16px;font-size:14px;color:#C9D0E0;line-height:1.7;text-align:right;flex:none}
+.by img{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 18%;filter:grayscale(.1) contrast(1.03);order:2;box-shadow:0 0 0 1.5px rgba(242,244,248,.35)}
+.by b{color:#fff;font-weight:600}
+.flt{display:flex;gap:4px;flex-wrap:wrap;margin:0}
+/* essays page, same rules as the AI classes area (Cristian, 2026-11-25) */
+.whead .copy{min-height:670px;box-sizing:border-box}
+.flt button{height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
+.wend{margin-top:88px}
+footer a{white-space:nowrap;display:inline-block;margin-bottom:6px}.wend .ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.wend .btn{height:44px;box-sizing:border-box;display:inline-flex;align-items:center;padding-top:0;padding-bottom:0}
+@media (max-width:900px){.whead .copy{min-height:0}.dbr{display:none}}
+.flt button{border:0;background:transparent;color:var(--slate);border-radius:999px;padding:0 16px;font:600 15px "Hanken Grotesk",Figtree,sans-serif;cursor:pointer}
+.flt button:hover{color:var(--ink);background:var(--card)}
+.flt button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.flt button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}  /* same as the AI classes area bar; navy-on-navy in dark mode before */
+.egrid{margin-top:28px}.egrid .ecard[hidden]{display:none}
+@media (max-width:900px){.ehead .copy{padding:120px 28px 40px !important;flex-direction:column;align-items:flex-start}.by{text-align:left}.by img{order:0}}
+
+/* the homepage gives every <section> 88px padding; essay sections set their own spacing */
+.chap,.kf2,.seealso{padding-top:0;padding-bottom:0}
+html:has(body.essay){overflow-x:clip}
+/* lead finding without a headline number: stack it like the other cards */
+.kf2 ol.kgrid li.nonum:first-child{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:8px}
+.kf2 ol.kgrid li.nonum:first-child h3{font-size:26px;line-height:1.2}
+.kf2 ol.kgrid li.nonum:first-child .kn{margin-top:4px}
+.kf2 ol.kgrid li:first-child a.fn{color:var(--lime)}
+/* cover: the navy spans the full width of the reading area (rail edge to window edge), text stays on the column */
+.cover::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:-100vw;right:-100vw;
+  background:radial-gradient(70% 120% at 70% 20%,#1C2C55 0%,#0E1830 55%,#0B1426 100%);border-bottom:1px solid var(--line)}
+.cover h1,.cover .byline,.cover .meta{max-width:680px}
+/* links inside navy blocks keep light colours in both themes */
+.chap a.btn{color:#0E1830}.chap a.btn.ghost{color:#F2F4F8}
+.chap .next a{color:var(--lime);text-decoration-color:var(--lime)}
+.chap .next{border:1px solid var(--line)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cover::before{border-bottom-color:#2B3E6B}:root:not([data-theme="light"]) .chap .next,:root:not([data-theme="light"]) .kf2 ol.kgrid li:first-child{background:#13204A;border-color:#2B3E6B}}
+:root[data-theme="dark"] .cover::before{border-bottom-color:#2B3E6B}
+:root[data-theme="dark"] .chap .next,:root[data-theme="dark"] .kf2 ol.kgrid li:first-child{background:#13204A;border-color:#2B3E6B}
+@media (max-width:620px){.cover{padding:52px 0 36px;margin-top:-20px}}
+
+/* figures */
+.fig{margin:44px 0 40px}
+.fig .ft{font:600 18px/1.35 "Hanken Grotesk",Figtree,sans-serif;letter-spacing:-.005em;margin:0 0 16px;color:var(--ink)}
+.fig .cap{font-size:14px;line-height:1.55;color:var(--slate);margin:14px 0 0}
+.fig .cap em{font-style:normal}
+.ch{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:22px 22px 16px;font-family:Figtree,sans-serif}
+.navy{background:var(--ink)}.navy2{background:#3A5185}.navy3{background:#6B83B8}.navy4{background:#9DB0D9}.lime{background:#C9D62A}.gray{background:#7A8094}
+.lg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--slate);margin:0 0 16px}
+.lg .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.hb .r{display:grid;grid-template-columns:minmax(130px,34%) 1fr;gap:0 16px;align-items:center;margin:0 0 10px}
+.hb .r.blk{grid-template-columns:1fr;gap:5px 0;margin:0 0 18px}
+.hb .lb{font-size:14px;line-height:1.3;color:var(--ink)}
+.hb .r.blk .lb{font-weight:600}
+.hb .tks{display:grid;gap:4px}
+.trk{position:relative;height:26px}
+.hb .r.blk .trk{height:20px}
+.bar{position:absolute;top:0;bottom:0;border-radius:3px}
+.vl{position:absolute;top:50%;transform:translateY(-50%);font:600 13px/1 Figtree,sans-serif;color:var(--ink);white-space:nowrap}
+.sl{position:absolute;top:50%;transform:translateY(-50%);text-align:center;font:600 12px/1 Figtree,sans-serif;white-space:nowrap;overflow:hidden}
+.vl.in{font-size:12px}
+.ref{position:absolute;top:-4px;bottom:-4px;border-left:2px dashed #7A8094;opacity:.9}
+.zero{position:absolute;top:-4px;bottom:-4px;border-left:1.5px solid var(--slate)}
+.gt{font:600 12px/1 Figtree,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:20px 0 12px}
+.gt:first-child{margin-top:0}
+.axis{font-size:12px;color:var(--slate);margin:14px 0 0;padding-top:10px;border-top:1px solid var(--hair)}
+.note{font-size:12px;line-height:1.45;color:var(--slate);margin:8px 0 0}
+.rk{display:inline-block;width:0;height:11px;border-left:2px dashed #7A8094;margin-right:6px;vertical-align:-1px}
+/* vertical bars */
+.vchart{position:relative}
+.vplot{position:absolute;left:0;right:0;top:0;height:var(--h)}
+.vcols{position:relative;display:grid;grid-template-columns:repeat(var(--n),1fr);gap:6px}
+.vcol .vbars{height:var(--h);display:flex;gap:3px;justify-content:center;padding:0 6%}
+.vbw{position:relative;flex:1;max-width:64px}
+.vb{position:absolute;left:0;right:0;border-radius:3px 3px 0 0}
+.vv{position:absolute;left:50%;transform:translateX(-50%);font:600 12px/1 Figtree,sans-serif;color:var(--ink);white-space:nowrap;margin:3px 0}
+.vlab{font-size:13px;line-height:1.25;text-align:center;color:var(--ink);margin-top:10px;padding:0 2px}
+.vref{position:absolute;left:0;right:0;border-top:2px dashed #7A8094}
+.vzero{position:absolute;left:0;right:0;border-top:1.5px solid var(--slate)}
+/* line charts */
+.svgc{width:100%;height:auto;display:block}
+.svgc .gl{stroke:var(--hair);stroke-width:1}.svgc .zl{stroke:var(--slate);stroke-width:1.5}
+.svgc .tx{fill:var(--slate);font:13px Figtree,sans-serif}.svgc .vv2{fill:var(--ink);font:600 13px Figtree,sans-serif}
+.svgc .an{stroke:#7A8094;stroke-dasharray:3 4}.svgc .an-t{fill:var(--slate)}
+.alt{display:none}
+@media (max-width:620px){
+  .ch{padding:16px 14px 12px}
+  .hb .r{grid-template-columns:1fr;gap:4px 0;margin:0 0 14px}
+  .svgwrap{display:none}.alt{display:block}
+  .vlab{font-size:11px}.vv{font-size:11px}
+  .vcol .vbars{padding:0}.vcols{gap:2px}
+}
+
+/* AI classes area */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+a.card.aud{text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .15s,transform .15s}
+a.card.aud:hover{border-color:var(--ink);transform:translateY(-2px)}
+a.card.aud p{flex:1}
+a.card.aud .ft{margin-top:20px;font-weight:600}
+.ac-open p{max-width:860px;margin-top:18px !important;font-family:"Hanken Grotesk";font-weight:500;font-size:clamp(22px,2.3vw,30px);line-height:1.34;letter-spacing:-.01em;margin:0;text-wrap:pretty}
+.ac-open p b{font-weight:600}
+.fmts{grid-template-columns:repeat(4,1fr)}
+.fmts div{padding-right:24px}
+.proof{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.proof a.chip{text-decoration:none;color:inherit}
+.proof .chip{flex:1 1 280px}
+.proof .chip i{font-size:12px;letter-spacing:.02em}
+.ac-end .ctas{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+.crumbs{font-size:13px;font-weight:600;letter-spacing:.04em;color:#AEB6CC;margin:0 0 18px}
+.crumbs a{color:#AEB6CC;text-decoration:none}.crumbs a:hover{color:#fff}
+@media (max-width:1100px){.grid4,.fmts{grid-template-columns:1fr 1fr !important}}
+@media (max-width:640px){.grid4,.fmts{grid-template-columns:1fr !important}}
+
+.todo{background:#FFF6C8;color:#3A3000;border:1px dashed #B9A300;border-radius:12px;padding:12px 16px;margin:14px 0;font-size:15px;line-height:1.5}
+.todo b{font-weight:700}
+mark.todo-i{background:#FFF6C8;color:#3A3000;border:1px dashed #B9A300;border-radius:6px;padding:0 6px;font-size:.88em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.two .card h3{margin-top:6px}
+.fmtline{margin-top:28px;font-size:18px;color:var(--slate)}.fmtline b{color:var(--ink)}
+.mods{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:40px}
+.mods div{display:grid;grid-template-columns:64px 1fr;gap:4px 16px;padding:22px 0;border-top:1px solid var(--hair)}
+.mods .n{grid-row:span 2;font-family:"Instrument Serif";font-style:italic;font-size:44px;line-height:1;color:var(--accent-ink,#6B7A00)}
+.mods h3{font-size:19px;margin:0}.mods p{margin:0;color:var(--slate);font-size:16px}
+.prose>*{max-width:760px}.prose>.fig,.prose>.brief,.prose>.stages,.prose>.stage,.prose>.cmds,.prose>.gal{max-width:860px}
+.prose p,.prose li{font-size:18px;line-height:1.65;text-wrap:pretty}
+.prose h2{font-size:30px;letter-spacing:-.015em;margin:56px 0 14px}
+.prose h3{font-size:21px;margin:32px 0 8px}
+.prose ul,.prose ol{padding-left:22px}.prose li{margin:0 0 8px}
+.prose a{color:var(--ink);text-decoration-color:var(--accent-ink,#C9D62A);text-underline-offset:3px}
+sup.cite a{text-decoration:none;font-weight:700;font-size:.7em;color:var(--slate);padding:0 1px}
+.defn{font-family:"Hanken Grotesk";font-weight:600;font-size:22px;line-height:1.4;border-top:2px solid var(--ink);border-bottom:1px solid var(--hair);padding:22px 0;margin:36px 0}
+.brief{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+.brief .card{padding:24px}.brief .card p{font-size:16px;margin:0}
+.refs li{font-size:15px;line-height:1.5;word-break:break-word}
+.qa{margin:0;padding:22px 0;border-top:1px solid var(--hair)}.qa h3{font-size:19px;margin:0 0 8px}.qa p{margin:0}
+.faqgrp{margin-top:56px}
+.fnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.tbl{width:100%;border-collapse:collapse;margin-top:36px;font-size:16px}
+.tbl th{text-align:left;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);padding:0 16px 12px 0;border-bottom:2px solid var(--ink)}
+.tbl td{vertical-align:top;padding:18px 16px 18px 0;border-bottom:1px solid var(--hair);line-height:1.5}
+.tbl td:first-child{white-space:nowrap;font-weight:600}
+.stage{margin-top:64px}
+.stage>.eyebrow{margin-bottom:6px}
+.step{display:grid;grid-template-columns:72px 1fr;gap:0 20px;padding:26px 0;border-top:1px solid var(--hair)}
+.step .n{font-family:"Instrument Serif";font-style:italic;font-size:52px;line-height:1;color:var(--accent-ink,#6B7A00)}
+.step h3{font-size:22px;margin:4px 0 8px}.step p{margin:0 0 12px}
+.prompt{position:relative;background:var(--night);color:#F2F4F8;border-radius:16px;padding:26px 28px;margin:18px 0;font-size:16px;line-height:1.6}
+.prompt .k{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#AEB6CC;margin-bottom:10px}
+.prompt button{position:absolute;top:18px;right:18px;font:600 13px "Hanken Grotesk",sans-serif;background:var(--lime);color:#0E1830;border:0;border-radius:999px;padding:7px 14px;cursor:pointer}
+.cmds{display:grid;grid-template-columns:200px 1fr;gap:0;margin:24px 0}
+.cmds dt,.cmds dd{margin:0;padding:14px 0;border-top:1px solid var(--hair)}
+.cmds dt{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:15px;font-weight:600}
+.callout{font-weight:700;font-size:20px;line-height:1.45;border-left:0;background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:22px 26px;margin:28px 0}
+.band .vals{border-color:var(--line)}.band .vals div{border-color:var(--line)}.band .vals h3{color:#F2F4F8}.band .vals p{color:#C9D0E0}
+.abar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--hair);margin-top:16px}
+.abar-in{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:12px 0}
+.abar-in::-webkit-scrollbar{display:none}
+.abar a{flex:none;text-decoration:none;color:var(--slate);font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.abar a:hover{color:var(--ink);background:var(--card)}
+.abar a[aria-current]{color:#0E1830;background:var(--lime)}
+.ph{margin:0}.ph img{display:block;width:100%;height:auto;object-fit:cover;border-radius:16px}
+.ph figcaption{font-size:13px;color:var(--slate);margin-top:10px;font-style:italic}
+.phgrid{display:grid;grid-template-columns:1.8fr 1fr;gap:16px;align-items:start}
+.phgrid .ph:first-child img{aspect-ratio:16/9}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 8px}
+section .wrap>.ph{margin:8px 0 40px}
+.dia{margin:56px 0 0}.dia figcaption{font-family:"Hanken Grotesk";font-weight:600;font-size:22px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:20px}
+.parts{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--hair);border-radius:16px;overflow:hidden;background:var(--card)}
+.part{display:flex;flex-direction:column;gap:8px;padding:24px 20px;text-decoration:none;color:inherit;border-right:1px solid var(--hair)}
+.part:last-child{border-right:0}.part:hover{background:var(--paper)}
+.part b{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-size:38px;line-height:1;color:var(--accent-ink,#6B7A00)}
+.part span{font-size:14px;color:var(--slate)}
+.stages{display:flex;align-items:stretch;gap:8px;margin:8px 0 8px;flex-wrap:wrap}
+.stages i{align-self:center;font-style:normal;color:var(--slate)}
+.stg{flex:1 1 120px;display:flex;flex-direction:column;gap:4px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:14px 16px}
+.stg:hover{border-color:var(--ink)}
+.stg span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
+.stg b{font-size:18px}
+.step{scroll-margin-top:90px}
+/* one enquiry button on screen at a time (Cristian, 2026-11-25): the sticky one shows only while the
+   hero, the closing band and the footer are all out of view */
+.abar a.abar-cta{visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s}
+html.cta-on .abar a.abar-cta{visibility:visible;opacity:1}
+/* third Fable review (UI/UX) fixes 2026-11-25 */
+.eyebrow.dk{color:#C9D0E0;background:rgba(242,244,248,.1)}
+a.btn[href^="https://brave-new.com"]::after{content:"\2197";margin-left:8px;font-weight:700}
+.prompt button{height:44px !important;padding:0 18px !important;background:transparent !important;color:#F2F4F8 !important;border:1px solid rgba(242,244,248,.35) !important;top:12px !important;right:12px !important}
+.prompt .k{padding-right:110px}
+.prose .fig .ft{font-size:19px !important}
+.rsn{display:block !important;font-size:24px !important;margin-top:48px !important}
+.mods .for{display:block;font-size:13px;color:var(--slate);margin-top:8px}
+.eyebrow+.h2,.eyebrow+h2,.eyebrow+.vh+*,.eyebrow+.faq,.eyebrow+.ed,.eyebrow+p{margin-top:20px !important}
+.stage>.eyebrow{margin-bottom:14px}.faqgrp>.eyebrow+.faq{margin-top:20px !important}
+.apr{position:sticky;top:90px;align-self:start}
+.apanel .fnav{margin-bottom:0}#who{padding-bottom:56px}
+.teach.one{max-width:none}
+.faqgrp .faq{grid-template-columns:1fr !important;max-width:760px}.faqgrp .faq div{scroll-margin-top:90px}
+.btn:focus-visible,.abar a:focus-visible,.mchip:focus-visible,.atabs button:focus-visible,.hph a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+@media (max-width:900px){.achero:not(.res) .hstat{display:none}.apr{position:static}}
+@media (max-width:640px){.tcard{grid-template-columns:1fr !important}.tcard img{width:96px !important;height:96px !important}
+  .step .prompt{margin-left:-56px;padding:20px}}
+/* second Fable review fixes 2026-11-25 */
+.hlist{flex:0 0 30%;max-width:360px;display:flex;flex-direction:column;border-top:1px solid rgba(242,244,248,.25)}
+.hlist .hk{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#AEB6CC;margin:14px 0 6px}
+.hlist a{font-family:"Instrument Serif";font-style:italic;font-size:30px;line-height:1.25;color:#F2F4F8;text-decoration:none;padding:4px 0;border-bottom:1px solid rgba(242,244,248,.12)}
+.hlist a:hover{color:var(--lime)}
+.byl{display:block;margin-top:14px;font-size:14px;color:#AEB6CC}.byl a{color:#F2F4F8}
+.briefrows{border-top:2px solid var(--ink);margin:24px 0 8px}
+.brow{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.brow b{font-size:15px;letter-spacing:.02em}.brow p{margin:0 !important}
+.prose .fig .ft{font-size:16px !important;font-weight:600}
+.rsn{display:grid !important;grid-template-columns:56px 1fr;align-items:baseline;gap:0 8px}
+.rsn .n{margin:0 !important}
+.mods div{align-content:start}.mods .for{align-items:flex-start}
+.prose>*,.prose>.fig,.prose>.brief,.prose>.stages,.prose>.stage,.prose>.cmds,.prose>.gal,.prose>.bigstat{max-width:760px !important}
+.gal,.tl{max-width:760px}
+.band.prose .h2,.band .prose .h2{font-size:clamp(38px,5vw,68px);line-height:1.02}
+.tl li:last-child{padding-bottom:0}
+.abar-in{-webkit-mask-image:none;mask-image:none}.abar-in.fl{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%);mask-image:linear-gradient(90deg,transparent,#000 8%)}.abar-in.fr{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.abar-in.fl.fr{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 88%,transparent)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tcard img{box-shadow:0 0 0 1px var(--hair);filter:brightness(.88)}}
+@media (max-width:640px){.mchip{height:auto !important;min-height:44px;padding:8px 16px 8px 7px !important;line-height:1.25;text-align:left}
+  .parts .part:last-child{grid-column:1/-1}.brow{grid-template-columns:1fr;gap:4px}}
+@media (max-width:900px){.nums{grid-template-columns:1fr 1fr !important}.nums div:nth-child(3){border-left:0;padding-left:0}.hlist{max-width:none;width:100%}.hlist a{font-size:24px}}
+/* Fable critique fixes 2026-11-25 */
+.abar a[aria-current]{background:var(--ink) !important;color:var(--paper) !important}
+.atabs button[aria-selected="true"]{background:var(--ink) !important;color:var(--paper) !important}
+.abar-w{display:flex;align-items:center;gap:16px}.abar-in{flex:1;min-width:0;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+.abar-cta{flex:none}
+.btn.fixcta{display:none}
+.abar a.abar-cta{background:var(--lime) !important;color:#0E1830 !important;padding:0 18px}
+.asknote{font-size:13px;color:#AEB6CC;margin:14px 0 0}
+.inlinecta{margin:28px 0 8px}
+.tcred{margin-top:14px !important;font-size:15px !important;color:var(--slate)}.tcred a{color:var(--ink);font-weight:600}
+.eyebrow+.vh+*{margin-top:20px !important}
+.nums div:first-child{border-left:0;padding-left:0}
+.rsn{display:block;font-size:24px !important;margin-top:48px !important}
+.rsn .n{margin:0 1px 0 4px;font-family:"Instrument Serif";font-style:italic;font-weight:400;font-size:44px;line-height:1;color:var(--accent-ink,#6B7A00)}
+.prose .fig p.axis,.prose .fig p.note{font-size:13px;line-height:1.5;color:var(--slate)}
+.prose .fig .ft{font-size:19px}
+.bigstat{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0}
+.bigstat b{display:block;font-family:"Instrument Serif";font-style:italic;font-weight:400;font-size:64px;line-height:1;color:var(--ink)}
+.bigstat span{font-size:16px;color:var(--slate)}.bigstat .cap{grid-column:1/-1;font-size:13px;margin:0}
+.prose>.fig,.prose>.brief,.prose>.bigstat{max-width:760px !important}
+.prompt .txt.mono{white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px}
+.mods .for a{font-size:13px !important;padding:6px 12px !important}
+sup.cite a{padding:4px 2px}
+.atabs{width:100%;max-width:760px;display:grid !important;grid-template-columns:repeat(4,1fr);height:auto !important;padding:4px !important}
+.atabs button{height:44px !important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mchip span{box-shadow:0 0 0 1px rgba(201,214,42,.55)}}
+/* hub hero 700px; sub-pages share one shorter height (F17) */
+.achero.sub .copy{min-height:670px !important;padding-top:150px !important}
+.achero.sub .hph,.achero.sub .hph img{height:300px}
+.achero.sub .hstat{gap:12px}.achero.sub .hstat b{font-size:72px}.achero.sub .hstat div{padding-top:10px}
+.achero.sub .h1{font-size:clamp(40px,4vw,58px)}
+@media (max-width:900px){.abar a.abar-cta{display:none !important}.achero.sub .copy{min-height:0 !important;padding-top:120px !important}
+  .btn.fixcta{position:fixed;left:16px;right:16px;bottom:16px;z-index:40;display:flex;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 6px 24px rgba(14,24,48,.3)}
+  .btn.fixcta.on{opacity:1;pointer-events:auto}
+  .step{grid-template-columns:44px 1fr !important;gap:0 12px !important}.step .n{font-size:36px !important}
+  .mods div{grid-template-columns:44px 1fr !important}.mods .n{font-size:34px !important}
+  .bigstat{grid-template-columns:1fr}}
+@media (max-width:640px){.atabs{grid-template-columns:1fr 1fr}}
+/* redesign 2026-11-25 */
+/* one pill height across the area (Cristian, 2026-11-25): buttons, area bar, audience tabs, module chips */
+.btn,.abar a,.atabs,.mchip{box-sizing:border-box;height:44px;display:inline-flex;align-items:center;justify-content:center;line-height:1;padding-top:0;padding-bottom:0}
+.btn{padding-left:22px;padding-right:22px;font-size:15px}.abar a{padding-left:16px;padding-right:16px;font-size:15px}
+.mchip{padding-left:7px;padding-right:16px}.mchip span{width:30px;height:30px}
+/* one hero height across the area (Cristian, 2026-11-25: headers bounced between sizes) */
+.achero .copy{min-height:700px;box-sizing:border-box;align-items:flex-end !important}
+.achero .hph{height:380px;align-self:flex-end}.achero .hph img{height:380px;min-height:0;max-height:none}
+.achero .hstat{align-self:flex-end}
+.achero .h1{font-size:clamp(44px,4.6vw,68px)}
+@media (max-width:900px){.achero .copy{min-height:0}.achero .hph,.achero .hph img{height:240px}}
+.atabs{display:inline-flex;gap:2px;margin:36px 0 0;padding:4px;background:var(--card);border:1px solid var(--hair);border-radius:999px;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.atabs::-webkit-scrollbar{display:none}
+.atabs button{flex:none;height:34px;font:600 15px "Hanken Grotesk",sans-serif;color:var(--slate);background:transparent;border:0;border-radius:999px;padding:0 18px;cursor:pointer}
+.atabs button:hover{color:var(--ink)}
+.atabs button[aria-selected="true"]{background:var(--lime);color:#0E1830}
+.atabs button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+html:not(.js-tabs) .atabs{display:none}
+.apanel[hidden]{display:none}
+@media (max-width:640px){.atabs{display:grid;grid-template-columns:1fr 1fr;height:auto;border-radius:22px;width:100%;overflow:visible}.atabs button{width:100%}html:not(.js-tabs) .atabs{display:none}}
+.apanel{display:grid;grid-template-columns:1fr 400px;gap:56px;padding:40px 0 8px;scroll-margin-top:80px}
+html:not(.js-tabs) .apanel{border-top:1px solid var(--hair)}
+.apanel .k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin:0}
+.ah{font-size:clamp(30px,3.2vw,44px);line-height:1.08;letter-spacing:-.02em;margin:12px 0 18px}
+.aprob{font-size:19px;line-height:1.55;max-width:680px;margin:0 0 28px}
+.apanel .ed{grid-template-columns:1fr 1fr;gap:36px}
+.apanel .ed p{font-size:19px}
+.apr .ph img{height:100%;max-height:560px}
+@media (max-width:900px){.apanel{grid-template-columns:1fr;gap:28px}.apr{order:-1}.apr .ph img{aspect-ratio:16/10 !important;max-height:300px}.apanel .ed{grid-template-columns:1fr}}
+.ehead .copy>div:first-child{flex:1 1 auto;min-width:0}
+.hph{flex:0 0 42%;max-width:520px;align-self:stretch}
+.hph img{width:100%;height:100%;min-height:300px;max-height:440px;object-fit:cover;border-radius:18px;display:block;box-shadow:0 0 0 1px rgba(242,244,248,.18)}
+.hstat{flex:0 0 36%;max-width:440px;display:grid;gap:18px;color:#F2F4F8}
+.hstat div{border-top:1px solid rgba(242,244,248,.25);padding-top:14px}
+.hstat b{display:block;font-family:"Instrument Serif";font-style:italic;font-weight:400;font-size:clamp(64px,7vw,104px);line-height:.95;color:var(--lime)}
+.hstat span{font-size:16px;color:#C9D0E0}
+.hstat p{font-size:12px;color:#AEB6CC;margin:0}
+.proofband{margin-top:0}.proofband .wrap{padding-top:8px;padding-bottom:8px}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.nums div{border-left:1px solid var(--line);padding:6px 0 6px 22px}
+.nums b{display:block;font-family:"Instrument Serif";font-style:italic;font-weight:400;font-size:clamp(56px,6vw,88px);line-height:1;color:var(--lime)}
+.nums span{display:block;margin-top:8px;color:#C9D0E0;font-size:16px;max-width:220px}
+.teach{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}.teach.one{grid-template-columns:1fr;max-width:820px;margin-top:20px}
+.tcard{display:grid;grid-template-columns:120px 1fr;gap:24px;background:var(--card);border:1px solid var(--hair);border-radius:18px;padding:28px}
+.tcard img,.tcard .ini{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 18%}
+.tcard .ini{display:grid;place-items:center;background:var(--night);color:var(--lime);font-family:"Instrument Serif";font-style:italic;font-size:44px}
+.tcard h3{font-size:24px;margin:4px 0 4px}.tcard .k{font-size:13px;font-weight:600;color:var(--slate);margin:0 0 12px}
+.tcard p{font-size:17px;line-height:1.55;margin:0}
+.ed{display:grid;grid-template-columns:1fr 1fr;gap:56px;border-top:2px solid var(--ink);padding-top:28px;margin-top:8px}
+.ed p{font-family:"Hanken Grotesk";font-weight:500;font-size:clamp(20px,1.9vw,25px);line-height:1.38;letter-spacing:-.005em;margin:14px 0 0;text-wrap:pretty}
+.mstrip{margin-top:44px}.mchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.mchip{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--hair);border-radius:999px;padding:8px 16px 8px 8px;font-size:15px;font-weight:500}
+.mchip:hover{border-color:var(--ink)}
+.mchip span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--night);color:var(--lime);font-family:"Instrument Serif";font-style:italic;font-size:18px}
+.mods .for{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.mods .for a{font-size:12px;font-weight:600;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--hair);border-radius:999px;padding:3px 10px}
+.mods div{scroll-margin-top:90px}
+.tl{list-style:none;padding:0;margin:36px 0 0;border-left:2px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:0 0 36px 28px;position:relative}
+.tl li::before{content:"";position:absolute;left:-9px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--lime);border:2px solid var(--ink)}
+.tl .td{font-weight:700;font-size:16px}.tl .td mark{display:block;width:fit-content;margin-top:6px;font-weight:500}
+.tl h3{font-size:22px;margin:0 0 4px}.tl .k{font-size:14px;color:var(--slate);margin:0 0 8px}.tl p{margin:0;font-size:17px}
+.card p,.vals p,.faq p{font-size:17px}
+.card.aud p{color:var(--ink);opacity:.82}
+.fig .ft{font-size:20px}
+@media (max-width:900px){.hph{flex-basis:auto;max-width:none;width:100%}.hph img{min-height:220px;max-height:300px}
+  .hstat{max-width:none;width:100%;grid-template-columns:1fr 1fr}.nums{grid-template-columns:1fr 1fr}.teach,.ed{grid-template-columns:1fr}
+  .tcard{grid-template-columns:72px 1fr;padding:22px}.tcard img,.tcard .ini{width:72px;height:72px;font-size:28px}.tl li{grid-template-columns:1fr;gap:6px}}
+@media (max-width:900px){.phgrid,.gal{grid-template-columns:1fr}.parts{grid-template-columns:1fr 1fr}.part{border-bottom:1px solid var(--hair)}.stages i{display:none}.stg{flex-basis:40%}}
+@media (max-width:900px){.two,.mods,.brief{grid-template-columns:1fr !important}.cmds{grid-template-columns:1fr}.cmds dd{border-top:0;padding-top:0}.tbl td:first-child{white-space:normal}}
+@media (max-width:700px){.tbl thead{display:none}.tbl tr{display:block;border-bottom:1px solid var(--hair);padding:12px 0}.tbl td{display:block;border:0;padding:4px 0}}
+</style>
+</head>
+<body>
+<header class="hero ehead achero sub" id="top">
+  <div class="frame"><i></i><i></i><i></i><i></i></div>
+  <div class="ticks l"></div><div class="ticks r"></div>
+  <nav aria-label="Main">
+    <a class="brand" href="/annebecheru-preview/">Anne <em>Becheru</em></a>
+    <div><a href="/annebecheru-preview/">Home</a><a href="/annebecheru-preview/writing/">Essays</a><a href="/annebecheru-preview/ai-classes/" aria-current="page" style="color:#fff;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px">AI classes</a></div>
+  </nav>
+  <div class="copy">
+    <div><span class="eyebrow dk">Case study</span>
+    <h1 class="h1" style="margin:0">Teaching AI at ASE: <em class="s">four rooms, one week, one method.</em></h1>
+    <p class="lead">9 to 12 November 2026, Bucharest University of Economic Studies.</p>
+    <div class="ctas"><a class="btn" href="https://brave-new.com/ai-growth/#class" title="Opens the enquiry form on brave-new.com">Ask for a programme</a></div></div>
+    <div class="hph"><img src="/annebecheru-preview/img/ai-classes/ase-group.jpg" srcset="/annebecheru-preview/img/ai-classes/ase-group-480.webp 480w, /annebecheru-preview/img/ai-classes/ase-group-960.webp 960w, /annebecheru-preview/img/ai-classes/ase-group-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 520px" width="1600" height="900" fetchpriority="high" decoding="async" alt="About 60 students standing together at the front of an ASE amphitheatre"></div>
+  </div>
+</header>
+<nav class="abar" aria-label="AI classes"><div class="wrap abar-w"><div class="abar-in"><a href="/annebecheru-preview/ai-classes/">Overview</a><a href="/annebecheru-preview/ai-classes/curriculum/">Curriculum</a><a href="/annebecheru-preview/ai-classes/why-ai-training-fails/">Research</a><a href="/annebecheru-preview/ai-classes/faq/">FAQ</a><a href="/annebecheru-preview/ai-classes/case-study-ase/" aria-current="page">Case study</a><a href="/annebecheru-preview/ai-classes/your-first-ai-hire/">Free guide</a></div><a class="btn abar-cta" href="https://brave-new.com/ai-growth/#class">Ask for a programme</a></div></nav><a class="btn fixcta" href="https://brave-new.com/ai-growth/#class">Ask for a programme</a><script>(()=>{const c=document.querySelector(".abar-in [aria-current]");if(c){const b=c.parentElement,r=c.getBoundingClientRect(),q=b.getBoundingClientRect();b.scrollLeft+=r.left-q.left-(q.width-r.width)/2;}{const b=document.querySelector(".abar-in");if(b){const e=()=>{b.classList.toggle("fl",b.scrollLeft>2);b.classList.toggle("fr",b.scrollLeft+b.clientWidth<b.scrollWidth-2);};e();b.addEventListener("scroll",e,{passive:true});addEventListener("resize",e);}}const go=()=>{const f=document.querySelector(".fixcta"),h=document.querySelector("header.hero");if(f&&h){const vis=new Map();const io=new IntersectionObserver(es=>{es.forEach(x=>vis.set(x.target,x.isIntersecting));const cb=document.getElementById("cookie-banner");const cbOn=cb&&cb.classList.contains("cb-visible");const away=![...vis.values()].some(Boolean);document.documentElement.classList.toggle("cta-on",away);f.classList.toggle("on",away&&!cbOn);});[h,document.querySelector(".ac-end"),document.querySelector("footer")].forEach(x=>x&&io.observe(x));setInterval(()=>{const cb=document.getElementById("cookie-banner");if(cb&&cb.classList.contains("cb-visible"))f.classList.remove("on");},800);}};document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go();})();</script>
+<main>
+<section class="manifesto"><div class="wrap ac-open">
+  <span class="eyebrow">The situation</span>
+  <p>Students and teachers at the Bucharest University of Economic Studies (ASE) asked the same question from two sides. Students who already run a business, or are close to it, wanted AI to help them grow it. Faculty wanted to teach with AI responsibly and to judge what students hand in.</p>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <span class="eyebrow">What we ran</span><h2 class="vh">What we ran</h2>
+  <div class="gal"><figure class="ph"><img src="/annebecheru-preview/img/ai-classes/ase-amphitheatre.jpg" srcset="/annebecheru-preview/img/ai-classes/ase-amphitheatre-480.webp 480w, /annebecheru-preview/img/ai-classes/ase-amphitheatre-960.webp 960w, /annebecheru-preview/img/ai-classes/ase-amphitheatre-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 580px" width="1600" height="900" loading="lazy" decoding="async" alt="A full ASE amphitheatre seen from the back rows, students at their desks" style="aspect-ratio:16/9"><figcaption>The amphitheatre on Wednesday 11 November 2026.</figcaption></figure><figure class="ph"><img src="/annebecheru-preview/img/ai-classes/ase-amphitheatre-side.jpg" srcset="/annebecheru-preview/img/ai-classes/ase-amphitheatre-side-480.webp 480w, /annebecheru-preview/img/ai-classes/ase-amphitheatre-side-960.webp 960w, /annebecheru-preview/img/ai-classes/ase-amphitheatre-side-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 580px" width="1600" height="900" loading="lazy" decoding="async" alt="The same amphitheatre seen from the side, students at laptops" style="aspect-ratio:16/9"><figcaption>The same amphitheatre from the other side, 11 November 2026.</figcaption></figure><figure class="ph"><img src="/annebecheru-preview/img/ai-classes/ase-sas-room.jpg" srcset="/annebecheru-preview/img/ai-classes/ase-sas-room-480.webp 480w, /annebecheru-preview/img/ai-classes/ase-sas-room-960.webp 960w, /annebecheru-preview/img/ai-classes/ase-sas-room-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 580px" width="1600" height="1155" loading="lazy" decoding="async" alt="Anne presenting to students at laptops, the slides on two screens behind her" style="aspect-ratio:16/9"><figcaption>The SAS workshop, 12 November 2026: Anne in the room, Shahar Hillel live from the US.</figcaption></figure><figure class="ph"><img src="/annebecheru-preview/img/ai-classes/ase-sas-presenters.jpg" srcset="/annebecheru-preview/img/ai-classes/ase-sas-presenters-480.webp 480w, /annebecheru-preview/img/ai-classes/ase-sas-presenters-960.webp 960w, /annebecheru-preview/img/ai-classes/ase-sas-presenters-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 580px" width="1600" height="1034" loading="lazy" decoding="async" alt="Two presenters at the front of the workshop room, students listening" style="aspect-ratio:16/9"></figure></div>
+  <ol class="tl"><li><span class="td">9 Nov 2026</span><div><h3>Marketing 55, the anniversary of the first marketing course at ASE</h3><p class="k">Carmen Acatrinei (Faculty of Marketing)</p><p>Build a real AI application without code, in 2 hours, live</p></div></li><li><span class="td">11 Nov 2026</span><div><h3>Market research class</h3><p class="k">Faculty of Marketing <mark class="todo-i">Anne confirms the host</mark></p><p>AI market research, with three live research pages built in class on real brands</p></div></li><li><span class="td">12 Nov 2026</span><div><h3>Students Entrepreneurial Society</h3><p class="k">Stere Stamule (Faculty of Business Administration)</p><p>"Build your growth agent", 3.5 hours: positioning, competitors and pricing, first clients, a weekly content routine</p></div></li><li><span class="td">12 Nov 2026 <mark class="todo-i">Anne confirms the date</mark></span><div><h3>AI literacy for faculty, FABIZ Faculty Development</h3><p class="k">Faculty of Business Administration</p><p>Session 1: how AI works, prompting and learning, teaching practice, benefits and harms</p></div></li></ol>
+</div></section>
+<section class="band"><div class="wrap">
+  <span class="eyebrow" style="color:#AEB6CC">How we taught</span>
+  <h2 class="h2">One format, <em class="s"><span class="nb">four rooms.</span></em></h2>
+  <div class="vals fmts" style="border-color:var(--line)"><div><h3>The room format</h3><p>Anne in the room, leading strategy and moving between teams. Shahar Hillel, Head of Technology at FYI.AI, online on the big screen, building live.</p></div><div><h3>Real problems</h3><p>Participants worked on their own business or their own course, not a toy example. For faculty, fictional Romanian companies stood in, so no confidential data entered the room.</p></div><div><h3>Printed material</h3><p>Team booklets, so the big screen stayed with the live build.</p></div><div><h3>The follow-up</h3><p>Within days, every participant received "Your first hire", a 30-slide guide: the ten steps to build, train and schedule their own agent, in English and Romanian.</p></div></div>
+</div></section>
+<section><div class="wrap prose">
+  <h2>Results</h2>
+  <p class="todo"><b>Anne confirms what can be stated:</b> how many people attended each room; what participants built; any quote, with the speaker's permission; any follow-up booked.</p>
+  <h2>What we learned</h2>
+  <ul><li>Most students did not use the tools the plan assumed, so the class switched to the AI they already used.</li><li>A printed booklet freed the screen for the live build.</li><li>Real work beats demos: the questions that mattered came from participants' own businesses.</li><li>A class needs a follow-through. Without one, the method is gone by the next week.</li></ul>
+  <p class="todo"><b>Draft note:</b> Anne confirms that faces in the group shots can be published. (Photos: room and crowd shots from 11 and 12 Nov. Anne's own photos stay off the site.)</p><p class="todo"><b>Draft note:</b> Before publishing: Anne confirms that ASE, Carmen Acatrinei and Stere Stamule agree to be named.</p><p class="todo"><b>Draft note:</b> Journal issue 29 (17 Nov) dates the faculty session 26 November; the pack says 12 Nov.</p>
+  <div class="fnav"><a class="btn line" href="/annebecheru-preview/ai-classes/#organisations">AI classes for organisations →</a><a class="btn line" href="/annebecheru-preview/ai-classes/your-first-ai-hire/">The follow-up guide →</a></div>
+</div></section>
+<section class="band ac-end"><div class="wrap">
+  <span class="eyebrow dk">Start</span>
+  <h2 class="h2">Run the same week <em class="s"><span class="nb">with your team.</span></em></h2>
+  <div class="ctas"><a class="btn" href="https://brave-new.com/ai-growth/#class" title="Opens the enquiry form on brave-new.com">Ask for a programme</a><a class="btn ghost" href="/annebecheru-preview/ai-classes/your-first-ai-hire/">Read the free guide: your first AI hire</a></div>
+  <p class="asknote">Enquiries go to Brave New, Anne's firm.</p>
+</div></section></main>
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap">
+      <div style="max-width:520px"><b style="color:#F2F4F8;font-family:'Hanken Grotesk';font-size:20px">Anne Becheru</b><p style="margin:8px 0 0">AI marketer, founder of Brave New and the Brave New Hive, investor.</p></div>
+      <div><a href="https://www.linkedin.com/in/anne-becheru-93578748/">LinkedIn</a><a href="https://brave-new.com/">Brave New</a><a href="https://bravenewhive.com/">The Hive</a><a href="https://www.youtube.com/@BraveNewMediaOfficial">YouTube</a><a href="https://www.instagram.com/bravenew.media/">Instagram</a><a href="https://www.linkedin.com/company/brave-new/">Brave New on LinkedIn</a><a href="mailto:anne@brave-new.com">Email</a></div>
+    </div>
+    <div class="word">Anne <em>Becheru</em></div>
+    <p style="margin-top:28px;font-size:14px">© 2026 Anne Becheru · A Brave New production · <a href="/annebecheru-preview/privacy/">Privacy</a> · <a href="/annebecheru-preview/terms/">Terms</a> · <button type="button" class="cookie-settings" onclick="window.CookieConsent&amp;&amp;CookieConsent.reopen()">Cookie settings</button></p>
+  </div>
+</footer>
+<script src="/annebecheru-preview/cookie-consent.js" defer data-bnm-consent data-ga-id="G-XXXXXXXXXX" data-clarity-id="z94hi8i29r"></script>
+<a href="#top" class="totop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<style>.totop{position:fixed;right:20px;bottom:20px;z-index:45;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ink,#0E1830);color:var(--paper,#F7F6F2);box-shadow:0 6px 20px rgba(14,24,48,.25);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;text-decoration:none}
+.totop.on{opacity:1;visibility:visible}.totop:focus-visible{outline:2px solid #C9D62A;outline-offset:3px}
+@media (max-width:1100px){body.essay .totop{bottom:76px}}
+@media (max-width:900px){.btn.fixcta{right:76px !important}}</style>
+<script>(()=>{const t=document.querySelector('.totop');if(!t)return;const f=()=>{const cb=document.getElementById('cookie-banner');t.classList.toggle('on',scrollY>innerHeight&&!(cb&&cb.classList.contains('cb-visible')));};addEventListener('scroll',f,{passive:true});f();setInterval(f,800);
+t.addEventListener('click',e=>{e.preventDefault();scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});});})();</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+# Anne Becheru
+
+> AI marketer, founder of Brave New and the Brave New Hive, investor. Essays on story, price, risk and AI, each built on public data and our own research.
+
+- [Home](https://annebecheru.com/): who Anne is, the vision, the orchestra, principles, work, FAQ
+- [All essays](https://annebecheru.com/writing/)
+
+## Essays
+
+- [Brand vs performance marketing: what the data says, and what 91 industrial websites show](https://annebecheru.com/writing/brand-or-performance/): Brand vs performance marketing explained with data: the IPA budget splits for B2B and B2C, why reach beats loyalty, and a scan of 91 industrial websites.
+- [Brand positioning: why clarity commands price, and what 91 industrial homepages reveal](https://annebecheru.com/writing/clarity-commands-price/): Brand positioning explained with data: what fluency research says about clarity and value, and how 91 industrial homepages read in their first 50 words.
+- [Marketing in a recession: why cutting is a bet, and what four downturns show](https://annebecheru.com/writing/cutting-is-a-bet/): Marketing in a recession explained with data: what going dark costs, why share of voice gets cheaper, and how US ad activity moved through four recessions.
+- [Fake it till you make it: where a big story becomes fraud, in data](https://annebecheru.com/writing/empires-and-frauds/): Fake it till you make it works for confidence, not facts. Court records, SEC data and 10 years of Wikipedia attention show where the line falls.
+- [Brand storytelling: why empires start as stories, and what 59 industrial about pages leave out](https://annebecheru.com/writing/empires-start-as-stories/): Brand storytelling explained with data: how stories change value and spread, and what 59 industrial about pages say, and skip, about their own origins.
+- [AI orchestration, costed: what AI marketing work really costs](https://annebecheru.com/writing/orchestration-costed/): AI orchestration costed with data: 11 AI models priced per token against BLS wages for 7 marketing tasks, and why review time, not model price, decides the bill.
+- [Pre-mortem: why plans hide risk, and what 229 forecasts reveal](https://annebecheru.com/writing/plans-hide-risk/): A pre-mortem asks a team to imagine its plan already failed. Data on cost overruns, the planning fallacy and 229 expert forecasts show why it works.
+- [Value-based pricing: the data on price vs. value, and how 91 industrial websites handle price](https://annebecheru.com/writing/price-versus-value/): Value-based pricing explained with data: why a 1% price rise moves profit 8%, where price leaks, and how 91 industrial websites handle price in public.
+- [Risk premium: what doubt costs, and what 107 years of bond data show](https://annebecheru.com/writing/risk-has-a-price/): A risk premium is the extra return people demand for taking a risk. Bond data since 1919 show how it jumps in downturns, and how suppliers can shrink it.
+- [Productized services: the data on selling work, not hours, as AI speeds up the hour](https://annebecheru.com/writing/sell-work-not-hours/): Productized services explained with data: how much AI cuts task time, what clients pay for professional services since 2019, and a ladder from hours to packages.
+- [Business strategy in the AI era: what the data says, and what 67 industrial homepages reveal](https://annebecheru.com/writing/strategy-in-the-ai-era/): Business strategy in the AI era, with data: 88% of firms use AI but 39% see any profit impact, and 16% of 67 industrial homepage headlines name the offer.
+- [Taste in the age of AI: why generic copy wins nothing, and what 64 industrial websites reveal](https://annebecheru.com/writing/taste-in-the-ai-era/): Taste in the age of AI, backed by data: AI lifts each writer but makes work more alike, and 80% of 64 industrial homepages lean on the same stock terms.
+- [Mimetic desire: why we want what others want, with data](https://annebecheru.com/writing/the-economics-of-desire/): Mimetic desire means we want what others want. The research on social proof, price and scarcity, plus our data on how unequally attention spreads in markets.
+- [How to go viral: what the research and 26 viral spikes show](https://annebecheru.com/writing/the-science-of-virality/): How to go viral, explained with data: what makes content shareable, why most shares never spread, and how fast attention fades across 26 viral spikes.
+- [Generative engine optimization: what AI says about you, and what 91 industrial websites reveal](https://annebecheru.com/writing/what-ai-says-about-you/): Generative engine optimization explained with data: how AI answers cut clicks, what makes a source quotable, and a scan of 91 industrial websites.
+
+## AI classes
+
+- [AI classes](https://annebecheru.com/ai-classes/): hands-on AI classes for companies, teams, organisations and entrepreneurs
+- [The curriculum: 11 modules](https://annebecheru.com/ai-classes/curriculum/)
+- [Why company AI training fails, and what works instead](https://annebecheru.com/ai-classes/why-ai-training-fails/): 2026 data, 14 sources
+- [AI classes FAQ](https://annebecheru.com/ai-classes/faq/)
+- [Case study: teaching AI at ASE Bucharest, November 2026](https://annebecheru.com/ai-classes/case-study-ase/)
+- [Your first AI hire: a free 10-step guide](https://annebecheru.com/ai-classes/your-first-ai-hire/)
+
+## Legal
+
+- [Privacy and cookie policy](https://annebecheru.com/privacy/)
+- [Terms](https://annebecheru.com/terms/)
+
+## Related sites
+- [Brave New Media](https://brave-new.com/): B2B branding, go-to-market, positioning and content production agency.
+- [Brave New Hive](https://bravenewhive.com/): marketing knowledge base published by Brave New Media.
